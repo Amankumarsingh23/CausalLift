@@ -1,0 +1,7 @@
+dataset,method,estimand,population,n,estimate,truth,signed_error,absolute_error,warning,score_variance,se,ci_low,ci_high
+NSW–CPS,naive_contrast,ATT comparison,held-out observational,6471,-8562.514133319924,,,,,,,,
+NSW–CPS,regression,ATT,validation,74,-98.27765722895174,,,,Observational comparability and overlap are unverified. Approximate independent-row intervals require adequate nuisance quality and overlap.,,,,
+NSW–CPS,att_weighted,ATT,validation,74,1167.0684729362874,,,,Observational comparability and overlap are unverified. Approximate independent-row intervals require adequate nuisance quality and overlap.,,,,
+NSW–CPS,matching,matched ATT,caliper-matched treated validation rows,74,1277.2355997297295,,,,Observational comparability and overlap are unverified. Formal matching inference unsupported.,,,,
+NSW–CPS,aipw_att,ATT,held-out observational,74,790.4116914602208,,,,Approximate independent-row interval; exchangeability and overlap unverified.,6620467116.428844,1011.483066381131,-1192.095118646796,2772.9185015672374
+NSW experiment,randomized_reference,randomized reference contrast,same held-out treated and 260 randomized controls,334,1826.082715891892,,,,,,,-162.26817352836065,3814.433605312144

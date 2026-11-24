@@ -1,0 +1,129 @@
+{
+  "runtime_seconds": 4.766716000000088,
+  "seed": 42,
+  "fixture": false,
+  "nsw": {
+    "status": "completed",
+    "source": "https://users.nber.org/~rdehejia/data/",
+    "training_n": 9706,
+    "validation_n": 6471,
+    "validation_treated": 74,
+    "files": {
+      "nswre74_treated": {
+        "rows": 185,
+        "sha256": "e7b742fe0ff07a0f45e129b4ff108bb9611cd83d53604732c48a8a0a3e20eda3"
+      },
+      "nswre74_control": {
+        "rows": 260,
+        "sha256": "a1364cea459d953dc691a667d99194b4ad335d6d550354fe23a5d2dc58d729b5"
+      },
+      "cps_controls": {
+        "rows": 15992,
+        "sha256": "dce640066f8bcdf447864b158b2cb0390bd3f8d6cbe3a27576a06926477d51f8"
+      }
+    },
+    "sensitivity": [
+      {
+        "dataset": "NSW\u2013CPS",
+        "profile": "unmodified",
+        "n": 6471,
+        "excluded": 0,
+        "clipped_scores": 0,
+        "target": "validation ATE",
+        "truth": null,
+        "hajek": -1244.44311941645,
+        "aipw": -2142.2226923363583
+      },
+      {
+        "dataset": "NSW\u2013CPS",
+        "profile": "clip_05_95",
+        "n": 6471,
+        "excluded": 0,
+        "clipped_scores": 6202,
+        "target": "validation ATE",
+        "truth": null,
+        "hajek": -6946.809006827699,
+        "aipw": -5321.599872670193
+      },
+      {
+        "dataset": "NSW\u2013CPS",
+        "profile": "restrict_05_95",
+        "n": 269,
+        "excluded": 6202,
+        "clipped_scores": 0,
+        "target": "restricted ATE",
+        "truth": null,
+        "hajek": 555.3508613861959,
+        "aipw": 1367.2484227968314
+      }
+    ]
+  },
+  "provenance": {
+    "A": {
+      "propensity": "known randomized design",
+      "outcome": "arm logistic; tree standardization comparator",
+      "validation_n": 4001,
+      "training_oof_n": 12000,
+      "fold_sizes": [
+        4000,
+        4000,
+        4000
+      ],
+      "validation_fingerprint": "c122ec44f281edb7ca61c8033192a850bff236b3aa9459e2c0bec880a6e5bf0d"
+    },
+    "C": {
+      "propensity": "verified Session 08 logistic",
+      "outcome": "arm logistic; tree standardization comparator",
+      "validation_n": 4000,
+      "training_oof_n": 12000,
+      "fold_sizes": [
+        4000,
+        4000,
+        4000
+      ],
+      "validation_fingerprint": "46b76d827840f506b6d14f51020fe55beb0a0848e6890944b9238d77a17409ac"
+    },
+    "F": {
+      "propensity": "verified Session 08 logistic",
+      "outcome": "arm logistic; tree standardization comparator",
+      "validation_n": 4001,
+      "training_oof_n": 12000,
+      "fold_sizes": [
+        4000,
+        4000,
+        4000
+      ],
+      "validation_fingerprint": "37b15e3dfe54e39337306bb08f1dc05f5a8cb533bdabb3b08416a2949a729916"
+    }
+  },
+  "robustness": {
+    "both_correct": {
+      "mean": 0.1027064814814815,
+      "bias": 0.002706481481481499,
+      "rmse": 0.025314971957571278,
+      "coverage": 0.9375,
+      "repetitions": 80
+    },
+    "neither": {
+      "mean": 0.2503472222222223,
+      "bias": 0.15034722222222224,
+      "rmse": 0.15181202029540627,
+      "coverage": 0.0,
+      "repetitions": 80
+    },
+    "outcome_only": {
+      "mean": 0.10055138888888888,
+      "bias": 0.0005513888888888775,
+      "rmse": 0.02039735292073066,
+      "coverage": 0.975,
+      "repetitions": 80
+    },
+    "propensity_only": {
+      "mean": 0.10243425925925931,
+      "bias": 0.002434259259259289,
+      "rmse": 0.025777236318281,
+      "coverage": 0.9625,
+      "repetitions": 80
+    }
+  }
+}

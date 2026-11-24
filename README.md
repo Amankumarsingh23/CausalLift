@@ -84,3 +84,6 @@ Session 07 adds partially linear DML, LinearDML and CausalForestDML. It reuses t
 ## Run Session 08
 
 Run `python -m causallift.session08` in the project environment after installing the package dependencies. Use `--fixture` to run without the benchmark files. See the [DAG guide](docs/CAUSAL_DAGS.md), [propensity guide](docs/PROPENSITY_SCORES.md), and [completion report](docs/session-08-completion.md).
+## Run Session 09
+
+Run `python -m causallift.session09` to reuse the Session 01 and 08 artifacts. Use `--download` to acquire the optional NSW/CPS files or `--fixture` for an offline smoke run. See the [methods](docs/OBSERVATIONAL_ESTIMATORS.md) and [completion report](docs/session-09-completion.md).
