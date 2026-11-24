@@ -87,3 +87,6 @@ Run `python -m causallift.session08` in the project environment after installing
 ## Run Session 09
 
 Run `python -m causallift.session09` to reuse the Session 01 and 08 artifacts. Use `--download` to acquire the optional NSW/CPS files or `--fixture` for an offline smoke run. See the [methods](docs/OBSERVATIONAL_ESTIMATORS.md) and [completion report](docs/session-09-completion.md).
+## Run Session 10
+
+Run `python -m causallift.session10` or use `--fixture` for an offline run. See the [causal reliability guide](docs/CAUSAL_RELIABILITY.md) and [completion report](docs/session-10-completion.md).

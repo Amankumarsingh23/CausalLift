@@ -90,18 +90,18 @@ def fetch_nsw(root):
             output.write(content)
 
 
-def load_saved_propensity(folder, scenario, spec, train, val, seed):
+def load_saved_propensity(folder, scenario, spec, train, val, seed, model="logistic"):
     models = json.loads(
         (folder / "propensity_predictions_manifest.json").read_text(encoding="utf-8")
     )["models"]
     (row,) = [
-        r for r in models if r["scenario"] == scenario and r["model"] == "logistic"
+        r for r in models if r["scenario"] == scenario and r["model"] == model
     ]
     col = spec.treatment_column
     if (
         row["target"] != col
         or tuple(row["feature_allowlist"]) != tuple(spec.feature_columns)
-        or row["configuration"] != outcome_configuration("logistic", seed, 55)
+        or row["configuration"] != outcome_configuration(model, seed, 55)
         or row["seed"] != seed
         or row["row_identity"] != spec.unit_id
         or row["source"] != f"data/synthetic/synthetic_{scenario}.parquet"
@@ -212,7 +212,7 @@ def _diagnostic(dataset, profile, kind, t, w):
     return rows
 
 
-def _estimates(dataset, X, t, y, e, mu0, mu1, tau, *, identification):
+def _estimates(dataset, X, t, y, e, mu0, mu1, tau, *, identification, legacy_ties=False):
     t = np.asarray(t, dtype=bool)
 
     def truth(mask):
@@ -247,7 +247,7 @@ def _estimates(dataset, X, t, y, e, mu0, mu1, tau, *, identification):
             ("att_weighted", "ATT", int(t.sum()), weighted_contrast(t, y, aw), t, {}),
         )
     ]
-    ti, ci, dist, radius = match(t, e)
+    ti, ci, dist, radius = match(t, e, legacy_ties=legacy_ties)
     point = float((y[ti] - y[ci]).mean()) if len(ti) else None
     rows.append(
         _result(
@@ -268,6 +268,8 @@ def _estimates(dataset, X, t, y, e, mu0, mu1, tau, *, identification):
         "control_n": int((~t).sum()),
         "matched_treated": len(ti),
         "unique_controls": len(np.unique(ci)),
+        "max_control_reuse": int(np.bincount(ci).max()) if len(ci) else 0,
+        "control_ess": effective_n(np.bincount(ci)) if len(ci) else None,
         "reused_control_matches": len(ci) - len(np.unique(ci)),
         "excluded_treated": int(t.sum()) - len(ti),
         "match_rate": len(ti) / t.sum(),
@@ -363,7 +365,7 @@ def robustness(seed, reps=80, n=1800):
     return out
 
 
-def _nsw(root, seed):
+def _nsw(root, seed, *, legacy_ties=False):
     folder = root / "data/raw/lalonde"
     if not all((folder / f"{name}.txt").is_file() for name in NSW_FILES):
         return (
@@ -420,6 +422,7 @@ def _nsw(root, seed):
         b,
         None,
         identification="Observational comparability and overlap are unverified.",
+        legacy_ties=legacy_ties,
     )
     dr = aipw(tv, y, e, a, b, att=True)
     result = [

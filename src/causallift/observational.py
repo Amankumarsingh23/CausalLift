@@ -101,8 +101,8 @@ def aipw(treatment, outcome, probability, mu0, mu1, *, att=False):
     }
 
 
-def match(treatment, probability, *, caliper_sd=0.2):
-    """With replacement. Lower logit wins distance ties, then earlier control row."""
+def match(treatment, probability, *, caliper_sd=0.2, legacy_ties=False):
+    """Match with replacement, balancing reuse among tied nearest controls."""
     t, e = design(treatment, probability)
     if not np.isfinite(caliper_sd) or caliper_sd < 0:
         raise ValueError("Caliper must be finite and nonnegative")
@@ -110,16 +110,33 @@ def match(treatment, probability, *, caliper_sd=0.2):
     radius = float(caliper_sd * scores.std(ddof=1))
     treated, controls = np.flatnonzero(t), np.flatnonzero(~t)
     sorted_controls = controls[np.argsort(scores[controls], kind="stable")]
-    values, first = np.unique(scores[sorted_controls], return_index=True)
-    candidate = sorted_controls[first]
+    values, first, sizes = np.unique(
+        scores[sorted_controls], return_index=True, return_counts=True
+    )
     split = np.searchsorted(values, scores[treated])
     left = np.maximum(split - 1, 0)
     right = np.minimum(split, len(values) - 1)
     dl, dr = abs(scores[treated] - values[left]), abs(scores[treated] - values[right])
-    nearest = np.where(dl <= dr, left, right)
     distance = np.minimum(dl, dr)
     keep = distance <= radius
-    return treated[keep], candidate[nearest[keep]], distance[keep], radius
+    if legacy_ties:
+        nearest = np.where(dl <= dr, left, right)
+        return (
+            treated[keep],
+            sorted_controls[first[nearest[keep]]],
+            distance[keep],
+            radius,
+        )
+    reuse = np.zeros(len(values), dtype=int)
+    chosen = []
+    for a, b, da, db in zip(left[keep], right[keep], dl[keep], dr[keep], strict=True):
+        if da == db:
+            group = a if reuse[a] // sizes[a] <= reuse[b] // sizes[b] else b
+        else:
+            group = a if da < db else b
+        chosen.append(sorted_controls[first[group] + reuse[group] % sizes[group]])
+        reuse[group] += 1
+    return treated[keep], np.asarray(chosen, dtype=int), distance[keep], radius
 
 
 def overlap_profiles(probability):

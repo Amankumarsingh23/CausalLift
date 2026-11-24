@@ -1,0 +1,237 @@
+{
+  "datasets": {
+    "A": {
+      "estimand": "validation ATE",
+      "status": "supported_under_assumptions",
+      "identification": "randomized",
+      "adjustment_set": [],
+      "fitted_features": [
+        "engagement",
+        "loyalty",
+        "spend",
+        "recency",
+        "price_sensitivity",
+        "activity"
+      ],
+      "assumptions": [
+        "consistency",
+        "positivity",
+        "exchangeability under stated design"
+      ],
+      "overlap_status": "no weight flag",
+      "weights_and_balance": {
+        "dataset": "A",
+        "model": "known_design",
+        "profile": "unmodified",
+        "n": 4001,
+        "estimand": "validation ATE",
+        "excluded": 0,
+        "clipped_scores": 0,
+        "true_ate": 0.10000000000000002,
+        "maximum_weight": 2.0,
+        "ess_treated": 1984.0,
+        "ess_control": 2017.0,
+        "ess_treated_fraction": 1.0,
+        "ess_control_fraction": 1.0,
+        "weighted_smd": "{\"engagement\": -0.00926706474462138, \"loyalty\": 0.011527917533988056, \"spend\": 0.016942018277319747, \"recency\": -0.03424764875639453, \"price_sensitivity\": -0.0011254031493930622, \"activity\": -0.021861321625063643}",
+        "hajek": 0.10402581084971291,
+        "aipw": 0.10206641551102903
+      },
+      "extreme_weight_warning": false,
+      "original_aipw": 0.10206641551102903,
+      "subset_stability": {
+        "estimate": {
+          "mean": 0.10364849855615044,
+          "sd": 0.004968433412319412,
+          "n": 20,
+          "q05": 0.09673056110451463,
+          "q95": 0.10976010158643733
+        },
+        "truth": {
+          "mean": 0.10000000000000002,
+          "sd": 1.4238309865648918e-17,
+          "n": 20,
+          "q05": 0.1,
+          "q95": 0.1
+        },
+        "error": {
+          "mean": 0.0036484985561504174,
+          "sd": 0.004968433412319412,
+          "n": 20,
+          "q05": -0.0032694388954853746,
+          "q95": 0.009760101586437326
+        }
+      },
+      "placebo": {
+        "mean": -0.005183656540019585,
+        "sd": 0.013236113968639222,
+        "n": 40,
+        "q05": -0.021361835415084462,
+        "q95": 0.012694786485131214,
+        "nominal_rejection_share": 0.025
+      },
+      "random_feature": null,
+      "negative_control": "separate simulation only",
+      "uncertainty": "Approximate Wald intervals; subset quantiles are descriptive; matching inference unsupported.",
+      "hidden_confounding": "A successful refutation cannot establish identification; the strength sweep is not a real-world bound.",
+      "train_fingerprint": "06868702eb5edb6a953421af9fcc4b6810448ebb07905e31c523845f3ff19983",
+      "validation_fingerprint": "c122ec44f281edb7ca61c8033192a850bff236b3aa9459e2c0bec880a6e5bf0d",
+      "train_outcome_fingerprint": "47110bace11167a3a3f006d87f9d985cb3f12367210de68b68d3498e7b9f2748",
+      "validation_outcome_fingerprint": "4d3e897a97f06e8257232d0f2ed7b901325d2ba619f64879fe580e49177dafd5"
+    },
+    "C": {
+      "estimand": "validation ATE",
+      "status": "caution",
+      "identification": "observed backdoor assumed",
+      "adjustment_set": [
+        "engagement",
+        "loyalty"
+      ],
+      "fitted_features": [
+        "engagement",
+        "loyalty",
+        "spend",
+        "recency",
+        "price_sensitivity",
+        "activity"
+      ],
+      "assumptions": [
+        "consistency",
+        "positivity",
+        "exchangeability under stated design"
+      ],
+      "overlap_status": "weight concentration",
+      "weights_and_balance": {
+        "dataset": "C",
+        "model": "logistic",
+        "profile": "unmodified",
+        "n": 4000,
+        "estimand": "validation ATE",
+        "excluded": 0,
+        "clipped_scores": 0,
+        "true_ate": -0.0008301757804972183,
+        "maximum_weight": 110.71344354061547,
+        "ess_treated": 450.0401244892534,
+        "ess_control": 1114.2451179528712,
+        "ess_treated_fraction": 0.25555941197572596,
+        "ess_control_fraction": 0.49765302275697687,
+        "weighted_smd": "{\"engagement\": -0.04129271951340762, \"loyalty\": -0.08006748881697925, \"spend\": 0.03223895244863003, \"recency\": -0.030882255272316535, \"price_sensitivity\": -0.04100501869344221, \"activity\": -0.025858890809832977}",
+        "hajek": -0.023694198269793965,
+        "aipw": -0.01747675413129275
+      },
+      "extreme_weight_warning": true,
+      "original_aipw": -0.01747675413129275,
+      "subset_stability": {
+        "estimate": {
+          "mean": -0.0190863145635927,
+          "sd": 0.01097098855659088,
+          "n": 20,
+          "q05": -0.03414035288415046,
+          "q95": -0.0035638827967633346
+        },
+        "truth": {
+          "mean": -0.0006801039529367008,
+          "sd": 0.0007303149687541292,
+          "n": 20,
+          "q05": -0.0019203117981089705,
+          "q95": 0.00024683859703736425
+        },
+        "error": {
+          "mean": -0.018406210610655997,
+          "sd": 0.011299583595464116,
+          "n": 20,
+          "q05": -0.03386814325446128,
+          "q95": -0.002722556351774886
+        }
+      },
+      "placebo": null,
+      "random_feature": {
+        "mean": -5.599305992409371e-05,
+        "sd": 0.0004570603145472111,
+        "n": 15,
+        "q05": -0.0008452502317926325,
+        "q95": 0.00048603995157046377
+      },
+      "negative_control": "separate simulation only",
+      "uncertainty": "Approximate Wald intervals; subset quantiles are descriptive; matching inference unsupported.",
+      "hidden_confounding": "A successful refutation cannot establish identification; the strength sweep is not a real-world bound.",
+      "train_fingerprint": "c4597d44f76322a286ccb623a84939c4f98a30e865055fe00cf5edcc9bff0177",
+      "validation_fingerprint": "46b76d827840f506b6d14f51020fe55beb0a0848e6890944b9238d77a17409ac",
+      "train_outcome_fingerprint": "317b776b6b0cd2d7dc4228b8c98067c0f7a0de08d36a6cd634087d9bbf0d1919",
+      "validation_outcome_fingerprint": "e9cf43f83aeb156864cadf15bfb9244d7e42f4bfdb2e294ef0762a0e4e00f16f"
+    },
+    "F": {
+      "estimand": "validation ATE",
+      "status": "not_identified",
+      "identification": "hidden backdoor open",
+      "adjustment_set": null,
+      "fitted_features": [
+        "engagement",
+        "loyalty",
+        "spend",
+        "recency",
+        "price_sensitivity",
+        "activity"
+      ],
+      "assumptions": [
+        "consistency",
+        "positivity",
+        "exchangeability under stated design"
+      ],
+      "overlap_status": "weight concentration",
+      "weights_and_balance": {
+        "dataset": "F",
+        "model": "logistic",
+        "profile": "unmodified",
+        "n": 4001,
+        "estimand": "validation ATE",
+        "excluded": 0,
+        "clipped_scores": 0,
+        "true_ate": -0.001069675526524926,
+        "maximum_weight": 38.52448771057008,
+        "ess_treated": 1096.1086111016803,
+        "ess_control": 1270.8785366900026,
+        "ess_treated_fraction": 0.5480543055508401,
+        "ess_control_fraction": 0.6351217074912557,
+        "weighted_smd": "{\"engagement\": 0.1822829732834063, \"loyalty\": -0.013730578573627686, \"spend\": 0.001753931908191665, \"recency\": 0.045571392173143765, \"price_sensitivity\": 0.006276642132776784, \"activity\": 0.015265348101779529}",
+        "hajek": 0.1477090696747192,
+        "aipw": 0.14510525636586533
+      },
+      "extreme_weight_warning": true,
+      "original_aipw": 0.14510525636586533,
+      "subset_stability": {
+        "estimate": {
+          "mean": 0.1446442003173889,
+          "sd": 0.008898646935092824,
+          "n": 20,
+          "q05": 0.1326593764835129,
+          "q95": 0.15652857016872265
+        },
+        "truth": {
+          "mean": -0.0008794208192963504,
+          "sd": 0.00046347594356086386,
+          "n": 20,
+          "q05": -0.0016988330345791016,
+          "q95": -0.00023148247300512715
+        },
+        "error": {
+          "mean": 0.14552362113668524,
+          "sd": 0.008713230293470257,
+          "n": 20,
+          "q05": 0.13392517111355287,
+          "q95": 0.1578014739749148
+        }
+      },
+      "placebo": null,
+      "random_feature": null,
+      "negative_control": "separate simulation only",
+      "uncertainty": "Approximate Wald intervals; subset quantiles are descriptive; matching inference unsupported.",
+      "hidden_confounding": "A successful refutation cannot establish identification; the strength sweep is not a real-world bound.",
+      "train_fingerprint": "d4b38f533853d96a7a00b93d17ce4f3e259bcddd511131bb5a645ad24fcf799a",
+      "validation_fingerprint": "37b15e3dfe54e39337306bb08f1dc05f5a8cb533bdabb3b08416a2949a729916",
+      "train_outcome_fingerprint": "6ebb097dd24182597f3bd64089463da8af7df0883e0c7eddc2301f417732c435",
+      "validation_outcome_fingerprint": "9b55a9e6b0c845e5e3b50ec89e224c240f67bbe2f2eaa1d2d146ef54257f1a51"
+    }
+  },
+  "session07_dml_coverage": "0/30 preserved"
+}

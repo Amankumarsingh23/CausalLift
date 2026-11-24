@@ -51,7 +51,8 @@ def test_matching_and_overlap_safeguards():
     e = [0.4, 0.4, 0.4, 0.4, 0.95]
     tr, co, dist, _ = match(t, e)
     np.testing.assert_array_equal(tr, [2, 3])
-    np.testing.assert_array_equal(co, [0, 0])
+    np.testing.assert_array_equal(co, [0, 1])
+    np.testing.assert_array_equal(match(t, e, legacy_ties=True)[1], [0, 0])
     np.testing.assert_array_equal(dist, [0, 0])
     profiles = overlap_profiles([0.01, 0.5, 0.99])
     assert profiles["clip_05_95"][0].all()
