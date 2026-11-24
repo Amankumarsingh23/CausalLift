@@ -1,0 +1,1524 @@
+{
+  "runs": {
+    "Criteo 200k/conversion/r_linear": {
+      "dataset": "Criteo 200k",
+      "outcome": "conversion",
+      "policy": "r_linear",
+      "training_n": 120000,
+      "seed": 42,
+      "propensity_source": "released training share",
+      "fit_seconds": 1.2476304000010714,
+      "validation_r_loss": 0.0025748112869717664,
+      "constant_effect_r_loss": 0.002574740660080548,
+      "strategy": "joint",
+      "warnings": [],
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 210,
+            "control_events": 24
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 105,
+            "control_events": 11
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.3591947999666445
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 210,
+            "control_events": 23
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 105,
+            "control_events": 12
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.2728787999949418
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 210,
+            "control_events": 23
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 105,
+            "control_events": 12
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.3042753000045195
+        }
+      ],
+      "covered_rows": 120000,
+      "membership_sha256": "ade0493874eb32f4743d40a19f7503a6dd778e836fc9520e7179a9cd287f28cd",
+      "oof_metrics": {
+        "n": 120000,
+        "positives": 350,
+        "prevalence": 0.002916666666666667,
+        "mean_probability": 0.0029048983103208102,
+        "roc_auc": 0.9547660915766223,
+        "average_precision": 0.21395165265116867,
+        "log_loss": 0.012427315187409754,
+        "brier_score": 0.0025689570820567535,
+        "warning": ""
+      },
+      "propensity_min": 0.85,
+      "propensity_max": 0.85,
+      "outcome_residual_mean": 1.1768356345856024e-05,
+      "outcome_residual_sd": 0.050684878845298056,
+      "treatment_residual_min": -0.85,
+      "treatment_residual_max": 0.15000000000000002,
+      "treatment_residual_mean": 4.204044519913926e-18,
+      "treatment_residual_sd": 0.3570714214271425,
+      "minimum_absolute_treatment_residual": 0.15000000000000002,
+      "mean_raw_weight": 0.12749999999999997
+    },
+    "Criteo 200k/conversion/r_lightgbm": {
+      "dataset": "Criteo 200k",
+      "outcome": "conversion",
+      "policy": "r_lightgbm",
+      "training_n": 120000,
+      "seed": 42,
+      "propensity_source": "released training share",
+      "fit_seconds": 1.328802500036545,
+      "validation_r_loss": 0.0026296263722204866,
+      "constant_effect_r_loss": 0.0025548637859820777,
+      "strategy": "joint",
+      "warnings": [],
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 210,
+            "control_events": 24
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 105,
+            "control_events": 11
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.22795879998011515
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 210,
+            "control_events": 23
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 105,
+            "control_events": 12
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.25611610000487417
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 210,
+            "control_events": 23
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 105,
+            "control_events": 12
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.2349955000099726
+        }
+      ],
+      "covered_rows": 120000,
+      "membership_sha256": "ade0493874eb32f4743d40a19f7503a6dd778e836fc9520e7179a9cd287f28cd",
+      "oof_metrics": {
+        "n": 120000,
+        "positives": 350,
+        "prevalence": 0.002916666666666667,
+        "mean_probability": 0.0028347970437976482,
+        "roc_auc": 0.9519451734224823,
+        "average_precision": 0.19667519315808743,
+        "log_loss": 0.012351923190553461,
+        "brier_score": 0.0025817193087846317,
+        "warning": ""
+      },
+      "propensity_min": 0.85,
+      "propensity_max": 0.85,
+      "outcome_residual_mean": 8.186962286901824e-05,
+      "outcome_residual_sd": 0.05081055605038665,
+      "treatment_residual_min": -0.85,
+      "treatment_residual_max": 0.15000000000000002,
+      "treatment_residual_mean": 4.204044519913926e-18,
+      "treatment_residual_sd": 0.3570714214271425,
+      "minimum_absolute_treatment_residual": 0.15000000000000002,
+      "mean_raw_weight": 0.12749999999999997
+    },
+    "Criteo 200k/visit/r_linear": {
+      "dataset": "Criteo 200k",
+      "outcome": "visit",
+      "policy": "r_linear",
+      "training_n": 120000,
+      "seed": 42,
+      "propensity_source": "released training share",
+      "fit_seconds": 0.8558058000053279,
+      "validation_r_loss": 0.030422301313377722,
+      "constant_effect_r_loss": 0.030407217659909398,
+      "strategy": "joint",
+      "warnings": [],
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 3313,
+            "control_events": 460
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 1656,
+            "control_events": 230
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.19106470001861453
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 3313,
+            "control_events": 460
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 1656,
+            "control_events": 230
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.1879268999909982
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 3312,
+            "control_events": 460
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 1657,
+            "control_events": 230
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.18144680000841618
+        }
+      ],
+      "covered_rows": 120000,
+      "membership_sha256": "2fa7c3ee17dc3909db68b6611b0a6e076bb3991032127ea03c15d7f4f9d8660e",
+      "oof_metrics": {
+        "n": 120000,
+        "positives": 5659,
+        "prevalence": 0.04715833333333333,
+        "mean_probability": 0.04715315435486435,
+        "roc_auc": 0.9300720360374404,
+        "average_precision": 0.47650425390813095,
+        "log_loss": 0.1127493846549248,
+        "brier_score": 0.03169145584280847,
+        "warning": ""
+      },
+      "propensity_min": 0.85,
+      "propensity_max": 0.85,
+      "outcome_residual_mean": 5.1789784689884046e-06,
+      "outcome_residual_sd": 0.17802094207139407,
+      "treatment_residual_min": -0.85,
+      "treatment_residual_max": 0.15000000000000002,
+      "treatment_residual_mean": 4.204044519913926e-18,
+      "treatment_residual_sd": 0.3570714214271425,
+      "minimum_absolute_treatment_residual": 0.15000000000000002,
+      "mean_raw_weight": 0.12749999999999997
+    },
+    "Criteo 200k/visit/r_lightgbm": {
+      "dataset": "Criteo 200k",
+      "outcome": "visit",
+      "policy": "r_lightgbm",
+      "training_n": 120000,
+      "seed": 42,
+      "propensity_source": "released training share",
+      "fit_seconds": 1.4705951000214554,
+      "validation_r_loss": 0.029081643919626813,
+      "constant_effect_r_loss": 0.029027182332228573,
+      "strategy": "joint",
+      "warnings": [],
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 3313,
+            "control_events": 460
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 1656,
+            "control_events": 230
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.28966700000455603
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 3313,
+            "control_events": 460
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 1656,
+            "control_events": 230
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.26928499998757616
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 3312,
+            "control_events": 460
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 1657,
+            "control_events": 230
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.2932802999857813
+        }
+      ],
+      "covered_rows": 120000,
+      "membership_sha256": "2fa7c3ee17dc3909db68b6611b0a6e076bb3991032127ea03c15d7f4f9d8660e",
+      "oof_metrics": {
+        "n": 120000,
+        "positives": 5659,
+        "prevalence": 0.04715833333333333,
+        "mean_probability": 0.047202719832778135,
+        "roc_auc": 0.9436546908876021,
+        "average_precision": 0.5031084831596353,
+        "log_loss": 0.1053793602436759,
+        "brier_score": 0.0303340393740987,
+        "warning": ""
+      },
+      "propensity_min": 0.85,
+      "propensity_max": 0.85,
+      "outcome_residual_mean": -4.438649944480844e-05,
+      "outcome_residual_sd": 0.1741666943015724,
+      "treatment_residual_min": -0.85,
+      "treatment_residual_max": 0.15000000000000002,
+      "treatment_residual_mean": 4.204044519913926e-18,
+      "treatment_residual_sd": 0.3570714214271425,
+      "minimum_absolute_treatment_residual": 0.15000000000000002,
+      "mean_raw_weight": 0.12749999999999997
+    },
+    "synthetic_A/outcome/r_linear": {
+      "dataset": "synthetic_A",
+      "outcome": "outcome",
+      "policy": "r_linear",
+      "training_n": 12000,
+      "seed": 42,
+      "propensity_source": "known randomized design",
+      "fit_seconds": 0.08236669999314472,
+      "validation_r_loss": 0.22697487346232162,
+      "constant_effect_r_loss": 0.22696405876530015,
+      "strategy": "joint",
+      "warnings": [],
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 8000,
+            "treated_n": 3966,
+            "control_n": 4034,
+            "treated_events": 1781,
+            "control_events": 1393
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1984,
+            "control_n": 2016,
+            "treated_events": 891,
+            "control_events": 696
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.010764900012873113
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 8000,
+            "treated_n": 3966,
+            "control_n": 4034,
+            "treated_events": 1781,
+            "control_events": 1393
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1984,
+            "control_n": 2016,
+            "treated_events": 891,
+            "control_events": 696
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.013097800023388118
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 8000,
+            "treated_n": 3968,
+            "control_n": 4032,
+            "treated_events": 1782,
+            "control_events": 1392
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1982,
+            "control_n": 2018,
+            "treated_events": 890,
+            "control_events": 697
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.014863199961837381
+        }
+      ],
+      "covered_rows": 12000,
+      "membership_sha256": "3a27706fa4696969497a350232f04dfe87d5e4e072f83b80cdf52226b77625d8",
+      "oof_metrics": {
+        "n": 12000,
+        "positives": 4761,
+        "prevalence": 0.39675,
+        "mean_probability": 0.39672867079017266,
+        "roc_auc": 0.6171151507597052,
+        "average_precision": 0.5047565913117749,
+        "log_loss": 0.6523541054888463,
+        "brier_score": 0.22999653911959858,
+        "warning": ""
+      },
+      "propensity_min": 0.5,
+      "propensity_max": 0.5,
+      "outcome_residual_mean": 2.1329209827325e-05,
+      "outcome_residual_sd": 0.47957954362614696,
+      "treatment_residual_min": -0.5,
+      "treatment_residual_max": 0.5,
+      "treatment_residual_mean": -0.004166666666666667,
+      "treatment_residual_sd": 0.4999826385874703,
+      "minimum_absolute_treatment_residual": 0.5,
+      "mean_raw_weight": 0.25
+    },
+    "synthetic_A/outcome/r_lightgbm": {
+      "dataset": "synthetic_A",
+      "outcome": "outcome",
+      "policy": "r_lightgbm",
+      "training_n": 12000,
+      "seed": 42,
+      "propensity_source": "known randomized design",
+      "fit_seconds": 0.18615239998325706,
+      "validation_r_loss": 0.2286146054301144,
+      "constant_effect_r_loss": 0.22737098160804103,
+      "strategy": "joint",
+      "warnings": [],
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 8000,
+            "treated_n": 3966,
+            "control_n": 4034,
+            "treated_events": 1781,
+            "control_events": 1393
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1984,
+            "control_n": 2016,
+            "treated_events": 891,
+            "control_events": 696
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.03265499998815358
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 8000,
+            "treated_n": 3966,
+            "control_n": 4034,
+            "treated_events": 1781,
+            "control_events": 1393
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1984,
+            "control_n": 2016,
+            "treated_events": 891,
+            "control_events": 696
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.035042400006204844
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 8000,
+            "treated_n": 3968,
+            "control_n": 4032,
+            "treated_events": 1782,
+            "control_events": 1392
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1982,
+            "control_n": 2018,
+            "treated_events": 890,
+            "control_events": 697
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.03960509999888018
+        }
+      ],
+      "covered_rows": 12000,
+      "membership_sha256": "3a27706fa4696969497a350232f04dfe87d5e4e072f83b80cdf52226b77625d8",
+      "oof_metrics": {
+        "n": 12000,
+        "positives": 4761,
+        "prevalence": 0.39675,
+        "mean_probability": 0.39726593250721076,
+        "roc_auc": 0.5978954836893523,
+        "average_precision": 0.4876152154696004,
+        "log_loss": 0.6588176202566581,
+        "brier_score": 0.23301035528840391,
+        "warning": ""
+      },
+      "propensity_min": 0.5,
+      "propensity_max": 0.5,
+      "outcome_residual_mean": -0.0005159325072107199,
+      "outcome_residual_sd": 0.4827111860129739,
+      "treatment_residual_min": -0.5,
+      "treatment_residual_max": 0.5,
+      "treatment_residual_mean": -0.004166666666666667,
+      "treatment_residual_sd": 0.4999826385874703,
+      "minimum_absolute_treatment_residual": 0.5,
+      "mean_raw_weight": 0.25
+    },
+    "synthetic_B/outcome/r_linear": {
+      "dataset": "synthetic_B",
+      "outcome": "outcome",
+      "policy": "r_linear",
+      "training_n": 12001,
+      "seed": 42,
+      "propensity_source": "known randomized design",
+      "fit_seconds": 0.0825565000413917,
+      "validation_r_loss": 0.21275188396684933,
+      "constant_effect_r_loss": 0.21343536162249854,
+      "strategy": "joint",
+      "warnings": [],
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 8000,
+            "treated_n": 3967,
+            "control_n": 4033,
+            "treated_events": 1388,
+            "control_events": 1393
+          },
+          "held_out": {
+            "n": 4001,
+            "treated_n": 1984,
+            "control_n": 2017,
+            "treated_events": 695,
+            "control_events": 696
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.012019299960229546
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 8001,
+            "treated_n": 3968,
+            "control_n": 4033,
+            "treated_events": 1389,
+            "control_events": 1392
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1983,
+            "control_n": 2017,
+            "treated_events": 694,
+            "control_events": 697
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.014426100009586662
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 8001,
+            "treated_n": 3967,
+            "control_n": 4034,
+            "treated_events": 1389,
+            "control_events": 1393
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1984,
+            "control_n": 2016,
+            "treated_events": 694,
+            "control_events": 696
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.01475519995437935
+        }
+      ],
+      "covered_rows": 12001,
+      "membership_sha256": "e7f5cd68b1600ef14fc35d8ecd424d7710478d1fc110098e74b88164d2991354",
+      "oof_metrics": {
+        "n": 12001,
+        "positives": 4172,
+        "prevalence": 0.34763769685859514,
+        "mean_probability": 0.3475239041858549,
+        "roc_auc": 0.6638130144494369,
+        "average_precision": 0.49968097059725564,
+        "log_loss": 0.6091096795835839,
+        "brier_score": 0.21006333947966183,
+        "warning": ""
+      },
+      "propensity_min": 0.5,
+      "propensity_max": 0.5,
+      "outcome_residual_mean": 0.00011379267274027385,
+      "outcome_residual_sd": 0.45832665919722526,
+      "treatment_residual_min": -0.5,
+      "treatment_residual_max": 0.5,
+      "treatment_residual_mean": -0.004124656278643446,
+      "treatment_residual_sd": 0.4999829869211382,
+      "minimum_absolute_treatment_residual": 0.5,
+      "mean_raw_weight": 0.25
+    },
+    "synthetic_B/outcome/r_lightgbm": {
+      "dataset": "synthetic_B",
+      "outcome": "outcome",
+      "policy": "r_lightgbm",
+      "training_n": 12001,
+      "seed": 42,
+      "propensity_source": "known randomized design",
+      "fit_seconds": 0.1648808000027202,
+      "validation_r_loss": 0.213327535724572,
+      "constant_effect_r_loss": 0.21265842799406057,
+      "strategy": "joint",
+      "warnings": [],
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 8000,
+            "treated_n": 3967,
+            "control_n": 4033,
+            "treated_events": 1388,
+            "control_events": 1393
+          },
+          "held_out": {
+            "n": 4001,
+            "treated_n": 1984,
+            "control_n": 2017,
+            "treated_events": 695,
+            "control_events": 696
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.034351599984802306
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 8001,
+            "treated_n": 3968,
+            "control_n": 4033,
+            "treated_events": 1389,
+            "control_events": 1392
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1983,
+            "control_n": 2017,
+            "treated_events": 694,
+            "control_events": 697
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.032471699989400804
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 8001,
+            "treated_n": 3967,
+            "control_n": 4034,
+            "treated_events": 1389,
+            "control_events": 1393
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1984,
+            "control_n": 2016,
+            "treated_events": 694,
+            "control_events": 696
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.03461020003305748
+        }
+      ],
+      "covered_rows": 12001,
+      "membership_sha256": "e7f5cd68b1600ef14fc35d8ecd424d7710478d1fc110098e74b88164d2991354",
+      "oof_metrics": {
+        "n": 12001,
+        "positives": 4172,
+        "prevalence": 0.34763769685859514,
+        "mean_probability": 0.34757239259509576,
+        "roc_auc": 0.6541578242360955,
+        "average_precision": 0.48691981248348853,
+        "log_loss": 0.6131778095503503,
+        "brier_score": 0.21200479835684793,
+        "warning": ""
+      },
+      "propensity_min": 0.5,
+      "propensity_max": 0.5,
+      "outcome_residual_mean": 6.53042634993149e-05,
+      "outcome_residual_sd": 0.46043978335087543,
+      "treatment_residual_min": -0.5,
+      "treatment_residual_max": 0.5,
+      "treatment_residual_mean": -0.004124656278643446,
+      "treatment_residual_sd": 0.4999829869211382,
+      "minimum_absolute_treatment_residual": 0.5,
+      "mean_raw_weight": 0.25
+    },
+    "synthetic_D/outcome/r_linear": {
+      "dataset": "synthetic_D",
+      "outcome": "outcome",
+      "policy": "r_linear",
+      "training_n": 12000,
+      "seed": 42,
+      "propensity_source": "known randomized design",
+      "fit_seconds": 0.08651870000176132,
+      "validation_r_loss": 0.2156584494514396,
+      "constant_effect_r_loss": 0.21632247638862176,
+      "strategy": "joint",
+      "warnings": [],
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 8000,
+            "treated_n": 1224,
+            "control_n": 6776,
+            "treated_events": 415,
+            "control_events": 2331
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 612,
+            "control_n": 3388,
+            "treated_events": 208,
+            "control_events": 1165
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.012804600002709776
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 8000,
+            "treated_n": 1225,
+            "control_n": 6775,
+            "treated_events": 416,
+            "control_events": 2330
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 611,
+            "control_n": 3389,
+            "treated_events": 207,
+            "control_events": 1166
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.01628149999305606
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 8000,
+            "treated_n": 1223,
+            "control_n": 6777,
+            "treated_events": 415,
+            "control_events": 2331
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 613,
+            "control_n": 3387,
+            "treated_events": 208,
+            "control_events": 1165
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.016221600002609193
+        }
+      ],
+      "covered_rows": 12000,
+      "membership_sha256": "214b1e4ae5821ef621756e8a1350f22e2964bcdf753db72ea3b0fa14f78ad0f3",
+      "oof_metrics": {
+        "n": 12000,
+        "positives": 4119,
+        "prevalence": 0.34325,
+        "mean_probability": 0.34320559230760184,
+        "roc_auc": 0.637516130863689,
+        "average_precision": 0.46994288846622734,
+        "log_loss": 0.6177389867662544,
+        "brier_score": 0.21378856846517624,
+        "warning": ""
+      },
+      "propensity_min": 0.15,
+      "propensity_max": 0.15,
+      "outcome_residual_mean": 4.4407692398245046e-05,
+      "outcome_residual_sd": 0.4623727570836469,
+      "treatment_residual_min": -0.15,
+      "treatment_residual_max": 0.85,
+      "treatment_residual_mean": 0.003000000000000007,
+      "treatment_residual_sd": 0.3599874997829786,
+      "minimum_absolute_treatment_residual": 0.15,
+      "mean_raw_weight": 0.12959999999999994
+    },
+    "synthetic_D/outcome/r_lightgbm": {
+      "dataset": "synthetic_D",
+      "outcome": "outcome",
+      "policy": "r_lightgbm",
+      "training_n": 12000,
+      "seed": 42,
+      "propensity_source": "known randomized design",
+      "fit_seconds": 0.15965699998196214,
+      "validation_r_loss": 0.2169558353625981,
+      "constant_effect_r_loss": 0.2176821116323761,
+      "strategy": "joint",
+      "warnings": [],
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 8000,
+            "treated_n": 1224,
+            "control_n": 6776,
+            "treated_events": 415,
+            "control_events": 2331
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 612,
+            "control_n": 3388,
+            "treated_events": 208,
+            "control_events": 1165
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.03821959998458624
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 8000,
+            "treated_n": 1225,
+            "control_n": 6775,
+            "treated_events": 416,
+            "control_events": 2330
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 611,
+            "control_n": 3389,
+            "treated_events": 207,
+            "control_events": 1166
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.02391480002552271
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 8000,
+            "treated_n": 1223,
+            "control_n": 6777,
+            "treated_events": 415,
+            "control_events": 2331
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 613,
+            "control_n": 3387,
+            "treated_events": 208,
+            "control_events": 1165
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.030852199997752905
+        }
+      ],
+      "covered_rows": 12000,
+      "membership_sha256": "214b1e4ae5821ef621756e8a1350f22e2964bcdf753db72ea3b0fa14f78ad0f3",
+      "oof_metrics": {
+        "n": 12000,
+        "positives": 4119,
+        "prevalence": 0.34325,
+        "mean_probability": 0.3427130961606784,
+        "roc_auc": 0.6272449629240043,
+        "average_precision": 0.4526300093590975,
+        "log_loss": 0.6215501132741709,
+        "brier_score": 0.21563468271290404,
+        "warning": ""
+      },
+      "propensity_min": 0.15,
+      "propensity_max": 0.15,
+      "outcome_residual_mean": 0.0005369038393216127,
+      "outcome_residual_sd": 0.4643645060156637,
+      "treatment_residual_min": -0.15,
+      "treatment_residual_max": 0.85,
+      "treatment_residual_mean": 0.003000000000000007,
+      "treatment_residual_sd": 0.3599874997829786,
+      "minimum_absolute_treatment_residual": 0.15,
+      "mean_raw_weight": 0.12959999999999994
+    },
+    "synthetic_E/outcome/r_linear": {
+      "dataset": "synthetic_E",
+      "outcome": "outcome",
+      "policy": "r_linear",
+      "training_n": 12000,
+      "seed": 42,
+      "propensity_source": "known randomized design",
+      "fit_seconds": 0.08289239997975528,
+      "validation_r_loss": 0.21476018607839129,
+      "constant_effect_r_loss": 0.21749645636563794,
+      "strategy": "joint",
+      "warnings": [],
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 8000,
+            "treated_n": 3967,
+            "control_n": 4033,
+            "treated_events": 1478,
+            "control_events": 1393
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1983,
+            "control_n": 2017,
+            "treated_events": 738,
+            "control_events": 696
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.012706400011666119
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 8000,
+            "treated_n": 3966,
+            "control_n": 4034,
+            "treated_events": 1477,
+            "control_events": 1393
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1984,
+            "control_n": 2016,
+            "treated_events": 739,
+            "control_events": 696
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.014509500004351139
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 8000,
+            "treated_n": 3967,
+            "control_n": 4033,
+            "treated_events": 1477,
+            "control_events": 1392
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1983,
+            "control_n": 2017,
+            "treated_events": 739,
+            "control_events": 697
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.01489910000236705
+        }
+      ],
+      "covered_rows": 12000,
+      "membership_sha256": "29982ecb85bb78f560ce12b52a9e22d023e77c0dc8a10dba2acc10ea2bafc166",
+      "oof_metrics": {
+        "n": 12000,
+        "positives": 4305,
+        "prevalence": 0.35875,
+        "mean_probability": 0.3586698012355616,
+        "roc_auc": 0.635829893915759,
+        "average_precision": 0.4869853548966775,
+        "log_loss": 0.6262643973777432,
+        "brier_score": 0.21792006819648624,
+        "warning": ""
+      },
+      "propensity_min": 0.5,
+      "propensity_max": 0.5,
+      "outcome_residual_mean": 8.019876443841323e-05,
+      "outcome_residual_sd": 0.46681908890344703,
+      "treatment_residual_min": -0.5,
+      "treatment_residual_max": 0.5,
+      "treatment_residual_mean": -0.004166666666666667,
+      "treatment_residual_sd": 0.4999826385874703,
+      "minimum_absolute_treatment_residual": 0.5,
+      "mean_raw_weight": 0.25
+    },
+    "synthetic_E/outcome/r_lightgbm": {
+      "dataset": "synthetic_E",
+      "outcome": "outcome",
+      "policy": "r_lightgbm",
+      "training_n": 12000,
+      "seed": 42,
+      "propensity_source": "known randomized design",
+      "fit_seconds": 0.19055529998149723,
+      "validation_r_loss": 0.21325494015933344,
+      "constant_effect_r_loss": 0.21531748004161963,
+      "strategy": "joint",
+      "warnings": [],
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 8000,
+            "treated_n": 3967,
+            "control_n": 4033,
+            "treated_events": 1478,
+            "control_events": 1393
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1983,
+            "control_n": 2017,
+            "treated_events": 738,
+            "control_events": 696
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.03488140000263229
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 8000,
+            "treated_n": 3966,
+            "control_n": 4034,
+            "treated_events": 1477,
+            "control_events": 1393
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1984,
+            "control_n": 2016,
+            "treated_events": 739,
+            "control_events": 696
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.03689380001742393
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 8000,
+            "treated_n": 3967,
+            "control_n": 4033,
+            "treated_events": 1477,
+            "control_events": 1392
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1983,
+            "control_n": 2017,
+            "treated_events": 739,
+            "control_events": 697
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.03780190000543371
+        }
+      ],
+      "covered_rows": 12000,
+      "membership_sha256": "29982ecb85bb78f560ce12b52a9e22d023e77c0dc8a10dba2acc10ea2bafc166",
+      "oof_metrics": {
+        "n": 12000,
+        "positives": 4305,
+        "prevalence": 0.35875,
+        "mean_probability": 0.35754675202311226,
+        "roc_auc": 0.6294214910960025,
+        "average_precision": 0.46915697574212845,
+        "log_loss": 0.6295017845151557,
+        "brier_score": 0.21952870651589457,
+        "warning": ""
+      },
+      "propensity_min": 0.5,
+      "propensity_max": 0.5,
+      "outcome_residual_mean": 0.0012032479768877373,
+      "outcome_residual_sd": 0.46853736106120786,
+      "treatment_residual_min": -0.5,
+      "treatment_residual_max": 0.5,
+      "treatment_residual_mean": -0.004166666666666667,
+      "treatment_residual_sd": 0.4999826385874703,
+      "minimum_absolute_treatment_residual": 0.5,
+      "mean_raw_weight": 0.25
+    },
+    "Criteo 1M/conversion/r_linear": {
+      "dataset": "Criteo 1M",
+      "outcome": "conversion",
+      "policy": "r_linear",
+      "training_n": 600000,
+      "seed": 42,
+      "propensity_source": "released training share",
+      "fit_seconds": 6.4062700000358745,
+      "validation_r_loss": 0.00255306844823316,
+      "constant_effect_r_loss": 0.002553677086507397,
+      "strategy": "joint",
+      "warnings": [],
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 400000,
+            "treated_n": 340000,
+            "control_n": 60000,
+            "treated_events": 1051,
+            "control_events": 117
+          },
+          "held_out": {
+            "n": 200000,
+            "treated_n": 170000,
+            "control_n": 30000,
+            "treated_events": 525,
+            "control_events": 58
+          },
+          "constant_fallback": null,
+          "fit_seconds": 1.6444457999896258
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 400000,
+            "treated_n": 339999,
+            "control_n": 60001,
+            "treated_events": 1050,
+            "control_events": 117
+          },
+          "held_out": {
+            "n": 200000,
+            "treated_n": 170001,
+            "control_n": 29999,
+            "treated_events": 526,
+            "control_events": 58
+          },
+          "constant_fallback": null,
+          "fit_seconds": 1.7065881000016816
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 400000,
+            "treated_n": 340001,
+            "control_n": 59999,
+            "treated_events": 1051,
+            "control_events": 116
+          },
+          "held_out": {
+            "n": 200000,
+            "treated_n": 169999,
+            "control_n": 30001,
+            "treated_events": 525,
+            "control_events": 59
+          },
+          "constant_fallback": null,
+          "fit_seconds": 1.4198766999761574
+        }
+      ],
+      "covered_rows": 600000,
+      "membership_sha256": "837c8ce9c55a8cb832157a776cc5c27f8daac1bbb826cac90dc65544a9276e65",
+      "oof_metrics": {
+        "n": 600000,
+        "positives": 1751,
+        "prevalence": 0.0029183333333333335,
+        "mean_probability": 0.002919393786692325,
+        "roc_auc": 0.9517566159683186,
+        "average_precision": 0.20833084494332704,
+        "log_loss": 0.01245032600498406,
+        "brier_score": 0.002579765912631718,
+        "warning": ""
+      },
+      "propensity_min": 0.85,
+      "propensity_max": 0.85,
+      "outcome_residual_mean": -1.0604533589919464e-06,
+      "outcome_residual_sd": 0.050791396038179115,
+      "treatment_residual_min": -0.85,
+      "treatment_residual_max": 0.15000000000000002,
+      "treatment_residual_mean": 1.0658141036401503e-17,
+      "treatment_residual_sd": 0.3570714214271425,
+      "minimum_absolute_treatment_residual": 0.15000000000000002,
+      "mean_raw_weight": 0.1275
+    },
+    "Criteo 1M/conversion/r_lightgbm": {
+      "dataset": "Criteo 1M",
+      "outcome": "conversion",
+      "policy": "r_lightgbm",
+      "training_n": 600000,
+      "seed": 42,
+      "propensity_source": "released training share",
+      "fit_seconds": 6.196207200002391,
+      "validation_r_loss": 0.0024635620263488405,
+      "constant_effect_r_loss": 0.002451105416892791,
+      "strategy": "joint",
+      "warnings": [],
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 400000,
+            "treated_n": 340000,
+            "control_n": 60000,
+            "treated_events": 1051,
+            "control_events": 117
+          },
+          "held_out": {
+            "n": 200000,
+            "treated_n": 170000,
+            "control_n": 30000,
+            "treated_events": 525,
+            "control_events": 58
+          },
+          "constant_fallback": null,
+          "fit_seconds": 1.1624982999637723
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 400000,
+            "treated_n": 339999,
+            "control_n": 60001,
+            "treated_events": 1050,
+            "control_events": 117
+          },
+          "held_out": {
+            "n": 200000,
+            "treated_n": 170001,
+            "control_n": 29999,
+            "treated_events": 526,
+            "control_events": 58
+          },
+          "constant_fallback": null,
+          "fit_seconds": 1.1328598000109196
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 400000,
+            "treated_n": 340001,
+            "control_n": 59999,
+            "treated_events": 1051,
+            "control_events": 116
+          },
+          "held_out": {
+            "n": 200000,
+            "treated_n": 169999,
+            "control_n": 30001,
+            "treated_events": 525,
+            "control_events": 59
+          },
+          "constant_fallback": null,
+          "fit_seconds": 1.1454720000037923
+        }
+      ],
+      "covered_rows": 600000,
+      "membership_sha256": "837c8ce9c55a8cb832157a776cc5c27f8daac1bbb826cac90dc65544a9276e65",
+      "oof_metrics": {
+        "n": 600000,
+        "positives": 1751,
+        "prevalence": 0.0029183333333333335,
+        "mean_probability": 0.002933370234523778,
+        "roc_auc": 0.9539117880220708,
+        "average_precision": 0.22030013982264599,
+        "log_loss": 0.012072099497237249,
+        "brier_score": 0.002528641408786328,
+        "warning": ""
+      },
+      "propensity_min": 0.85,
+      "propensity_max": 0.85,
+      "outcome_residual_mean": -1.5036901190444141e-05,
+      "outcome_residual_sd": 0.050285596175027404,
+      "treatment_residual_min": -0.85,
+      "treatment_residual_max": 0.15000000000000002,
+      "treatment_residual_mean": 1.0658141036401503e-17,
+      "treatment_residual_sd": 0.3570714214271425,
+      "minimum_absolute_treatment_residual": 0.15000000000000002,
+      "mean_raw_weight": 0.1275
+    },
+    "Criteo 1M/visit/r_linear": {
+      "dataset": "Criteo 1M",
+      "outcome": "visit",
+      "policy": "r_linear",
+      "training_n": 600000,
+      "seed": 42,
+      "propensity_source": "released training share",
+      "fit_seconds": 4.702617799979635,
+      "validation_r_loss": 0.03138600594243912,
+      "constant_effect_r_loss": 0.03141270112766214,
+      "strategy": "joint",
+      "warnings": [],
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 400000,
+            "treated_n": 340000,
+            "control_n": 60000,
+            "treated_events": 16478,
+            "control_events": 2238
+          },
+          "held_out": {
+            "n": 200000,
+            "treated_n": 170000,
+            "control_n": 30000,
+            "treated_events": 8238,
+            "control_events": 1119
+          },
+          "constant_fallback": null,
+          "fit_seconds": 1.0094295000308193
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 400000,
+            "treated_n": 340000,
+            "control_n": 60000,
+            "treated_events": 16477,
+            "control_events": 2238
+          },
+          "held_out": {
+            "n": 200000,
+            "treated_n": 170000,
+            "control_n": 30000,
+            "treated_events": 8239,
+            "control_events": 1119
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.88981949997833
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 400000,
+            "treated_n": 340000,
+            "control_n": 60000,
+            "treated_events": 16477,
+            "control_events": 2238
+          },
+          "held_out": {
+            "n": 200000,
+            "treated_n": 170000,
+            "control_n": 30000,
+            "treated_events": 8239,
+            "control_events": 1119
+          },
+          "constant_fallback": null,
+          "fit_seconds": 1.0998970000073314
+        }
+      ],
+      "covered_rows": 600000,
+      "membership_sha256": "7563af95676d4e3338f1ea4e0ebf21f1c2df0ad5759539bd016e3ac2841e789b",
+      "oof_metrics": {
+        "n": 600000,
+        "positives": 28073,
+        "prevalence": 0.046788333333333335,
+        "mean_probability": 0.046790946851483724,
+        "roc_auc": 0.9321128343438955,
+        "average_precision": 0.48011275010728416,
+        "log_loss": 0.11125953523322935,
+        "brier_score": 0.031320848070019926,
+        "warning": ""
+      },
+      "propensity_min": 0.85,
+      "propensity_max": 0.85,
+      "outcome_residual_mean": -2.613518150389827e-06,
+      "outcome_residual_sd": 0.17697697043171876,
+      "treatment_residual_min": -0.85,
+      "treatment_residual_max": 0.15000000000000002,
+      "treatment_residual_mean": 1.0658141036401503e-17,
+      "treatment_residual_sd": 0.3570714214271425,
+      "minimum_absolute_treatment_residual": 0.15000000000000002,
+      "mean_raw_weight": 0.1275
+    },
+    "Criteo 1M/visit/r_lightgbm": {
+      "dataset": "Criteo 1M",
+      "outcome": "visit",
+      "policy": "r_lightgbm",
+      "training_n": 600000,
+      "seed": 42,
+      "propensity_source": "released training share",
+      "fit_seconds": 7.444212800008245,
+      "validation_r_loss": 0.029899455533054117,
+      "constant_effect_r_loss": 0.029934881750590933,
+      "strategy": "joint",
+      "warnings": [],
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 400000,
+            "treated_n": 340000,
+            "control_n": 60000,
+            "treated_events": 16478,
+            "control_events": 2238
+          },
+          "held_out": {
+            "n": 200000,
+            "treated_n": 170000,
+            "control_n": 30000,
+            "treated_events": 8238,
+            "control_events": 1119
+          },
+          "constant_fallback": null,
+          "fit_seconds": 1.367461399990134
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 400000,
+            "treated_n": 340000,
+            "control_n": 60000,
+            "treated_events": 16477,
+            "control_events": 2238
+          },
+          "held_out": {
+            "n": 200000,
+            "treated_n": 170000,
+            "control_n": 30000,
+            "treated_events": 8239,
+            "control_events": 1119
+          },
+          "constant_fallback": null,
+          "fit_seconds": 1.297016899974551
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 400000,
+            "treated_n": 340000,
+            "control_n": 60000,
+            "treated_events": 16477,
+            "control_events": 2238
+          },
+          "held_out": {
+            "n": 200000,
+            "treated_n": 170000,
+            "control_n": 30000,
+            "treated_events": 8239,
+            "control_events": 1119
+          },
+          "constant_fallback": null,
+          "fit_seconds": 1.4048845000215806
+        }
+      ],
+      "covered_rows": 600000,
+      "membership_sha256": "7563af95676d4e3338f1ea4e0ebf21f1c2df0ad5759539bd016e3ac2841e789b",
+      "oof_metrics": {
+        "n": 600000,
+        "positives": 28073,
+        "prevalence": 0.046788333333333335,
+        "mean_probability": 0.046819285876832,
+        "roc_auc": 0.9455366666869022,
+        "average_precision": 0.5085570897228717,
+        "log_loss": 0.10365532698819203,
+        "brier_score": 0.02991355123256374,
+        "warning": ""
+      },
+      "propensity_min": 0.85,
+      "propensity_max": 0.85,
+      "outcome_residual_mean": -3.09525434986665e-05,
+      "outcome_residual_sd": 0.17295534185015446,
+      "treatment_residual_min": -0.85,
+      "treatment_residual_max": 0.15000000000000002,
+      "treatment_residual_mean": 1.0658141036401503e-17,
+      "treatment_residual_sd": 0.3570714214271425,
+      "minimum_absolute_treatment_residual": 0.15000000000000002,
+      "mean_raw_weight": 0.1275
+    }
+  }
+}

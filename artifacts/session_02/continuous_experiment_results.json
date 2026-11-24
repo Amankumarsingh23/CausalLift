@@ -1,0 +1,48 @@
+{
+  "treatment": {
+    "n": 300,
+    "mean": 18.449408021541945,
+    "events": null,
+    "variance": 114.49387505431086
+  },
+  "control": {
+    "n": 400,
+    "mean": 14.982149483750913,
+    "events": null,
+    "variance": 54.895418492000225
+  },
+  "absolute_lift": 3.4672585377910323,
+  "relative_lift": 0.23142597406009685,
+  "effect_se": 0.7203365855008593,
+  "null_se": 0.7203365855008593,
+  "statistic": 4.813386696692912,
+  "statistic_name": "t",
+  "p_value": 1.964516862760404e-06,
+  "log10_p_value": -5.706744238996556,
+  "confidence_interval": [
+    2.0520253731681786,
+    4.882491702413886
+  ],
+  "confidence_level": 0.95,
+  "significant": true,
+  "test_method": "welch_t",
+  "interval_method": "welch_t",
+  "dataset_id": "synthetic_revenue",
+  "experiment_id": "revenue",
+  "degrees_of_freedom": 503.87594541907345,
+  "wald_interval": null,
+  "bootstrap_interval": [
+    2.1461651989110875,
+    4.853393539804276
+  ],
+  "warnings": [],
+  "assumptions": [
+    "Independent observations and treatment arms.",
+    "Fixed-horizon, two-sided inference without multiplicity adjustment.",
+    "A causal interpretation requires a design that identifies an assignment effect.",
+    "Welch relies on normal populations or an adequate sampling approximation for arm means."
+  ],
+  "total_n": 700,
+  "true_mean_difference": 2.0,
+  "interpretation": "Randomized assignment effect"
+}

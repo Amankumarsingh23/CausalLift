@@ -1,0 +1,122 @@
+{
+  "primary_and_guardrail_pass": {
+    "decision": "ship",
+    "reason": "The primary target and all mandatory guardrails passed.",
+    "health": "pass",
+    "alpha": 0.05,
+    "primary_metric": "conversion",
+    "primary": {
+      "status": "passes",
+      "benefit_interval": [
+        0.011331232688257436,
+        0.028674801254527024
+      ],
+      "direction": "higher",
+      "benefit_threshold": 0.005
+    },
+    "guardrails": {
+      "refund": {
+        "status": "passes",
+        "benefit_interval": [
+          -0.0038972593481712424,
+          0.0038972593481712424
+        ],
+        "direction": "lower",
+        "benefit_threshold": -0.005
+      }
+    },
+    "synthetic": true,
+    "primary_estimate": 0.01999999999999999,
+    "guardrail_estimate": 0.0
+  },
+  "guardrail_harm": {
+    "decision": "do_not_ship",
+    "reason": "The primary target or a mandatory guardrail failed.",
+    "health": "pass",
+    "alpha": 0.05,
+    "primary_metric": "conversion",
+    "primary": {
+      "status": "passes",
+      "benefit_interval": [
+        0.011331232688257436,
+        0.028674801254527024
+      ],
+      "direction": "higher",
+      "benefit_threshold": 0.005
+    },
+    "guardrails": {
+      "refund": {
+        "status": "fails",
+        "benefit_interval": [
+          -0.019571837235665475,
+          -0.010488508199183977
+        ],
+        "direction": "lower",
+        "benefit_threshold": -0.005
+      }
+    },
+    "synthetic": true,
+    "primary_estimate": 0.01999999999999999,
+    "guardrail_estimate": 0.015000000000000003
+  },
+  "guardrail_inconclusive": {
+    "decision": "inconclusive",
+    "reason": "Evidence is insufficient for the primary target or guardrail safety.",
+    "health": "pass",
+    "alpha": 0.05,
+    "primary_metric": "conversion",
+    "primary": {
+      "status": "passes",
+      "benefit_interval": [
+        0.011331232688257436,
+        0.028674801254527024
+      ],
+      "direction": "higher",
+      "benefit_threshold": 0.005
+    },
+    "guardrails": {
+      "refund": {
+        "status": "inconclusive",
+        "benefit_interval": [
+          -0.005995940376298048,
+          0.001984980931714243
+        ],
+        "direction": "lower",
+        "benefit_threshold": -0.005
+      }
+    },
+    "synthetic": true,
+    "primary_estimate": 0.01999999999999999,
+    "guardrail_estimate": 0.0019999999999999983
+  },
+  "experiment_health_failed": {
+    "decision": "investigate",
+    "reason": "Supplied experiment health did not pass.",
+    "health": "fail",
+    "alpha": 0.05,
+    "primary_metric": "conversion",
+    "primary": {
+      "status": "passes",
+      "benefit_interval": [
+        0.011331232688257436,
+        0.028674801254527024
+      ],
+      "direction": "higher",
+      "benefit_threshold": 0.005
+    },
+    "guardrails": {
+      "refund": {
+        "status": "passes",
+        "benefit_interval": [
+          -0.0038972593481712424,
+          0.0038972593481712424
+        ],
+        "direction": "lower",
+        "benefit_threshold": -0.005
+      }
+    },
+    "synthetic": true,
+    "primary_estimate": 0.01999999999999999,
+    "guardrail_estimate": 0.0
+  }
+}

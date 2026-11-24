@@ -1,0 +1,13 @@
+family,feature,dataset,subgroup,partition,exploratory,family_size,raw_p,adjusted_p,raw_reject,adjusted_reject,method,error_rate,alpha
+criteo_v2_1/f0,f0,criteo_v2_1,"(-inf, 21.927]",validation,True,2,0.10408372182224827,0.20816744364449655,False,False,bonferroni,FWER,0.05
+criteo_v2_1/f0,f0,criteo_v2_1,"(21.927, inf]",validation,True,2,0.7459095690273045,1.0,False,False,bonferroni,FWER,0.05
+criteo_v2_1/f0,f0,criteo_v2_1,"(-inf, 21.927]",validation,True,2,0.10408372182224827,0.20816744364449655,False,False,holm,FWER,0.05
+criteo_v2_1/f0,f0,criteo_v2_1,"(21.927, inf]",validation,True,2,0.7459095690273045,0.7459095690273045,False,False,holm,FWER,0.05
+criteo_v2_1/f0,f0,criteo_v2_1,"(-inf, 21.927]",validation,True,2,0.10408372182224827,0.20816744364449655,False,False,benjamini_hochberg,FDR,0.05
+criteo_v2_1/f0,f0,criteo_v2_1,"(21.927, inf]",validation,True,2,0.7459095690273045,0.7459095690273045,False,False,benjamini_hochberg,FDR,0.05
+synthetic_E/price_sensitivity,price_sensitivity,synthetic_E,"(-inf, 0.0]",validation,True,2,4.429638328702225e-06,8.85927665740445e-06,True,True,bonferroni,FWER,0.05
+synthetic_E/price_sensitivity,price_sensitivity,synthetic_E,"(0.0, inf]",validation,True,2,1.2362388344021465e-11,2.472477668804293e-11,True,True,bonferroni,FWER,0.05
+synthetic_E/price_sensitivity,price_sensitivity,synthetic_E,"(-inf, 0.0]",validation,True,2,4.429638328702225e-06,4.429638328702225e-06,True,True,holm,FWER,0.05
+synthetic_E/price_sensitivity,price_sensitivity,synthetic_E,"(0.0, inf]",validation,True,2,1.2362388344021465e-11,2.472477668804293e-11,True,True,holm,FWER,0.05
+synthetic_E/price_sensitivity,price_sensitivity,synthetic_E,"(-inf, 0.0]",validation,True,2,4.429638328702225e-06,4.429638328702225e-06,True,True,benjamini_hochberg,FDR,0.05
+synthetic_E/price_sensitivity,price_sensitivity,synthetic_E,"(0.0, inf]",validation,True,2,1.2362388344021465e-11,2.472477668804293e-11,True,True,benjamini_hochberg,FDR,0.05

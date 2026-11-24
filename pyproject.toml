@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "causallift"
+version = "0.1.0"
+description = "Reproducible causal experimentation datasets"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2,<3", "pandas>=2.2,<4", "scipy>=1.13,<2",
+    "scikit-learn>=1.5,<2", "pyarrow>=17,<27",
+    "duckdb>=1.2,<3", "matplotlib>=3.9,<4", "lightgbm>=4.6,<5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.9,<1", "statsmodels>=0.14.5,<0.16"]
+advanced = ["econml==0.17.1"]
+
+[project.scripts]
+causallift = "causallift.session01:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

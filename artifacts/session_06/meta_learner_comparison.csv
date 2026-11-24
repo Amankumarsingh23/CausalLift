@@ -1,0 +1,65 @@
+dataset,outcome,policy,learner,base,training_n,validation_n,train_treated_n,train_control_n,train_treated_events,train_control_events,fit_seconds,model_origin,fit_propensity,fit_propensity_source,raw_effect_min,raw_effect_max,outside_bounds_n,outside_bounds_fraction,clipped,validation_r_loss
+Criteo 200k,conversion,s_logistic,s,logistic,120000,40001,102000,18000,315,35,0.0,session_05,,,,,,,,
+Criteo 200k,conversion,s_lightgbm,s,lightgbm,120000,40001,102000,18000,315,35,0.0,session_05,,,,,,,,
+Criteo 200k,conversion,t_logistic,t,logistic,120000,40001,102000,18000,315,35,0.0,session_05,,,,,,,,
+Criteo 200k,conversion,t_lightgbm,t,lightgbm,120000,40001,102000,18000,315,35,0.0,session_05,,,,,,,,
+Criteo 200k,conversion,x_linear,x,linear,120000,40001,102000,18000,315,35,0.6706156000145711,session_06,0.85,released training share,-0.01077240507184057,0.21238971275364193,0.0,0.0,False,
+Criteo 200k,conversion,x_lightgbm,x,lightgbm,120000,40001,102000,18000,315,35,0.838954399980139,session_06,0.85,released training share,-0.21264035088571975,0.2349655445199051,0.0,0.0,False,
+Criteo 200k,conversion,r_linear,r,linear,120000,40001,102000,18000,315,35,1.2476304000010714,session_06,0.85,released training share,-0.010136805321138437,0.1949957358342759,0.0,0.0,False,0.0025748112869717664
+Criteo 200k,conversion,r_lightgbm,r,lightgbm,120000,40001,102000,18000,315,35,1.328802500036545,session_06,0.85,released training share,-0.6793589943294672,0.6564410541702029,0.0,0.0,False,0.0026296263722204866
+Criteo 200k,visit,s_logistic,s,logistic,120000,40001,102000,18000,4969,690,0.0,session_05,,,,,,,,
+Criteo 200k,visit,s_lightgbm,s,lightgbm,120000,40001,102000,18000,4969,690,0.0,session_05,,,,,,,,
+Criteo 200k,visit,t_logistic,t,logistic,120000,40001,102000,18000,4969,690,0.0,session_05,,,,,,,,
+Criteo 200k,visit,t_lightgbm,t,lightgbm,120000,40001,102000,18000,4969,690,0.0,session_05,,,,,,,,
+Criteo 200k,visit,x_linear,x,linear,120000,40001,102000,18000,4969,690,0.4000984999584034,session_06,0.85,released training share,-0.029430049882791628,0.419189246001735,0.0,0.0,False,
+Criteo 200k,visit,x_lightgbm,x,lightgbm,120000,40001,102000,18000,4969,690,0.8513593000243418,session_06,0.85,released training share,-0.17962021481747673,0.43985752341686,0.0,0.0,False,
+Criteo 200k,visit,r_linear,r,linear,120000,40001,102000,18000,4969,690,0.8558058000053279,session_06,0.85,released training share,-0.028367306837958232,0.3989985431132754,0.0,0.0,False,0.030422301313377722
+Criteo 200k,visit,r_lightgbm,r,lightgbm,120000,40001,102000,18000,4969,690,1.4705951000214554,session_06,0.85,released training share,-0.31771046371507083,0.8226154260303232,0.0,0.0,False,0.029081643919626813
+synthetic_A,outcome,s_logistic,s,logistic,12000,4001,5950,6050,2672,2089,0.0,session_05,,,,,,,,
+synthetic_A,outcome,s_lightgbm,s,lightgbm,12000,4001,5950,6050,2672,2089,0.0,session_05,,,,,,,,
+synthetic_A,outcome,t_logistic,t,logistic,12000,4001,5950,6050,2672,2089,0.0,session_05,,,,,,,,
+synthetic_A,outcome,t_lightgbm,t,lightgbm,12000,4001,5950,6050,2672,2089,0.0,session_05,,,,,,,,
+synthetic_A,outcome,x_linear,x,linear,12000,4001,5950,6050,2672,2089,0.05899260001024231,session_06,0.5,known randomized design,0.05226654270520924,0.1580139824000803,0.0,0.0,False,
+synthetic_A,outcome,x_lightgbm,x,lightgbm,12000,4001,5950,6050,2672,2089,0.1595435999915935,session_06,0.5,known randomized design,-0.1726718403239171,0.317869889384948,0.0,0.0,False,
+synthetic_A,outcome,r_linear,r,linear,12000,4001,5950,6050,2672,2089,0.08236669999314472,session_06,0.5,known randomized design,0.05244646338670077,0.15768770747782518,0.0,0.0,False,0.22697487346232162
+synthetic_A,outcome,r_lightgbm,r,lightgbm,12000,4001,5950,6050,2672,2089,0.18615239998325706,session_06,0.5,known randomized design,-0.29973612784271475,0.44136097805249225,0.0,0.0,False,0.2286146054301144
+synthetic_B,outcome,s_logistic,s,logistic,12001,4000,5951,6050,2083,2089,0.0,session_05,,,,,,,,
+synthetic_B,outcome,s_lightgbm,s,lightgbm,12001,4000,5951,6050,2083,2089,0.0,session_05,,,,,,,,
+synthetic_B,outcome,t_logistic,t,logistic,12001,4000,5951,6050,2083,2089,0.0,session_05,,,,,,,,
+synthetic_B,outcome,t_lightgbm,t,lightgbm,12001,4000,5951,6050,2083,2089,0.0,session_05,,,,,,,,
+synthetic_B,outcome,x_linear,x,linear,12001,4000,5951,6050,2083,2089,0.05097759998170659,session_06,0.5,known randomized design,-0.2601066396560976,0.2500468514301549,0.0,0.0,False,
+synthetic_B,outcome,x_lightgbm,x,lightgbm,12001,4000,5951,6050,2083,2089,0.15115559997502714,session_06,0.5,known randomized design,-0.26416044401681726,0.29854759695638877,0.0,0.0,False,
+synthetic_B,outcome,r_linear,r,linear,12001,4000,5951,6050,2083,2089,0.0825565000413917,session_06,0.5,known randomized design,-0.260067636410681,0.24978192303968963,0.0,0.0,False,0.21275188396684933
+synthetic_B,outcome,r_lightgbm,r,lightgbm,12001,4000,5951,6050,2083,2089,0.1648808000027202,session_06,0.5,known randomized design,-0.3326036973168619,0.38954821821430724,0.0,0.0,False,0.213327535724572
+synthetic_D,outcome,s_logistic,s,logistic,12000,4000,1836,10164,623,3496,0.0,session_05,,,,,,,,
+synthetic_D,outcome,s_lightgbm,s,lightgbm,12000,4000,1836,10164,623,3496,0.0,session_05,,,,,,,,
+synthetic_D,outcome,t_logistic,t,logistic,12000,4000,1836,10164,623,3496,0.0,session_05,,,,,,,,
+synthetic_D,outcome,t_lightgbm,t,lightgbm,12000,4000,1836,10164,623,3496,0.0,session_05,,,,,,,,
+synthetic_D,outcome,x_linear,x,linear,12000,4000,1836,10164,623,3496,0.05476779997115955,session_06,0.15,known randomized design,-0.3113583749736185,0.2751353125874077,0.0,0.0,False,
+synthetic_D,outcome,x_lightgbm,x,lightgbm,12000,4000,1836,10164,623,3496,0.14615430001867935,session_06,0.15,known randomized design,-0.391950527182957,0.4872156076226901,0.0,0.0,False,
+synthetic_D,outcome,r_linear,r,linear,12000,4000,1836,10164,623,3496,0.08651870000176132,session_06,0.15,known randomized design,-0.3127762814368709,0.2760798554691993,0.0,0.0,False,0.2156584494514396
+synthetic_D,outcome,r_lightgbm,r,lightgbm,12000,4000,1836,10164,623,3496,0.15965699998196214,session_06,0.15,known randomized design,-0.5377510850530052,0.4367832351537309,0.0,0.0,False,0.2169558353625981
+synthetic_E,outcome,s_logistic,s,logistic,12000,4001,5950,6050,2216,2089,0.0,session_05,,,,,,,,
+synthetic_E,outcome,s_lightgbm,s,lightgbm,12000,4001,5950,6050,2216,2089,0.0,session_05,,,,,,,,
+synthetic_E,outcome,t_logistic,t,logistic,12000,4001,5950,6050,2216,2089,0.0,session_05,,,,,,,,
+synthetic_E,outcome,t_lightgbm,t,lightgbm,12000,4001,5950,6050,2216,2089,0.0,session_05,,,,,,,,
+synthetic_E,outcome,x_linear,x,linear,12000,4001,5950,6050,2216,2089,0.048255400033667684,session_06,0.5,known randomized design,-0.3461751636741802,0.4973303966714301,0.0,0.0,False,
+synthetic_E,outcome,x_lightgbm,x,lightgbm,12000,4001,5950,6050,2216,2089,0.1446138999890536,session_06,0.5,known randomized design,-0.3163775453347045,0.3607729542395663,0.0,0.0,False,
+synthetic_E,outcome,r_linear,r,linear,12000,4001,5950,6050,2216,2089,0.08289239997975528,session_06,0.5,known randomized design,-0.34485921838745587,0.49649062618398143,0.0,0.0,False,0.21476018607839129
+synthetic_E,outcome,r_lightgbm,r,lightgbm,12000,4001,5950,6050,2216,2089,0.19055529998149723,session_06,0.5,known randomized design,-0.4153626763400903,0.49533483409558926,0.0,0.0,False,0.21325494015933344
+Criteo 1M,conversion,s_logistic,s,logistic,600000,200000,510000,90000,1576,175,0.0,session_05,,,,,,,,
+Criteo 1M,conversion,s_lightgbm,s,lightgbm,600000,200000,510000,90000,1576,175,0.0,session_05,,,,,,,,
+Criteo 1M,conversion,t_logistic,t,logistic,600000,200000,510000,90000,1576,175,0.0,session_05,,,,,,,,
+Criteo 1M,conversion,t_lightgbm,t,lightgbm,600000,200000,510000,90000,1576,175,0.0,session_05,,,,,,,,
+Criteo 1M,conversion,x_linear,x,linear,600000,200000,510000,90000,1576,175,2.8373236000188626,session_06,0.85,released training share,-0.003683565166148581,0.1382035636563744,0.0,0.0,False,
+Criteo 1M,conversion,x_lightgbm,x,lightgbm,600000,200000,510000,90000,1576,175,3.8768894000095315,session_06,0.85,released training share,-0.21646995760464763,0.31862157262130214,0.0,0.0,False,
+Criteo 1M,conversion,r_linear,r,linear,600000,200000,510000,90000,1576,175,6.4062700000358745,session_06,0.85,released training share,-0.0036791004900444996,0.13933945652037732,0.0,0.0,False,0.00255306844823316
+Criteo 1M,conversion,r_lightgbm,r,lightgbm,600000,200000,510000,90000,1576,175,6.196207200002391,session_06,0.85,released training share,-0.658436320580398,0.693386837033649,0.0,0.0,False,0.0024635620263488405
+Criteo 1M,visit,s_logistic,s,logistic,600000,200000,510000,90000,24716,3357,0.0,session_05,,,,,,,,
+Criteo 1M,visit,s_lightgbm,s,lightgbm,600000,200000,510000,90000,24716,3357,0.0,session_05,,,,,,,,
+Criteo 1M,visit,t_logistic,t,logistic,600000,200000,510000,90000,24716,3357,0.0,session_05,,,,,,,,
+Criteo 1M,visit,t_lightgbm,t,lightgbm,600000,200000,510000,90000,24716,3357,0.0,session_05,,,,,,,,
+Criteo 1M,visit,x_linear,x,linear,600000,200000,510000,90000,24716,3357,1.943081900011748,session_06,0.85,released training share,-0.0476145061641353,0.1739261473851936,0.0,0.0,False,
+Criteo 1M,visit,x_lightgbm,x,lightgbm,600000,200000,510000,90000,24716,3357,4.403498999949079,session_06,0.85,released training share,-0.22012829485704175,0.5471537470213131,0.0,0.0,False,
+Criteo 1M,visit,r_linear,r,linear,600000,200000,510000,90000,24716,3357,4.702617799979635,session_06,0.85,released training share,-0.04666614344229382,0.16941729856329274,0.0,0.0,False,0.03138600594243912
+Criteo 1M,visit,r_lightgbm,r,lightgbm,600000,200000,510000,90000,24716,3357,7.444212800008245,session_06,0.85,released training share,-0.25367562241278224,0.7261320422390047,0.0,0.0,False,0.029899455533054117

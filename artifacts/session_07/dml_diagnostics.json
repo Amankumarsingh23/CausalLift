@@ -1,0 +1,5434 @@
+{
+  "benchmarks": {
+    "Criteo 200k/conversion": {
+      "dataset": "Criteo 200k",
+      "outcome": "conversion",
+      "rows": 120000,
+      "outcome_strategy": "joint",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 210,
+            "control_events": 24
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 105,
+            "control_events": 11
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.3571798999910243
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 210,
+            "control_events": 23
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 105,
+            "control_events": 12
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.26737680000951514
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 210,
+            "control_events": 23
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 105,
+            "control_events": 12
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.2976165000000037
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "n": 120000,
+        "positives": 350,
+        "prevalence": 0.002916666666666667,
+        "mean_probability": 0.0029048983103208102,
+        "roc_auc": 0.9547660915766223,
+        "average_precision": 0.21395165265116867,
+        "log_loss": 0.012427315187409754,
+        "brier_score": 0.0025689570820567535,
+        "warning": ""
+      },
+      "propensity_crossfit": null,
+      "propensity_min": 0.85,
+      "propensity_max": 0.85,
+      "propensity_p10": 0.85,
+      "propensity_p90": 0.85,
+      "outcome_residual_mean": 1.1768356345856024e-05,
+      "outcome_residual_sd": 0.050684878845298056,
+      "treatment_residual_mean": 4.204044519913926e-18,
+      "treatment_residual_sd": 0.3570714214271425
+    },
+    "Criteo 200k/visit": {
+      "dataset": "Criteo 200k",
+      "outcome": "visit",
+      "rows": 120000,
+      "outcome_strategy": "joint",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 3313,
+            "control_events": 460
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 1656,
+            "control_events": 230
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.1929833999602124
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 3313,
+            "control_events": 460
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 1656,
+            "control_events": 230
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.19236190000083297
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 3312,
+            "control_events": 460
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 1657,
+            "control_events": 230
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.21419169998262078
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "n": 120000,
+        "positives": 5659,
+        "prevalence": 0.04715833333333333,
+        "mean_probability": 0.04715315435486435,
+        "roc_auc": 0.9300720360374404,
+        "average_precision": 0.47650425390813095,
+        "log_loss": 0.1127493846549248,
+        "brier_score": 0.03169145584280847,
+        "warning": ""
+      },
+      "propensity_crossfit": null,
+      "propensity_min": 0.85,
+      "propensity_max": 0.85,
+      "propensity_p10": 0.85,
+      "propensity_p90": 0.85,
+      "outcome_residual_mean": 5.1789784689884046e-06,
+      "outcome_residual_sd": 0.17802094207139407,
+      "treatment_residual_mean": 4.204044519913926e-18,
+      "treatment_residual_sd": 0.3570714214271425
+    },
+    "synthetic_A/outcome": {
+      "dataset": "synthetic_A",
+      "outcome": "outcome",
+      "rows": 12000,
+      "outcome_strategy": "joint",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 8000,
+            "treated_n": 3966,
+            "control_n": 4034,
+            "treated_events": 1781,
+            "control_events": 1393
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1984,
+            "control_n": 2016,
+            "treated_events": 891,
+            "control_events": 696
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.014849200029857457
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 8000,
+            "treated_n": 3966,
+            "control_n": 4034,
+            "treated_events": 1781,
+            "control_events": 1393
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1984,
+            "control_n": 2016,
+            "treated_events": 891,
+            "control_events": 696
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.017166199977509677
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 8000,
+            "treated_n": 3968,
+            "control_n": 4032,
+            "treated_events": 1782,
+            "control_events": 1392
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1982,
+            "control_n": 2018,
+            "treated_events": 890,
+            "control_events": 697
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.018299999996088445
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "n": 12000,
+        "positives": 4761,
+        "prevalence": 0.39675,
+        "mean_probability": 0.39672867079017266,
+        "roc_auc": 0.6171151507597052,
+        "average_precision": 0.5047565913117749,
+        "log_loss": 0.6523541054888463,
+        "brier_score": 0.22999653911959858,
+        "warning": ""
+      },
+      "propensity_crossfit": null,
+      "propensity_min": 0.5,
+      "propensity_max": 0.5,
+      "propensity_p10": 0.5,
+      "propensity_p90": 0.5,
+      "outcome_residual_mean": 2.1329209827325e-05,
+      "outcome_residual_sd": 0.47957954362614696,
+      "treatment_residual_mean": -0.004166666666666667,
+      "treatment_residual_sd": 0.4999826385874703
+    },
+    "synthetic_B/outcome": {
+      "dataset": "synthetic_B",
+      "outcome": "outcome",
+      "rows": 12001,
+      "outcome_strategy": "joint",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 8000,
+            "treated_n": 3967,
+            "control_n": 4033,
+            "treated_events": 1388,
+            "control_events": 1393
+          },
+          "held_out": {
+            "n": 4001,
+            "treated_n": 1984,
+            "control_n": 2017,
+            "treated_events": 695,
+            "control_events": 696
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.015316099976189435
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 8001,
+            "treated_n": 3968,
+            "control_n": 4033,
+            "treated_events": 1389,
+            "control_events": 1392
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1983,
+            "control_n": 2017,
+            "treated_events": 694,
+            "control_events": 697
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.018675799947232008
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 8001,
+            "treated_n": 3967,
+            "control_n": 4034,
+            "treated_events": 1389,
+            "control_events": 1393
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1984,
+            "control_n": 2016,
+            "treated_events": 694,
+            "control_events": 696
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.018276399991009384
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "n": 12001,
+        "positives": 4172,
+        "prevalence": 0.34763769685859514,
+        "mean_probability": 0.3475239041858549,
+        "roc_auc": 0.6638130144494369,
+        "average_precision": 0.49968097059725564,
+        "log_loss": 0.6091096795835839,
+        "brier_score": 0.21006333947966183,
+        "warning": ""
+      },
+      "propensity_crossfit": null,
+      "propensity_min": 0.5,
+      "propensity_max": 0.5,
+      "propensity_p10": 0.5,
+      "propensity_p90": 0.5,
+      "outcome_residual_mean": 0.00011379267274027385,
+      "outcome_residual_sd": 0.45832665919722526,
+      "treatment_residual_mean": -0.004124656278643446,
+      "treatment_residual_sd": 0.4999829869211382
+    },
+    "synthetic_D/outcome": {
+      "dataset": "synthetic_D",
+      "outcome": "outcome",
+      "rows": 12000,
+      "outcome_strategy": "joint",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 8000,
+            "treated_n": 1224,
+            "control_n": 6776,
+            "treated_events": 415,
+            "control_events": 2331
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 612,
+            "control_n": 3388,
+            "treated_events": 208,
+            "control_events": 1165
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.020054000022355467
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 8000,
+            "treated_n": 1225,
+            "control_n": 6775,
+            "treated_events": 416,
+            "control_events": 2330
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 611,
+            "control_n": 3389,
+            "treated_events": 207,
+            "control_events": 1166
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.017855599988251925
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 8000,
+            "treated_n": 1223,
+            "control_n": 6777,
+            "treated_events": 415,
+            "control_events": 2331
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 613,
+            "control_n": 3387,
+            "treated_events": 208,
+            "control_events": 1165
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.01641189999645576
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "n": 12000,
+        "positives": 4119,
+        "prevalence": 0.34325,
+        "mean_probability": 0.34320559230760184,
+        "roc_auc": 0.637516130863689,
+        "average_precision": 0.46994288846622734,
+        "log_loss": 0.6177389867662544,
+        "brier_score": 0.21378856846517624,
+        "warning": ""
+      },
+      "propensity_crossfit": null,
+      "propensity_min": 0.15,
+      "propensity_max": 0.15,
+      "propensity_p10": 0.15,
+      "propensity_p90": 0.15,
+      "outcome_residual_mean": 4.4407692398245046e-05,
+      "outcome_residual_sd": 0.4623727570836469,
+      "treatment_residual_mean": 0.003000000000000007,
+      "treatment_residual_sd": 0.3599874997829786
+    },
+    "synthetic_E/outcome": {
+      "dataset": "synthetic_E",
+      "outcome": "outcome",
+      "rows": 12000,
+      "outcome_strategy": "joint",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 8000,
+            "treated_n": 3967,
+            "control_n": 4033,
+            "treated_events": 1478,
+            "control_events": 1393
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1983,
+            "control_n": 2017,
+            "treated_events": 738,
+            "control_events": 696
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.016071899968665093
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 8000,
+            "treated_n": 3966,
+            "control_n": 4034,
+            "treated_events": 1477,
+            "control_events": 1393
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1984,
+            "control_n": 2016,
+            "treated_events": 739,
+            "control_events": 696
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.012405099987518042
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 8000,
+            "treated_n": 3967,
+            "control_n": 4033,
+            "treated_events": 1477,
+            "control_events": 1392
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1983,
+            "control_n": 2017,
+            "treated_events": 739,
+            "control_events": 697
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.01841199997579679
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "n": 12000,
+        "positives": 4305,
+        "prevalence": 0.35875,
+        "mean_probability": 0.3586698012355616,
+        "roc_auc": 0.635829893915759,
+        "average_precision": 0.4869853548966775,
+        "log_loss": 0.6262643973777432,
+        "brier_score": 0.21792006819648624,
+        "warning": ""
+      },
+      "propensity_crossfit": null,
+      "propensity_min": 0.5,
+      "propensity_max": 0.5,
+      "propensity_p10": 0.5,
+      "propensity_p90": 0.5,
+      "outcome_residual_mean": 8.019876443841323e-05,
+      "outcome_residual_sd": 0.46681908890344703,
+      "treatment_residual_mean": -0.004166666666666667,
+      "treatment_residual_sd": 0.4999826385874703
+    },
+    "Criteo 1M/conversion": {
+      "dataset": "Criteo 1M",
+      "outcome": "conversion",
+      "rows": 600000,
+      "outcome_strategy": "joint",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 400000,
+            "treated_n": 340000,
+            "control_n": 60000,
+            "treated_events": 1051,
+            "control_events": 117
+          },
+          "held_out": {
+            "n": 200000,
+            "treated_n": 170000,
+            "control_n": 30000,
+            "treated_events": 525,
+            "control_events": 58
+          },
+          "constant_fallback": null,
+          "fit_seconds": 1.5778172999853268
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 400000,
+            "treated_n": 339999,
+            "control_n": 60001,
+            "treated_events": 1050,
+            "control_events": 117
+          },
+          "held_out": {
+            "n": 200000,
+            "treated_n": 170001,
+            "control_n": 29999,
+            "treated_events": 526,
+            "control_events": 58
+          },
+          "constant_fallback": null,
+          "fit_seconds": 1.798607099975925
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 400000,
+            "treated_n": 340001,
+            "control_n": 59999,
+            "treated_events": 1051,
+            "control_events": 116
+          },
+          "held_out": {
+            "n": 200000,
+            "treated_n": 169999,
+            "control_n": 30001,
+            "treated_events": 525,
+            "control_events": 59
+          },
+          "constant_fallback": null,
+          "fit_seconds": 1.528371199965477
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "n": 600000,
+        "positives": 1751,
+        "prevalence": 0.0029183333333333335,
+        "mean_probability": 0.002919393786692325,
+        "roc_auc": 0.9517566159683186,
+        "average_precision": 0.20833084494332704,
+        "log_loss": 0.01245032600498406,
+        "brier_score": 0.002579765912631718,
+        "warning": ""
+      },
+      "propensity_crossfit": null,
+      "propensity_min": 0.85,
+      "propensity_max": 0.85,
+      "propensity_p10": 0.85,
+      "propensity_p90": 0.85,
+      "outcome_residual_mean": -1.0604533589919464e-06,
+      "outcome_residual_sd": 0.050791396038179115,
+      "treatment_residual_mean": 1.0658141036401503e-17,
+      "treatment_residual_sd": 0.3570714214271425
+    },
+    "Criteo 1M/visit": {
+      "dataset": "Criteo 1M",
+      "outcome": "visit",
+      "rows": 600000,
+      "outcome_strategy": "joint",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 400000,
+            "treated_n": 340000,
+            "control_n": 60000,
+            "treated_events": 16478,
+            "control_events": 2238
+          },
+          "held_out": {
+            "n": 200000,
+            "treated_n": 170000,
+            "control_n": 30000,
+            "treated_events": 8238,
+            "control_events": 1119
+          },
+          "constant_fallback": null,
+          "fit_seconds": 1.0323667000047863
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 400000,
+            "treated_n": 340000,
+            "control_n": 60000,
+            "treated_events": 16477,
+            "control_events": 2238
+          },
+          "held_out": {
+            "n": 200000,
+            "treated_n": 170000,
+            "control_n": 30000,
+            "treated_events": 8239,
+            "control_events": 1119
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.9581873000133783
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 400000,
+            "treated_n": 340000,
+            "control_n": 60000,
+            "treated_events": 16477,
+            "control_events": 2238
+          },
+          "held_out": {
+            "n": 200000,
+            "treated_n": 170000,
+            "control_n": 30000,
+            "treated_events": 8239,
+            "control_events": 1119
+          },
+          "constant_fallback": null,
+          "fit_seconds": 1.1937570000300184
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "n": 600000,
+        "positives": 28073,
+        "prevalence": 0.046788333333333335,
+        "mean_probability": 0.046790946851483724,
+        "roc_auc": 0.9321128343438955,
+        "average_precision": 0.48011275010728416,
+        "log_loss": 0.11125953523322935,
+        "brier_score": 0.031320848070019926,
+        "warning": ""
+      },
+      "propensity_crossfit": null,
+      "propensity_min": 0.85,
+      "propensity_max": 0.85,
+      "propensity_p10": 0.85,
+      "propensity_p90": 0.85,
+      "outcome_residual_mean": -2.613518150389827e-06,
+      "outcome_residual_sd": 0.17697697043171876,
+      "treatment_residual_mean": 1.0658141036401503e-17,
+      "treatment_residual_sd": 0.3570714214271425
+    }
+  },
+  "confounding": [
+    {
+      "rep": 0,
+      "seed": 2684470948,
+      "estimate": 1.4988656180228588,
+      "standard_error": 0.05608547708557032,
+      "ci_low": 1.3889401028793975,
+      "ci_high": 1.60879113316632,
+      "denominator": 563.0205027592742,
+      "derivative": -0.2345918761496976,
+      "score_mean": -1.295260195396016e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 782,
+            "control_n": 818,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 390,
+            "control_n": 410,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.14502130000619218
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 781,
+            "control_n": 819,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 391,
+            "control_n": 409,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.1449943999759853
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 781,
+            "control_n": 819,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 391,
+            "control_n": 409,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.13658180000493303
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.538263122991684
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 782,
+              "control_n": 818,
+              "treated_events": 782,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 390,
+              "control_n": 410,
+              "treated_events": 390,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.12051189999328926
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 781,
+              "control_n": 819,
+              "treated_events": 781,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 391,
+              "control_n": 409,
+              "treated_events": 391,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.13577339996118098
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 781,
+              "control_n": 819,
+              "treated_events": 781,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 391,
+              "control_n": 409,
+              "treated_events": 391,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.135270600032527
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1172,
+          "prevalence": 0.48833333333333334,
+          "mean_probability": 0.48923778948212315,
+          "roc_auc": 0.6395078987448721,
+          "average_precision": 0.6470376496882401,
+          "log_loss": 0.6619466025446461,
+          "brier_score": 0.2345918761496976,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.12395284473299628,
+      "propensity_max": 0.9127921017449007,
+      "propensity_p10": 0.28104036037138236,
+      "propensity_p90": 0.754516940574593,
+      "outcome_residual_mean": 0.0006144244562232615,
+      "outcome_residual_sd": 1.5382630002826945,
+      "treatment_residual_mean": -0.0009044561487898777,
+      "treatment_residual_sd": 0.4843460107286655
+    },
+    {
+      "rep": 1,
+      "seed": 4091952314,
+      "estimate": 1.5515800411819067,
+      "standard_error": 0.05802124696554854,
+      "ci_low": 1.437860486791331,
+      "ci_high": 1.6652995955724825,
+      "denominator": 550.8201235997401,
+      "derivative": -0.22950838483322505,
+      "score_mean": 5.69914485974247e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 766,
+            "control_n": 834,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 383,
+            "control_n": 417,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.14496369997505099
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 766,
+            "control_n": 834,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 383,
+            "control_n": 417,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.14605040004244074
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 766,
+            "control_n": 834,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 383,
+            "control_n": 417,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.1208547999849543
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5791632275687424
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 766,
+              "control_n": 834,
+              "treated_events": 766,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 383,
+              "control_n": 417,
+              "treated_events": 383,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.10854859999381006
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 766,
+              "control_n": 834,
+              "treated_events": 766,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 383,
+              "control_n": 417,
+              "treated_events": 383,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.1026242999942042
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 766,
+              "control_n": 834,
+              "treated_events": 766,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 383,
+              "control_n": 417,
+              "treated_events": 383,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.09728190000168979
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1149,
+          "prevalence": 0.47875,
+          "mean_probability": 0.47462632145331224,
+          "roc_auc": 0.6609869632579404,
+          "average_precision": 0.6464331918581558,
+          "log_loss": 0.6514952224719966,
+          "brier_score": 0.22950838483322505,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.12565102116927457,
+      "propensity_max": 0.8924658338686275,
+      "propensity_p10": 0.2638512687779277,
+      "propensity_p90": 0.7368425698761584,
+      "outcome_residual_mean": -0.010204627870417324,
+      "outcome_residual_sd": 1.5791302558292504,
+      "treatment_residual_mean": 0.004123678546687804,
+      "treatment_residual_sd": 0.4790525859532214
+    },
+    {
+      "rep": 2,
+      "seed": 233227757,
+      "estimate": 1.503847753739733,
+      "standard_error": 0.05380160265503152,
+      "ci_low": 1.3983985502253395,
+      "ci_high": 1.6092969572541265,
+      "denominator": 564.5459993935309,
+      "derivative": -0.23522749974730453,
+      "score_mean": 4.5889218351173137e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 790,
+            "control_n": 810,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 395,
+            "control_n": 405,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.10697600001003593
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 790,
+            "control_n": 810,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 395,
+            "control_n": 405,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.13075800001388416
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 790,
+            "control_n": 810,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 395,
+            "control_n": 405,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.11271749995648861
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5017216803767781
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 790,
+              "control_n": 810,
+              "treated_events": 790,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 395,
+              "control_n": 405,
+              "treated_events": 395,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.1372189000248909
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 790,
+              "control_n": 810,
+              "treated_events": 790,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 395,
+              "control_n": 405,
+              "treated_events": 395,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.13481690001208335
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 790,
+              "control_n": 810,
+              "treated_events": 790,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 395,
+              "control_n": 405,
+              "treated_events": 395,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.10078429995337501
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1185,
+          "prevalence": 0.49375,
+          "mean_probability": 0.49351298302483165,
+          "roc_auc": 0.6392061259571808,
+          "average_precision": 0.6432238205320886,
+          "log_loss": 0.6631118641893122,
+          "brier_score": 0.23522749974730453,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.12511368947609403,
+      "propensity_max": 0.92342326853796,
+      "propensity_p10": 0.29739789310701437,
+      "propensity_p90": 0.737637797166076,
+      "outcome_residual_mean": -0.0024108395672416865,
+      "outcome_residual_sd": 1.501719745214211,
+      "treatment_residual_mean": 0.00023701697516844553,
+      "treatment_residual_sd": 0.4850025191380536
+    },
+    {
+      "rep": 3,
+      "seed": 3276785861,
+      "estimate": 1.64582083485968,
+      "standard_error": 0.05858415447843427,
+      "ci_low": 1.530998002017221,
+      "ci_high": 1.7606436677021389,
+      "denominator": 553.1146830026084,
+      "derivative": -0.23046445125108686,
+      "score_mean": 6.513308411134252e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 778,
+            "control_n": 822,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 388,
+            "control_n": 412,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.12947049998911098
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 777,
+            "control_n": 823,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 389,
+            "control_n": 411,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.13674449996324256
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 777,
+            "control_n": 823,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 389,
+            "control_n": 411,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.1385145999956876
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.589064524413382
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 778,
+              "control_n": 822,
+              "treated_events": 778,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 388,
+              "control_n": 412,
+              "treated_events": 388,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.12812849995680153
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 777,
+              "control_n": 823,
+              "treated_events": 777,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 389,
+              "control_n": 411,
+              "treated_events": 389,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.11534740001661703
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 777,
+              "control_n": 823,
+              "treated_events": 777,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 389,
+              "control_n": 411,
+              "treated_events": 389,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.10149339999770746
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1166,
+          "prevalence": 0.48583333333333334,
+          "mean_probability": 0.48798855894928106,
+          "roc_auc": 0.6519893748036618,
+          "average_precision": 0.6596802637389931,
+          "log_loss": 0.6522775765854796,
+          "brier_score": 0.23046445125108686,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.14802631762768065,
+      "propensity_max": 0.9112440113667998,
+      "propensity_p10": 0.28366195764478297,
+      "propensity_p90": 0.7651676606008123,
+      "outcome_residual_mean": 0.010396307739819395,
+      "outcome_residual_sd": 1.58903051560834,
+      "treatment_residual_mean": -0.0021552256159476685,
+      "treatment_residual_sd": 0.4800622941386162
+    },
+    {
+      "rep": 4,
+      "seed": 3644269654,
+      "estimate": 1.5819165114377494,
+      "standard_error": 0.0559921842777031,
+      "ci_low": 1.4721738468377246,
+      "ci_high": 1.6916591760377742,
+      "denominator": 545.2334015314314,
+      "derivative": -0.22718058397142973,
+      "score_mean": 5.921189464667502e-18,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 796,
+            "control_n": 804,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 397,
+            "control_n": 403,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.13402510003652424
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 795,
+            "control_n": 805,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 398,
+            "control_n": 402,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.11856350000016391
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 795,
+            "control_n": 805,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 398,
+            "control_n": 402,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.1353763000224717
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5260967319153211
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 796,
+              "control_n": 804,
+              "treated_events": 796,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 397,
+              "control_n": 403,
+              "treated_events": 397,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.13115890003973618
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 795,
+              "control_n": 805,
+              "treated_events": 795,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 398,
+              "control_n": 402,
+              "treated_events": 398,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.09623319999082014
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 795,
+              "control_n": 805,
+              "treated_events": 795,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 398,
+              "control_n": 402,
+              "treated_events": 398,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.10976500000106171
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1193,
+          "prevalence": 0.4970833333333333,
+          "mean_probability": 0.49797852059600417,
+          "roc_auc": 0.6710645015003984,
+          "average_precision": 0.6773783503513738,
+          "log_loss": 0.6457231292526334,
+          "brier_score": 0.22718058397142973,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.13332761914396082,
+      "propensity_max": 0.9114330904643902,
+      "propensity_p10": 0.2796041333130921,
+      "propensity_p90": 0.7763163180116184,
+      "outcome_residual_mean": -0.015712449917406567,
+      "outcome_residual_sd": 1.5260158433254276,
+      "treatment_residual_mean": -0.0008951872626707535,
+      "treatment_residual_sd": 0.4766338034709608
+    },
+    {
+      "rep": 5,
+      "seed": 1206282609,
+      "estimate": 1.5656713086768854,
+      "standard_error": 0.05714133195636855,
+      "ci_low": 1.4536763560137584,
+      "ci_high": 1.6776662613400124,
+      "denominator": 551.0267266207933,
+      "derivative": -0.22959446942533054,
+      "score_mean": 3.1086244689504386e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 764,
+            "control_n": 836,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 382,
+            "control_n": 418,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.0963762000319548
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 764,
+            "control_n": 836,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 382,
+            "control_n": 418,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.1454968000180088
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 764,
+            "control_n": 836,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 382,
+            "control_n": 418,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.14172690000850707
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5540847898708268
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 764,
+              "control_n": 836,
+              "treated_events": 764,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 382,
+              "control_n": 418,
+              "treated_events": 382,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.10429109999677166
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 764,
+              "control_n": 836,
+              "treated_events": 764,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 382,
+              "control_n": 418,
+              "treated_events": 382,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.12471479998202994
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 764,
+              "control_n": 836,
+              "treated_events": 764,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 382,
+              "control_n": 418,
+              "treated_events": 382,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.09677390003344044
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1146,
+          "prevalence": 0.4775,
+          "mean_probability": 0.47534715262171584,
+          "roc_auc": 0.6615208296801023,
+          "average_precision": 0.6381964973646479,
+          "log_loss": 0.6513587988005569,
+          "brier_score": 0.22959446942533054,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.11269099277681227,
+      "propensity_max": 0.8890918787831551,
+      "propensity_p10": 0.2712170286171689,
+      "propensity_p90": 0.7022394110306684,
+      "outcome_residual_mean": 0.0010192860984969934,
+      "outcome_residual_sd": 1.5540844556084141,
+      "treatment_residual_mean": 0.0021528473782841387,
+      "treatment_residual_sd": 0.47915533459776516
+    },
+    {
+      "rep": 6,
+      "seed": 3543069911,
+      "estimate": 1.5910735005800616,
+      "standard_error": 0.05641780284168625,
+      "ci_low": 1.4804966389234782,
+      "ci_high": 1.701650362236645,
+      "denominator": 563.9269289441884,
+      "derivative": -0.23496955372674516,
+      "score_mean": -3.404683942183813e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 761,
+            "control_n": 839,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 380,
+            "control_n": 420,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.13032050000037998
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 761,
+            "control_n": 839,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 380,
+            "control_n": 420,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.1081654999870807
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 760,
+            "control_n": 840,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 381,
+            "control_n": 419,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.1263973999884911
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5205561555505474
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 761,
+              "control_n": 839,
+              "treated_events": 761,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 380,
+              "control_n": 420,
+              "treated_events": 380,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.1256394000374712
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 761,
+              "control_n": 839,
+              "treated_events": 761,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 380,
+              "control_n": 420,
+              "treated_events": 380,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.10381180001422763
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 760,
+              "control_n": 840,
+              "treated_events": 760,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 381,
+              "control_n": 419,
+              "treated_events": 381,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.13257070002146065
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1141,
+          "prevalence": 0.47541666666666665,
+          "mean_probability": 0.4752455207091507,
+          "roc_auc": 0.6407008887456414,
+          "average_precision": 0.6245638372916779,
+          "log_loss": 0.6628257977831505,
+          "brier_score": 0.23496955372674516,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.1194955453309009,
+      "propensity_max": 0.8951518520607565,
+      "propensity_p10": 0.26629790752797533,
+      "propensity_p90": 0.7259203709927594,
+      "outcome_residual_mean": -0.009342543429711216,
+      "outcome_residual_sd": 1.5205274542292633,
+      "treatment_residual_mean": 0.0001711459575159339,
+      "treatment_residual_sd": 0.48473655157807766
+    },
+    {
+      "rep": 7,
+      "seed": 3479688010,
+      "estimate": 1.47069186970065,
+      "standard_error": 0.055264232702471425,
+      "ci_low": 1.3623759639705681,
+      "ci_high": 1.5790077754307317,
+      "denominator": 554.6666738820857,
+      "derivative": -0.23111111411753568,
+      "score_mean": -4.9960036108132046e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 790,
+            "control_n": 810,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 396,
+            "control_n": 404,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.15392899996368214
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 791,
+            "control_n": 809,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 395,
+            "control_n": 405,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.14129140001023188
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 791,
+            "control_n": 809,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 395,
+            "control_n": 405,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.11861170001793653
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5239900639701858
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 790,
+              "control_n": 810,
+              "treated_events": 790,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 396,
+              "control_n": 404,
+              "treated_events": 396,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.1317208000109531
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 791,
+              "control_n": 809,
+              "treated_events": 791,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 395,
+              "control_n": 405,
+              "treated_events": 395,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.1501622999785468
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 791,
+              "control_n": 809,
+              "treated_events": 791,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 395,
+              "control_n": 405,
+              "treated_events": 395,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.10787190002156422
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1186,
+          "prevalence": 0.49416666666666664,
+          "mean_probability": 0.49500718641711616,
+          "roc_auc": 0.6536660545463133,
+          "average_precision": 0.6635914921393816,
+          "log_loss": 0.6531700411115702,
+          "brier_score": 0.23111111411753568,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.10645171280659343,
+      "propensity_max": 0.9031714630068817,
+      "propensity_p10": 0.28426522955505035,
+      "propensity_p90": 0.7456112947847844,
+      "outcome_residual_mean": -0.002250745170267304,
+      "outcome_residual_sd": 1.5239884019329115,
+      "treatment_residual_mean": -0.0008405197504494963,
+      "treatment_residual_sd": 0.4807394384113756
+    },
+    {
+      "rep": 8,
+      "seed": 877132087,
+      "estimate": 1.626465810145665,
+      "standard_error": 0.05469582904590789,
+      "ci_low": 1.5192639551111287,
+      "ci_high": 1.7336676651802014,
+      "denominator": 564.075612884237,
+      "derivative": -0.2350315053684321,
+      "score_mean": 1.4802973661668754e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 798,
+            "control_n": 802,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 399,
+            "control_n": 401,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.12527690001297742
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 798,
+            "control_n": 802,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 399,
+            "control_n": 401,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.13939900003606454
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 798,
+            "control_n": 802,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 399,
+            "control_n": 401,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.12071619997732341
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5464020787688935
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 798,
+              "control_n": 802,
+              "treated_events": 798,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 399,
+              "control_n": 401,
+              "treated_events": 399,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.16009680001297966
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 798,
+              "control_n": 802,
+              "treated_events": 798,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 399,
+              "control_n": 401,
+              "treated_events": 399,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.12649850000161678
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 798,
+              "control_n": 802,
+              "treated_events": 798,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 399,
+              "control_n": 401,
+              "treated_events": 399,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.11119440000038594
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1197,
+          "prevalence": 0.49875,
+          "mean_probability": 0.5016954902644596,
+          "roc_auc": 0.6409553948601068,
+          "average_precision": 0.6543718176897573,
+          "log_loss": 0.6621939698735686,
+          "brier_score": 0.2350315053684321,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.1355719862358355,
+      "propensity_max": 0.8965327984445953,
+      "propensity_p10": 0.3011928573940287,
+      "propensity_p90": 0.7506870011204547,
+      "outcome_residual_mean": 0.00957876168566544,
+      "outcome_residual_sd": 1.5463724119840359,
+      "treatment_residual_mean": -0.0029454902644596363,
+      "treatment_residual_sd": 0.4847915319552663
+    },
+    {
+      "rep": 9,
+      "seed": 1244265337,
+      "estimate": 1.5339029265209063,
+      "standard_error": 0.05635119255971488,
+      "ci_low": 1.4234566186179867,
+      "ci_high": 1.644349234423826,
+      "denominator": 557.996643051801,
+      "derivative": -0.23249860127158375,
+      "score_mean": 4.7369515717340015e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 758,
+            "control_n": 842,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 379,
+            "control_n": 421,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.09884990000864491
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 758,
+            "control_n": 842,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 379,
+            "control_n": 421,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.09717900003306568
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 758,
+            "control_n": 842,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 379,
+            "control_n": 421,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.1092394000152126
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5255646977584734
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 758,
+              "control_n": 842,
+              "treated_events": 758,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 379,
+              "control_n": 421,
+              "treated_events": 379,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.11945810000179335
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 758,
+              "control_n": 842,
+              "treated_events": 758,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 379,
+              "control_n": 421,
+              "treated_events": 379,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.13992469996446744
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 758,
+              "control_n": 842,
+              "treated_events": 758,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 379,
+              "control_n": 421,
+              "treated_events": 379,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.1333185999537818
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1137,
+          "prevalence": 0.47375,
+          "mean_probability": 0.4764320724211249,
+          "roc_auc": 0.6495214936167812,
+          "average_precision": 0.633544201902144,
+          "log_loss": 0.6569047366135475,
+          "brier_score": 0.23249860127158375,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.12405805353240439,
+      "propensity_max": 0.8938578577731736,
+      "propensity_p10": 0.2670509684549759,
+      "propensity_p90": 0.7107115533023539,
+      "outcome_residual_mean": 0.007828491960310824,
+      "outcome_residual_sd": 1.52554461152748,
+      "treatment_residual_mean": -0.0026820724211248296,
+      "treatment_residual_sd": 0.4821736282285787
+    },
+    {
+      "rep": 10,
+      "seed": 2740186692,
+      "estimate": 1.5091098653460162,
+      "standard_error": 0.054689963985529486,
+      "ci_low": 1.4019195056185887,
+      "ci_high": 1.6163002250734437,
+      "denominator": 554.0124440263749,
+      "derivative": -0.23083851834432287,
+      "score_mean": 6.661338147750939e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 800,
+            "control_n": 800,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 401,
+            "control_n": 399,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.10693499998888001
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 801,
+            "control_n": 799,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 400,
+            "control_n": 400,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.13910920004127547
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 801,
+            "control_n": 799,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 400,
+            "control_n": 400,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.12531909998506308
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5207719202588883
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 800,
+              "control_n": 800,
+              "treated_events": 800,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 401,
+              "control_n": 399,
+              "treated_events": 401,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.11774299998069182
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 801,
+              "control_n": 799,
+              "treated_events": 801,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 400,
+              "control_n": 400,
+              "treated_events": 400,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.12433319998672232
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 801,
+              "control_n": 799,
+              "treated_events": 801,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 400,
+              "control_n": 400,
+              "treated_events": 400,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.10816399997565895
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1201,
+          "prevalence": 0.5004166666666666,
+          "mean_probability": 0.499448023578052,
+          "roc_auc": 0.6605289309228687,
+          "average_precision": 0.6549534300161673,
+          "log_loss": 0.654053864967505,
+          "brier_score": 0.23083851834432287,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.1370832640994796,
+      "propensity_max": 0.9050404831274421,
+      "propensity_p10": 0.29058821844008365,
+      "propensity_p90": 0.7374936527203209,
+      "outcome_residual_mean": -0.006663022542713012,
+      "outcome_residual_sd": 1.5207573236971446,
+      "treatment_residual_mean": 0.0009686430886146135,
+      "treatment_residual_sd": 0.4804555963612972
+    },
+    {
+      "rep": 11,
+      "seed": 3884972972,
+      "estimate": 1.6028745624832708,
+      "standard_error": 0.056460829314575536,
+      "ci_low": 1.4922133704894425,
+      "ci_high": 1.713535754477099,
+      "denominator": 540.5243759133912,
+      "derivative": -0.225218489963913,
+      "score_mean": 5.847174596359157e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 796,
+            "control_n": 804,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 398,
+            "control_n": 402,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.12899459997424856
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 796,
+            "control_n": 804,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 398,
+            "control_n": 402,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.11175089998869225
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 796,
+            "control_n": 804,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 398,
+            "control_n": 402,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.12998100003460422
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.604133722199375
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 796,
+              "control_n": 804,
+              "treated_events": 796,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 398,
+              "control_n": 402,
+              "treated_events": 398,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.11785119998967275
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 796,
+              "control_n": 804,
+              "treated_events": 796,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 398,
+              "control_n": 402,
+              "treated_events": 398,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.09356229996774346
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 796,
+              "control_n": 804,
+              "treated_events": 796,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 398,
+              "control_n": 402,
+              "treated_events": 398,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.12167259998386726
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1194,
+          "prevalence": 0.4975,
+          "mean_probability": 0.5000653040885127,
+          "roc_auc": 0.6742196332686096,
+          "average_precision": 0.6908670535489956,
+          "log_loss": 0.6400351102369124,
+          "brier_score": 0.225218489963913,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.12624275729349227,
+      "propensity_max": 0.9398099389032094,
+      "propensity_p10": 0.2922179205262923,
+      "propensity_p90": 0.7548633707769041,
+      "outcome_residual_mean": -0.007061211437063253,
+      "outcome_residual_sd": 1.604118180805349,
+      "treatment_residual_mean": -0.00256530408851264,
+      "treatment_residual_sd": 0.47456496834347817
+    },
+    {
+      "rep": 12,
+      "seed": 829139639,
+      "estimate": 1.554710179193591,
+      "standard_error": 0.05756439695262007,
+      "ci_low": 1.4418860343746913,
+      "ci_high": 1.6675343240124905,
+      "denominator": 549.1347744640567,
+      "derivative": -0.2288061560266903,
+      "score_mean": -4.5889218351173137e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 763,
+            "control_n": 837,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 381,
+            "control_n": 419,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.13331179996021092
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 763,
+            "control_n": 837,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 381,
+            "control_n": 419,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.14203599997563288
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 762,
+            "control_n": 838,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 382,
+            "control_n": 418,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.11655120004434139
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5292803912128925
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 763,
+              "control_n": 837,
+              "treated_events": 763,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 381,
+              "control_n": 419,
+              "treated_events": 381,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.12096149998251349
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 763,
+              "control_n": 837,
+              "treated_events": 763,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 381,
+              "control_n": 419,
+              "treated_events": 381,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.11445569997886196
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 762,
+              "control_n": 838,
+              "treated_events": 762,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 382,
+              "control_n": 418,
+              "treated_events": 382,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.11767219996545464
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1144,
+          "prevalence": 0.4766666666666667,
+          "mean_probability": 0.4752464688416342,
+          "roc_auc": 0.6604229767048237,
+          "average_precision": 0.6579343639473884,
+          "log_loss": 0.6484931121721176,
+          "brier_score": 0.2288061560266903,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.11687529289895654,
+      "propensity_max": 0.8989456310836227,
+      "propensity_p10": 0.2764307886336595,
+      "propensity_p90": 0.7248645680976522,
+      "outcome_residual_mean": 0.006753328588398485,
+      "outcome_residual_sd": 1.5292654797324219,
+      "treatment_residual_mean": 0.0014201978250325841,
+      "treatment_residual_sd": 0.47833475627935307
+    },
+    {
+      "rep": 13,
+      "seed": 2545567356,
+      "estimate": 1.580095744772755,
+      "standard_error": 0.058163593378697524,
+      "ci_low": 1.4660971965390788,
+      "ci_high": 1.6940942930064313,
+      "denominator": 556.1235836760862,
+      "derivative": -0.23171815986503594,
+      "score_mean": 2.0724163126336256e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 762,
+            "control_n": 838,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 382,
+            "control_n": 418,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.11579040001379326
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 763,
+            "control_n": 837,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 381,
+            "control_n": 419,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.11576220003189519
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 763,
+            "control_n": 837,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 381,
+            "control_n": 419,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.12157269997987896
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.559507273666921
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 762,
+              "control_n": 838,
+              "treated_events": 762,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 382,
+              "control_n": 418,
+              "treated_events": 382,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.12821180000901222
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 763,
+              "control_n": 837,
+              "treated_events": 763,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 381,
+              "control_n": 419,
+              "treated_events": 381,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.11614549998193979
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 763,
+              "control_n": 837,
+              "treated_events": 763,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 381,
+              "control_n": 419,
+              "treated_events": 381,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.14454849995672703
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1144,
+          "prevalence": 0.4766666666666667,
+          "mean_probability": 0.4775891814575372,
+          "roc_auc": 0.6521320041423545,
+          "average_precision": 0.640247461212551,
+          "log_loss": 0.6562863687846743,
+          "brier_score": 0.23171815986503594,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.111129060650858,
+      "propensity_max": 0.8979044160982999,
+      "propensity_p10": 0.2709721680217068,
+      "propensity_p90": 0.7292302939835638,
+      "outcome_residual_mean": 0.013974316835382734,
+      "outcome_residual_sd": 1.5594446624003742,
+      "treatment_residual_mean": -0.0009225147908705219,
+      "treatment_residual_sd": 0.4813702409076579
+    },
+    {
+      "rep": 14,
+      "seed": 2718398101,
+      "estimate": 1.6169597966440803,
+      "standard_error": 0.05783517105036115,
+      "ci_low": 1.503604944345662,
+      "ci_high": 1.7303146489424985,
+      "denominator": 544.3222787362931,
+      "derivative": -0.22680094947345547,
+      "score_mean": -3.256654205567126e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 756,
+            "control_n": 844,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 378,
+            "control_n": 422,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.1161149000399746
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 756,
+            "control_n": 844,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 378,
+            "control_n": 422,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.11197399999946356
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 756,
+            "control_n": 844,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 378,
+            "control_n": 422,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.09805620001861826
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5632566402166046
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 756,
+              "control_n": 844,
+              "treated_events": 756,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 378,
+              "control_n": 422,
+              "treated_events": 378,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.11349840002367273
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 756,
+              "control_n": 844,
+              "treated_events": 756,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 378,
+              "control_n": 422,
+              "treated_events": 378,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.14580699999351054
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 756,
+              "control_n": 844,
+              "treated_events": 756,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 378,
+              "control_n": 422,
+              "treated_events": 378,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.1314793999772519
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1134,
+          "prevalence": 0.4725,
+          "mean_probability": 0.47098115778922856,
+          "roc_auc": 0.6691108659249786,
+          "average_precision": 0.651467794913144,
+          "log_loss": 0.6449595884716357,
+          "brier_score": 0.22680094947345547,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.11703907311829598,
+      "propensity_max": 0.9065046824997967,
+      "propensity_p10": 0.27114411260019183,
+      "propensity_p90": 0.7262438905904737,
+      "outcome_residual_mean": 0.010854045577325519,
+      "outcome_residual_sd": 1.5632189587117709,
+      "treatment_residual_mean": 0.0015188422107713896,
+      "treatment_residual_sd": 0.4762338108448352
+    },
+    {
+      "rep": 15,
+      "seed": 176092387,
+      "estimate": 1.4388743605754233,
+      "standard_error": 0.055464317396757216,
+      "ci_low": 1.3301662960506837,
+      "ci_high": 1.5475824251001629,
+      "denominator": 549.9167757589465,
+      "derivative": -0.22913198989956104,
+      "score_mean": -5.736152293896643e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 795,
+            "control_n": 805,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 398,
+            "control_n": 402,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.10256520000984892
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 795,
+            "control_n": 805,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 398,
+            "control_n": 402,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.09859229996800423
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 796,
+            "control_n": 804,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 397,
+            "control_n": 403,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.11858200002461672
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5004502350937372
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 795,
+              "control_n": 805,
+              "treated_events": 795,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 398,
+              "control_n": 402,
+              "treated_events": 398,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.11035699996864423
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 795,
+              "control_n": 805,
+              "treated_events": 795,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 398,
+              "control_n": 402,
+              "treated_events": 398,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.12572930002352223
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 796,
+              "control_n": 804,
+              "treated_events": 796,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 397,
+              "control_n": 403,
+              "treated_events": 397,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.13416030001826584
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1193,
+          "prevalence": 0.4970833333333333,
+          "mean_probability": 0.49820835614139736,
+          "roc_auc": 0.6666782411345942,
+          "average_precision": 0.6625635899673437,
+          "log_loss": 0.650066053356673,
+          "brier_score": 0.22913198989956104,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.13517677380803,
+      "propensity_max": 0.8837751932069325,
+      "propensity_p10": 0.27942675493405966,
+      "propensity_p90": 0.7548377609045593,
+      "outcome_residual_mean": -0.0127171084639312,
+      "outcome_residual_sd": 1.5003963420193906,
+      "treatment_residual_mean": -0.0011250228080640589,
+      "treatment_residual_sd": 0.47867601174828306
+    },
+    {
+      "rep": 16,
+      "seed": 3528048386,
+      "estimate": 1.578831332401601,
+      "standard_error": 0.05694937968200362,
+      "ci_low": 1.4672125992829799,
+      "ci_high": 1.6904500655202221,
+      "denominator": 552.3087629546089,
+      "derivative": -0.23012865123108706,
+      "score_mean": 8.215650382226158e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 779,
+            "control_n": 821,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 389,
+            "control_n": 411,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.13607299997238442
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 779,
+            "control_n": 821,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 389,
+            "control_n": 411,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.12860789999831468
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 778,
+            "control_n": 822,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 390,
+            "control_n": 410,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.12414239998906851
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5596957458436729
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 779,
+              "control_n": 821,
+              "treated_events": 779,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 389,
+              "control_n": 411,
+              "treated_events": 389,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.11967360001290217
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 779,
+              "control_n": 821,
+              "treated_events": 779,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 389,
+              "control_n": 411,
+              "treated_events": 389,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.12792869994882494
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 778,
+              "control_n": 822,
+              "treated_events": 778,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 390,
+              "control_n": 410,
+              "treated_events": 390,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.11354270001174882
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1168,
+          "prevalence": 0.4866666666666667,
+          "mean_probability": 0.4881039002776773,
+          "roc_auc": 0.6566572340330903,
+          "average_precision": 0.6548357701899581,
+          "log_loss": 0.6516624379143605,
+          "brier_score": 0.23012865123108706,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.13364170740583456,
+      "propensity_max": 0.9296864177330336,
+      "propensity_p10": 0.2837281975268143,
+      "propensity_p90": 0.7407531408374791,
+      "outcome_residual_mean": -0.005201585595062176,
+      "outcome_residual_sd": 1.5596870721751042,
+      "treatment_residual_mean": -0.0014372336110106516,
+      "treatment_residual_sd": 0.47971510877877754
+    },
+    {
+      "rep": 17,
+      "seed": 569531098,
+      "estimate": 1.5280403855382072,
+      "standard_error": 0.05534134232745286,
+      "ci_low": 1.4195733477203005,
+      "ci_high": 1.6365074233561139,
+      "denominator": 541.9172960097455,
+      "derivative": -0.22579887333739398,
+      "score_mean": 5.921189464667501e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 745,
+            "control_n": 855,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 373,
+            "control_n": 427,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.11098019999917597
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 745,
+            "control_n": 855,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 373,
+            "control_n": 427,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.14866499998606741
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 746,
+            "control_n": 854,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 372,
+            "control_n": 428,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.10658000002149493
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5095274411408712
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 745,
+              "control_n": 855,
+              "treated_events": 745,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 373,
+              "control_n": 427,
+              "treated_events": 373,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.14302669995231554
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 745,
+              "control_n": 855,
+              "treated_events": 745,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 373,
+              "control_n": 427,
+              "treated_events": 373,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.13153190002776682
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 746,
+              "control_n": 854,
+              "treated_events": 746,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 372,
+              "control_n": 428,
+              "treated_events": 372,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.10019110003486276
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1118,
+          "prevalence": 0.4658333333333333,
+          "mean_probability": 0.46255877632268855,
+          "roc_auc": 0.6720150201356891,
+          "average_precision": 0.6420174183759725,
+          "log_loss": 0.6437088945507607,
+          "brier_score": 0.22579887333739398,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.11904472139244396,
+      "propensity_max": 0.9064913821979675,
+      "propensity_p10": 0.25390145831767896,
+      "propensity_p90": 0.7366155308132752,
+      "outcome_residual_mean": 0.00631218684923943,
+      "outcome_residual_sd": 1.5095142436739333,
+      "treatment_residual_mean": 0.003274557010644772,
+      "treatment_residual_sd": 0.4751717064533389
+    },
+    {
+      "rep": 18,
+      "seed": 1337295874,
+      "estimate": 1.5711302792299324,
+      "standard_error": 0.05791294798993076,
+      "ci_low": 1.45762298693113,
+      "ci_high": 1.684637571528735,
+      "denominator": 553.9723645832123,
+      "derivative": -0.23082181857633846,
+      "score_mean": -1.0362081563168128e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 751,
+            "control_n": 849,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 375,
+            "control_n": 425,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.12010140001075342
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 751,
+            "control_n": 849,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 375,
+            "control_n": 425,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.12231980002252385
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 750,
+            "control_n": 850,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 376,
+            "control_n": 424,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.1346684999880381
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5748809161419812
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 751,
+              "control_n": 849,
+              "treated_events": 751,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 375,
+              "control_n": 425,
+              "treated_events": 375,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.12404749996494502
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 751,
+              "control_n": 849,
+              "treated_events": 751,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 375,
+              "control_n": 425,
+              "treated_events": 375,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.10196600004564971
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 750,
+              "control_n": 850,
+              "treated_events": 750,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 376,
+              "control_n": 424,
+              "treated_events": 376,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.10858820000430569
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1126,
+          "prevalence": 0.4691666666666667,
+          "mean_probability": 0.4699274713900119,
+          "roc_auc": 0.655591680585337,
+          "average_precision": 0.6287952751383145,
+          "log_loss": 0.6544502376015915,
+          "brier_score": 0.23082181857633846,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.11506143723203976,
+      "propensity_max": 0.877214348850805,
+      "propensity_p10": 0.26460579794890876,
+      "propensity_p90": 0.7163616533024435,
+      "outcome_residual_mean": 0.008831241317777938,
+      "outcome_residual_sd": 1.5748561550836933,
+      "treatment_residual_mean": -0.0007608047233452868,
+      "treatment_residual_sd": 0.48043859103168574
+    },
+    {
+      "rep": 19,
+      "seed": 612016888,
+      "estimate": 1.5324551341230628,
+      "standard_error": 0.055586524376991096,
+      "ci_low": 1.4235075483184054,
+      "ci_high": 1.6414027199277201,
+      "denominator": 558.9743511285426,
+      "derivative": -0.23290597963689275,
+      "score_mean": -3.8857805861880476e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 766,
+            "control_n": 834,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 383,
+            "control_n": 417,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.09452839998994023
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 766,
+            "control_n": 834,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 383,
+            "control_n": 417,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.12235730001702905
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 766,
+            "control_n": 834,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 383,
+            "control_n": 417,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.12973559997044504
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5495503511895685
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 766,
+              "control_n": 834,
+              "treated_events": 766,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 383,
+              "control_n": 417,
+              "treated_events": 383,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.11161769996397197
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 766,
+              "control_n": 834,
+              "treated_events": 766,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 383,
+              "control_n": 417,
+              "treated_events": 383,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.09281269996427
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 766,
+              "control_n": 834,
+              "treated_events": 766,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 383,
+              "control_n": 417,
+              "treated_events": 383,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.11237370001617819
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1149,
+          "prevalence": 0.47875,
+          "mean_probability": 0.47665511299060254,
+          "roc_auc": 0.6411838327423354,
+          "average_precision": 0.6448455513749378,
+          "log_loss": 0.656507434218263,
+          "brier_score": 0.23290597963689275,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.13920909385257468,
+      "propensity_max": 0.921252215957982,
+      "propensity_p10": 0.27480353030591337,
+      "propensity_p90": 0.7352390882973201,
+      "outcome_residual_mean": 0.009439918790769924,
+      "outcome_residual_sd": 1.5495215967533136,
+      "treatment_residual_mean": 0.0020948870093974383,
+      "treatment_residual_sd": 0.4825987889389183
+    },
+    {
+      "rep": 20,
+      "seed": 232150720,
+      "estimate": 1.6187415644286087,
+      "standard_error": 0.05558799350972732,
+      "ci_low": 1.5097910991766998,
+      "ci_high": 1.7276920296805176,
+      "denominator": 553.2730939465382,
+      "derivative": -0.23053045581105758,
+      "score_mean": -4.144832625267251e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 751,
+            "control_n": 849,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 375,
+            "control_n": 425,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.12257760000647977
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 751,
+            "control_n": 849,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 375,
+            "control_n": 425,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.1225857000099495
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 750,
+            "control_n": 850,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 376,
+            "control_n": 424,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.0967464999994263
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5262688153372517
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 751,
+              "control_n": 849,
+              "treated_events": 751,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 375,
+              "control_n": 425,
+              "treated_events": 375,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.10173900000518188
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 751,
+              "control_n": 849,
+              "treated_events": 751,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 375,
+              "control_n": 425,
+              "treated_events": 375,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.11184990004403517
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 750,
+              "control_n": 850,
+              "treated_events": 750,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 376,
+              "control_n": 424,
+              "treated_events": 376,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.11117309995461255
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1126,
+          "prevalence": 0.4691666666666667,
+          "mean_probability": 0.46594362392513555,
+          "roc_auc": 0.6559799626914573,
+          "average_precision": 0.627396729640818,
+          "log_loss": 0.654045139847258,
+          "brier_score": 0.23053045581105758,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.11646629877902233,
+      "propensity_max": 0.9093742081423262,
+      "propensity_p10": 0.262877883537502,
+      "propensity_p90": 0.7195483772540566,
+      "outcome_residual_mean": -0.004788922050057966,
+      "outcome_residual_sd": 1.5262613022993723,
+      "treatment_residual_mean": 0.003223042741531239,
+      "treatment_residual_sd": 0.4801250543416203
+    },
+    {
+      "rep": 21,
+      "seed": 2324106676,
+      "estimate": 1.6420216442472158,
+      "standard_error": 0.056226595218113636,
+      "ci_low": 1.531819542646404,
+      "ci_high": 1.7522237458480274,
+      "denominator": 555.3526774051328,
+      "derivative": -0.23139694891880533,
+      "score_mean": 3.9968028886505634e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 748,
+            "control_n": 852,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 375,
+            "control_n": 425,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.1352953999885358
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 749,
+            "control_n": 851,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 374,
+            "control_n": 426,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.11560470005497336
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 749,
+            "control_n": 851,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 374,
+            "control_n": 426,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.09950670000398532
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5551931603963332
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 748,
+              "control_n": 852,
+              "treated_events": 748,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 375,
+              "control_n": 425,
+              "treated_events": 375,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.10420969995902851
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 749,
+              "control_n": 851,
+              "treated_events": 749,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 374,
+              "control_n": 426,
+              "treated_events": 374,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.09032750001642853
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 749,
+              "control_n": 851,
+              "treated_events": 749,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 374,
+              "control_n": 426,
+              "treated_events": 374,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.11327499995240942
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1123,
+          "prevalence": 0.46791666666666665,
+          "mean_probability": 0.465537378418948,
+          "roc_auc": 0.6502774269893192,
+          "average_precision": 0.6210015751218572,
+          "log_loss": 0.6563116849592131,
+          "brier_score": 0.23139694891880533,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.10655478387933026,
+      "propensity_max": 0.9165554544311102,
+      "propensity_p10": 0.2736618557959074,
+      "propensity_p90": 0.7168775281195521,
+      "outcome_residual_mean": -0.001029411950329225,
+      "outcome_residual_sd": 1.5551928197026155,
+      "treatment_residual_mean": 0.00237928824771869,
+      "treatment_residual_sd": 0.48103148327967016
+    },
+    {
+      "rep": 22,
+      "seed": 1658700540,
+      "estimate": 1.6534076614228619,
+      "standard_error": 0.05755387419707376,
+      "ci_low": 1.5406041408258513,
+      "ci_high": 1.7662111820198725,
+      "denominator": 559.9992194421303,
+      "derivative": -0.23333300810088764,
+      "score_mean": -8.141635513917815e-18,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 772,
+            "control_n": 828,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 386,
+            "control_n": 414,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.11256440001307055
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 772,
+            "control_n": 828,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 386,
+            "control_n": 414,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.09965699998429045
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 772,
+            "control_n": 828,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 386,
+            "control_n": 414,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.11795620003249496
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.583271572630599
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 772,
+              "control_n": 828,
+              "treated_events": 772,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 386,
+              "control_n": 414,
+              "treated_events": 386,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.11859760002698749
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 772,
+              "control_n": 828,
+              "treated_events": 772,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 386,
+              "control_n": 414,
+              "treated_events": 386,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.10628640005597845
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 772,
+              "control_n": 828,
+              "treated_events": 772,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 386,
+              "control_n": 414,
+              "treated_events": 386,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.11915689997840673
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1158,
+          "prevalence": 0.4825,
+          "mean_probability": 0.47643126140433784,
+          "roc_auc": 0.6443921581715378,
+          "average_precision": 0.6439815679796469,
+          "log_loss": 0.6582850516912354,
+          "brier_score": 0.23333300810088764,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.12996999565393536,
+      "propensity_max": 0.906125048852684,
+      "propensity_p10": 0.27742504713648247,
+      "propensity_p90": 0.7188712750196661,
+      "outcome_residual_mean": -0.011675996701818589,
+      "outcome_residual_sd": 1.5832285191346158,
+      "treatment_residual_mean": 0.006068738595662171,
+      "treatment_residual_sd": 0.48300743111544897
+    },
+    {
+      "rep": 23,
+      "seed": 609942288,
+      "estimate": 1.5446903611904865,
+      "standard_error": 0.05795289431179213,
+      "ci_low": 1.431104775539521,
+      "ci_high": 1.658275946841452,
+      "denominator": 577.6368485176507,
+      "derivative": -0.2406820202156878,
+      "score_mean": 4.366877230192282e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 812,
+            "control_n": 788,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 406,
+            "control_n": 394,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.11874150001676753
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 812,
+            "control_n": 788,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 406,
+            "control_n": 394,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.1385446999920532
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 812,
+            "control_n": 788,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 406,
+            "control_n": 394,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.10457480000331998
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5995503423219652
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 812,
+              "control_n": 788,
+              "treated_events": 812,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 406,
+              "control_n": 394,
+              "treated_events": 406,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.12253499997314066
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 812,
+              "control_n": 788,
+              "treated_events": 812,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 406,
+              "control_n": 394,
+              "treated_events": 406,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.10332639998523518
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 812,
+              "control_n": 788,
+              "treated_events": 812,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 406,
+              "control_n": 394,
+              "treated_events": 406,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.1136695999884978
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1218,
+          "prevalence": 0.5075,
+          "mean_probability": 0.5039854312906832,
+          "roc_auc": 0.6189844103812246,
+          "average_precision": 0.6460297141311482,
+          "log_loss": 0.6747910237082938,
+          "brier_score": 0.2406820202156878,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.15544786871264107,
+      "propensity_max": 0.8973754975963066,
+      "propensity_p10": 0.30345195128429675,
+      "propensity_p90": 0.7603313181191147,
+      "outcome_residual_mean": 0.005621977525938015,
+      "outcome_residual_sd": 1.5995404624425775,
+      "treatment_residual_mean": 0.003514568709316843,
+      "treatment_residual_sd": 0.4905809495103487
+    },
+    {
+      "rep": 24,
+      "seed": 3405943863,
+      "estimate": 1.7136184326277966,
+      "standard_error": 0.057643462763264375,
+      "ci_low": 1.6006393216676258,
+      "ci_high": 1.8265975435879673,
+      "denominator": 533.9139772533433,
+      "derivative": -0.22246415718889304,
+      "score_mean": 4.884981308350689e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 776,
+            "control_n": 824,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 388,
+            "control_n": 412,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.15855620004003868
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 776,
+            "control_n": 824,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 388,
+            "control_n": 412,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.12498670001514256
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 776,
+            "control_n": 824,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 388,
+            "control_n": 412,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.13430330000119284
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5678869045417854
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 776,
+              "control_n": 824,
+              "treated_events": 776,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 388,
+              "control_n": 412,
+              "treated_events": 388,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.1578864999464713
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 776,
+              "control_n": 824,
+              "treated_events": 776,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 388,
+              "control_n": 412,
+              "treated_events": 388,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.10973080003168434
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 776,
+              "control_n": 824,
+              "treated_events": 776,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 388,
+              "control_n": 412,
+              "treated_events": 388,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.12816289998590946
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1164,
+          "prevalence": 0.485,
+          "mean_probability": 0.4812378050915541,
+          "roc_auc": 0.6877196421223546,
+          "average_precision": 0.6800422264940211,
+          "log_loss": 0.635602107643441,
+          "brier_score": 0.22246415718889304,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.11312955353121566,
+      "propensity_max": 0.9175349268728622,
+      "propensity_p10": 0.26960566728466195,
+      "propensity_p90": 0.7413018020405832,
+      "outcome_residual_mean": 0.006974471058475139,
+      "outcome_residual_sd": 1.5678713921068514,
+      "treatment_residual_mean": 0.0037621949084459595,
+      "treatment_residual_sd": 0.47164605699439904
+    },
+    {
+      "rep": 25,
+      "seed": 2257503667,
+      "estimate": 1.5810113344242633,
+      "standard_error": 0.05700870505439679,
+      "ci_low": 1.4692763257123822,
+      "ci_high": 1.6927463431361445,
+      "denominator": 542.815778512758,
+      "derivative": -0.2261732410469825,
+      "score_mean": -2.1464311809419693e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 764,
+            "control_n": 836,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 382,
+            "control_n": 418,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.11014649999560788
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 764,
+            "control_n": 836,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 382,
+            "control_n": 418,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.11708170000929385
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 764,
+            "control_n": 836,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 382,
+            "control_n": 418,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.1264752999995835
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5431446386045666
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 764,
+              "control_n": 836,
+              "treated_events": 764,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 382,
+              "control_n": 418,
+              "treated_events": 382,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.11897130002034828
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 764,
+              "control_n": 836,
+              "treated_events": 764,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 382,
+              "control_n": 418,
+              "treated_events": 382,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.11513839999679476
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 764,
+              "control_n": 836,
+              "treated_events": 764,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 382,
+              "control_n": 418,
+              "treated_events": 382,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.10113189998082817
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1146,
+          "prevalence": 0.4775,
+          "mean_probability": 0.4781603161561344,
+          "roc_auc": 0.67040548777942,
+          "average_precision": 0.6640970458294686,
+          "log_loss": 0.6433267823546632,
+          "brier_score": 0.2261732410469825,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.11935365642678773,
+      "propensity_max": 0.9185235867911494,
+      "propensity_p10": 0.2681360638354715,
+      "propensity_p90": 0.745673504564175,
+      "outcome_residual_mean": 0.002928429122978962,
+      "outcome_residual_sd": 1.5431418599587303,
+      "treatment_residual_mean": -0.0006603161561344203,
+      "treatment_residual_sd": 0.4755762872868625
+    },
+    {
+      "rep": 26,
+      "seed": 4018327298,
+      "estimate": 1.6033087898267226,
+      "standard_error": 0.05433313583707078,
+      "ci_low": 1.4968178004189443,
+      "ci_high": 1.709799779234501,
+      "denominator": 556.1832825396012,
+      "derivative": -0.2317430343915005,
+      "score_mean": 1.0917193075480705e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 767,
+            "control_n": 833,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 384,
+            "control_n": 416,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.11415560002205893
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 767,
+            "control_n": 833,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 384,
+            "control_n": 416,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.11133089999202639
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 768,
+            "control_n": 832,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 383,
+            "control_n": 417,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.09379630000330508
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5176187731747426
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 767,
+              "control_n": 833,
+              "treated_events": 767,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 384,
+              "control_n": 416,
+              "treated_events": 384,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.11024910002015531
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 767,
+              "control_n": 833,
+              "treated_events": 767,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 384,
+              "control_n": 416,
+              "treated_events": 384,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.09956680005416274
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 768,
+              "control_n": 832,
+              "treated_events": 768,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 383,
+              "control_n": 417,
+              "treated_events": 383,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.1125330999493599
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1151,
+          "prevalence": 0.4795833333333333,
+          "mean_probability": 0.47611960114187923,
+          "roc_auc": 0.6503072136249399,
+          "average_precision": 0.6489925251229123,
+          "log_loss": 0.6555125639920897,
+          "brier_score": 0.23174303439150046,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.10898975710434934,
+      "propensity_max": 0.8937608468856663,
+      "propensity_p10": 0.2715305618584002,
+      "propensity_p90": 0.740993474465704,
+      "outcome_residual_mean": -0.0033607875992287006,
+      "outcome_residual_sd": 1.5176150519150513,
+      "treatment_residual_mean": 0.0034637321914540156,
+      "treatment_residual_sd": 0.48138450011483164
+    },
+    {
+      "rep": 27,
+      "seed": 2224437599,
+      "estimate": 1.4934001518171742,
+      "standard_error": 0.056666987192313875,
+      "ci_low": 1.3823348978078496,
+      "ci_high": 1.6044654058264989,
+      "denominator": 555.8690023360366,
+      "derivative": -0.23161208430668193,
+      "score_mean": 1.7023419710919066e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 771,
+            "control_n": 829,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 386,
+            "control_n": 414,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.12317199999233708
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 771,
+            "control_n": 829,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 386,
+            "control_n": 414,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.12604819994885474
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 772,
+            "control_n": 828,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 385,
+            "control_n": 415,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.11436469998443499
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5326587506045388
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 771,
+              "control_n": 829,
+              "treated_events": 771,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 386,
+              "control_n": 414,
+              "treated_events": 386,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.1000536999781616
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 771,
+              "control_n": 829,
+              "treated_events": 771,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 386,
+              "control_n": 414,
+              "treated_events": 386,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.09508200001437217
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 772,
+              "control_n": 828,
+              "treated_events": 772,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 385,
+              "control_n": 415,
+              "treated_events": 385,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.10108029999537393
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1157,
+          "prevalence": 0.4820833333333333,
+          "mean_probability": 0.48052342089791295,
+          "roc_auc": 0.6512480261113054,
+          "average_precision": 0.6507565424573052,
+          "log_loss": 0.6555951491412259,
+          "brier_score": 0.23161208430668193,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.13729934115300949,
+      "propensity_max": 0.9056925045688802,
+      "propensity_p10": 0.2730865863054025,
+      "propensity_p90": 0.7479936127162109,
+      "outcome_residual_mean": 0.015155751628269556,
+      "outcome_residual_sd": 1.5325838146728707,
+      "treatment_residual_mean": 0.0015599124354203557,
+      "treatment_residual_sd": 0.4812584035420844
+    },
+    {
+      "rep": 28,
+      "seed": 168388230,
+      "estimate": 1.5999451484545002,
+      "standard_error": 0.058847719811004034,
+      "ci_low": 1.4846057370526313,
+      "ci_high": 1.715284559856369,
+      "denominator": 529.6680008907815,
+      "derivative": -0.22069500037115897,
+      "score_mean": -2.6645352591003756e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 752,
+            "control_n": 848,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 376,
+            "control_n": 424,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.12074699997901917
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 752,
+            "control_n": 848,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 376,
+            "control_n": 424,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.1425908000092022
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 752,
+            "control_n": 848,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 376,
+            "control_n": 424,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.14209460001438856
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5468689540902332
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 752,
+              "control_n": 848,
+              "treated_events": 752,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 376,
+              "control_n": 424,
+              "treated_events": 376,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.10264889994869009
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 752,
+              "control_n": 848,
+              "treated_events": 752,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 376,
+              "control_n": 424,
+              "treated_events": 376,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.1289593999972567
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 752,
+              "control_n": 848,
+              "treated_events": 752,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 376,
+              "control_n": 424,
+              "treated_events": 376,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.10097690002294257
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1128,
+          "prevalence": 0.47,
+          "mean_probability": 0.471162752922188,
+          "roc_auc": 0.690089182166912,
+          "average_precision": 0.6747349617123559,
+          "log_loss": 0.6317169101041132,
+          "brier_score": 0.22069500037115897,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.09060742333747215,
+      "propensity_max": 0.9051696849363832,
+      "propensity_p10": 0.2537960400440046,
+      "propensity_p90": 0.7365849458124769,
+      "outcome_residual_mean": 0.005051373921999689,
+      "outcome_residual_sd": 1.546860706317706,
+      "treatment_residual_mean": -0.001162752922187956,
+      "treatment_residual_sd": 0.469780425706309
+    },
+    {
+      "rep": 29,
+      "seed": 911875363,
+      "estimate": 1.5735282816531695,
+      "standard_error": 0.05831269483652361,
+      "ci_low": 1.4592374999321116,
+      "ci_high": 1.6878190633742274,
+      "denominator": 555.1720550597909,
+      "derivative": -0.2313216896082462,
+      "score_mean": 3.256654205567126e-17,
+      "rows": 2400,
+      "outcome_strategy": "treatment",
+      "outcome_folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 1600,
+            "treated_n": 783,
+            "control_n": 817,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 392,
+            "control_n": 408,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.09657779999542981
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 1600,
+            "treated_n": 783,
+            "control_n": 817,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 392,
+            "control_n": 408,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.11927319999085739
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 1600,
+            "treated_n": 784,
+            "control_n": 816,
+            "treated_events": null,
+            "control_events": null
+          },
+          "held_out": {
+            "n": 800,
+            "treated_n": 391,
+            "control_n": 409,
+            "treated_events": null,
+            "control_events": null
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.11901520000537857
+        }
+      ],
+      "outcome_warnings": [],
+      "outcome_metrics": {
+        "rmse": 1.5775195689167165
+      },
+      "propensity_crossfit": {
+        "strategy": "joint",
+        "folds": [
+          {
+            "fold": 0,
+            "training": {
+              "n": 1600,
+              "treated_n": 783,
+              "control_n": 817,
+              "treated_events": 783,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 392,
+              "control_n": 408,
+              "treated_events": 392,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.10369169997284189
+          },
+          {
+            "fold": 1,
+            "training": {
+              "n": 1600,
+              "treated_n": 783,
+              "control_n": 817,
+              "treated_events": 783,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 392,
+              "control_n": 408,
+              "treated_events": 392,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.09453529998427257
+          },
+          {
+            "fold": 2,
+            "training": {
+              "n": 1600,
+              "treated_n": 784,
+              "control_n": 816,
+              "treated_events": 784,
+              "control_events": 0
+            },
+            "held_out": {
+              "n": 800,
+              "treated_n": 391,
+              "control_n": 409,
+              "treated_events": 391,
+              "control_events": 0
+            },
+            "constant_fallback": null,
+            "fit_seconds": 0.09028300002682954
+          }
+        ],
+        "warnings": [],
+        "metrics": {
+          "n": 2400,
+          "positives": 1175,
+          "prevalence": 0.4895833333333333,
+          "mean_probability": 0.4931427681876807,
+          "roc_auc": 0.657588884064264,
+          "average_precision": 0.6476482224783238,
+          "log_loss": 0.6546282557871658,
+          "brier_score": 0.2313216896082462,
+          "warning": ""
+        }
+      },
+      "propensity_min": 0.14412850246524034,
+      "propensity_max": 0.880119281386766,
+      "propensity_p10": 0.28348902438261325,
+      "propensity_p90": 0.7231034542164881,
+      "outcome_residual_mean": 0.0006277687903977617,
+      "outcome_residual_sd": 1.5775194440074356,
+      "treatment_residual_mean": -0.0035594348543473778,
+      "treatment_residual_sd": 0.4809459637337274
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - python: '3.11'
+            extras: dev
+          - python: '3.13'
+            extras: dev,advanced
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install ".[${{ matrix.extras }}]"
+      - run: python -m ruff check .
+      - run: python -m pytest -q
+      - run: python -m pip check

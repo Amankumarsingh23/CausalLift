@@ -1,0 +1,306 @@
+{
+  "criteo_v2_1": {
+    "source": {
+      "missing": {
+        "f0": 0,
+        "f1": 0,
+        "f2": 0,
+        "f3": 0,
+        "f4": 0,
+        "f5": 0,
+        "f6": 0,
+        "f7": 0,
+        "f8": 0,
+        "f9": 0,
+        "f10": 0,
+        "f11": 0,
+        "treatment": 0,
+        "conversion": 0,
+        "visit": 0,
+        "exposure": 0
+      },
+      "invalid": {
+        "f0": 0,
+        "f1": 0,
+        "f2": 0,
+        "f3": 0,
+        "f4": 0,
+        "f5": 0,
+        "f6": 0,
+        "f7": 0,
+        "f8": 0,
+        "f9": 0,
+        "f10": 0,
+        "f11": 0,
+        "treatment": 0,
+        "conversion": 0,
+        "visit": 0,
+        "exposure": 0
+      }
+    },
+    "processed": {
+      "missing": {
+        "f0": 0,
+        "f1": 0,
+        "f2": 0,
+        "f3": 0,
+        "f4": 0,
+        "f5": 0,
+        "f6": 0,
+        "f7": 0,
+        "f8": 0,
+        "f9": 0,
+        "f10": 0,
+        "f11": 0,
+        "treatment": 0,
+        "conversion": 0,
+        "visit": 0,
+        "exposure": 0,
+        "split": 0
+      },
+      "invalid": {
+        "f0": 0,
+        "f1": 0,
+        "f2": 0,
+        "f3": 0,
+        "f4": 0,
+        "f5": 0,
+        "f6": 0,
+        "f7": 0,
+        "f8": 0,
+        "f9": 0,
+        "f10": 0,
+        "f11": 0,
+        "treatment": 0,
+        "conversion": 0,
+        "visit": 0,
+        "exposure": 0,
+        "split": 0
+      }
+    }
+  },
+  "synthetic_A": {
+    "processed": {
+      "missing": {
+        "engagement": 0,
+        "loyalty": 0,
+        "spend": 0,
+        "recency": 0,
+        "price_sensitivity": 0,
+        "activity": 0,
+        "unit_id": 0,
+        "treatment": 0,
+        "outcome": 0,
+        "split": 0
+      },
+      "invalid": {
+        "engagement": 0,
+        "loyalty": 0,
+        "spend": 0,
+        "recency": 0,
+        "price_sensitivity": 0,
+        "activity": 0,
+        "unit_id": 0,
+        "treatment": 0,
+        "outcome": 0,
+        "split": 0
+      }
+    },
+    "ground_truth_missing": {
+      "unit_id": 0,
+      "mu0_true": 0,
+      "mu1_true": 0,
+      "tau_true": 0,
+      "propensity_true": 0,
+      "y0_true": 0,
+      "y1_true": 0
+    }
+  },
+  "synthetic_B": {
+    "processed": {
+      "missing": {
+        "engagement": 0,
+        "loyalty": 0,
+        "spend": 0,
+        "recency": 0,
+        "price_sensitivity": 0,
+        "activity": 0,
+        "unit_id": 0,
+        "treatment": 0,
+        "outcome": 0,
+        "split": 0
+      },
+      "invalid": {
+        "engagement": 0,
+        "loyalty": 0,
+        "spend": 0,
+        "recency": 0,
+        "price_sensitivity": 0,
+        "activity": 0,
+        "unit_id": 0,
+        "treatment": 0,
+        "outcome": 0,
+        "split": 0
+      }
+    },
+    "ground_truth_missing": {
+      "unit_id": 0,
+      "mu0_true": 0,
+      "mu1_true": 0,
+      "tau_true": 0,
+      "propensity_true": 0,
+      "y0_true": 0,
+      "y1_true": 0
+    }
+  },
+  "synthetic_C": {
+    "processed": {
+      "missing": {
+        "engagement": 0,
+        "loyalty": 0,
+        "spend": 0,
+        "recency": 0,
+        "price_sensitivity": 0,
+        "activity": 0,
+        "unit_id": 0,
+        "treatment": 0,
+        "outcome": 0,
+        "split": 0
+      },
+      "invalid": {
+        "engagement": 0,
+        "loyalty": 0,
+        "spend": 0,
+        "recency": 0,
+        "price_sensitivity": 0,
+        "activity": 0,
+        "unit_id": 0,
+        "treatment": 0,
+        "outcome": 0,
+        "split": 0
+      }
+    },
+    "ground_truth_missing": {
+      "unit_id": 0,
+      "mu0_true": 0,
+      "mu1_true": 0,
+      "tau_true": 0,
+      "propensity_true": 0,
+      "y0_true": 0,
+      "y1_true": 0
+    }
+  },
+  "synthetic_D": {
+    "processed": {
+      "missing": {
+        "engagement": 0,
+        "loyalty": 0,
+        "spend": 0,
+        "recency": 0,
+        "price_sensitivity": 0,
+        "activity": 0,
+        "unit_id": 0,
+        "treatment": 0,
+        "outcome": 0,
+        "split": 0
+      },
+      "invalid": {
+        "engagement": 0,
+        "loyalty": 0,
+        "spend": 0,
+        "recency": 0,
+        "price_sensitivity": 0,
+        "activity": 0,
+        "unit_id": 0,
+        "treatment": 0,
+        "outcome": 0,
+        "split": 0
+      }
+    },
+    "ground_truth_missing": {
+      "unit_id": 0,
+      "mu0_true": 0,
+      "mu1_true": 0,
+      "tau_true": 0,
+      "propensity_true": 0,
+      "y0_true": 0,
+      "y1_true": 0
+    }
+  },
+  "synthetic_E": {
+    "processed": {
+      "missing": {
+        "engagement": 0,
+        "loyalty": 0,
+        "spend": 0,
+        "recency": 0,
+        "price_sensitivity": 0,
+        "activity": 0,
+        "unit_id": 0,
+        "treatment": 0,
+        "outcome": 0,
+        "split": 0
+      },
+      "invalid": {
+        "engagement": 0,
+        "loyalty": 0,
+        "spend": 0,
+        "recency": 0,
+        "price_sensitivity": 0,
+        "activity": 0,
+        "unit_id": 0,
+        "treatment": 0,
+        "outcome": 0,
+        "split": 0
+      }
+    },
+    "ground_truth_missing": {
+      "unit_id": 0,
+      "mu0_true": 0,
+      "mu1_true": 0,
+      "tau_true": 0,
+      "propensity_true": 0,
+      "y0_true": 0,
+      "y1_true": 0
+    }
+  },
+  "synthetic_F": {
+    "processed": {
+      "missing": {
+        "engagement": 0,
+        "loyalty": 0,
+        "spend": 0,
+        "recency": 0,
+        "price_sensitivity": 0,
+        "activity": 0,
+        "unit_id": 0,
+        "treatment": 0,
+        "outcome": 0,
+        "split": 0
+      },
+      "invalid": {
+        "engagement": 0,
+        "loyalty": 0,
+        "spend": 0,
+        "recency": 0,
+        "price_sensitivity": 0,
+        "activity": 0,
+        "unit_id": 0,
+        "treatment": 0,
+        "outcome": 0,
+        "split": 0
+      }
+    },
+    "ground_truth_missing": {
+      "unit_id": 0,
+      "mu0_true": 0,
+      "mu1_true": 0,
+      "tau_true": 0,
+      "propensity_true": 0,
+      "y0_true": 0,
+      "y1_true": 0,
+      "latent_confounder": 0,
+      "tau_observed_true": 0
+    }
+  }
+}

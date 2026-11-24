@@ -1,0 +1,262 @@
+{
+  "seed": 42,
+  "repetitions": 3000,
+  "planning_scope": "Hypothetical future experiments using exact Session 02 control rates.",
+  "binary_planning_method": "two_sided_normal_cohen_h",
+  "planning_rows": 24,
+  "mde_rows": 16,
+  "continuous_example": {
+    "standardized_effect": 0.2,
+    "alpha": 0.05,
+    "target_power": 0.8,
+    "assumption": "Common population variance",
+    "control_n": 393,
+    "treated_n": 393,
+    "achieved_power": 0.8005559137898353,
+    "warnings": [],
+    "total_n": 786
+  },
+  "srm_statuses": {
+    "healthy_synthetic": "no_mismatch_detected",
+    "mismatched_synthetic": "mismatch",
+    "unequal_synthetic": "no_mismatch_detected",
+    "criteo_released_archive": "not_assessable"
+  },
+  "balance_flags": {
+    "criteo_v2_1": 0,
+    "synthetic_A": 0,
+    "synthetic_C": 2
+  },
+  "subgroup_rejections": {
+    "criteo_v2_1/f0": {
+      "uncorrected": 0,
+      "bonferroni": 0,
+      "holm": 0,
+      "benjamini_hochberg": 0
+    },
+    "synthetic_E/price_sensitivity": {
+      "uncorrected": 2,
+      "bonferroni": 2,
+      "holm": 2,
+      "benjamini_hochberg": 2
+    }
+  },
+  "guardrail_decisions": {
+    "primary_and_guardrail_pass": "ship",
+    "guardrail_harm": "do_not_ship",
+    "guardrail_inconclusive": "inconclusive",
+    "experiment_health_failed": "investigate"
+  },
+  "global_null_note": "FDR equals FWER under the global null because every rejection is false.",
+  "simulations": [
+    {
+      "check": "fixed_horizon",
+      "metric": "type_i_error",
+      "estimate": 0.049666666666666665,
+      "reference": 0.05,
+      "monte_carlo_se": 0.00396652193946993,
+      "parameters": {
+        "baseline": 0.1,
+        "control_n": 3835,
+        "treated_n": 3835,
+        "alpha": 0.05,
+        "null_treatment_rate": 0.1,
+        "control_inspections": [
+          383,
+          767,
+          1150,
+          1534,
+          1917,
+          2301,
+          2684,
+          3068,
+          3451,
+          3835
+        ],
+        "treated_inspections": [
+          383,
+          767,
+          1150,
+          1534,
+          1917,
+          2301,
+          2684,
+          3068,
+          3451,
+          3835
+        ]
+      },
+      "seed": 2684470948,
+      "repetitions": 3000
+    },
+    {
+      "check": "naive_peeking",
+      "metric": "type_i_error",
+      "estimate": 0.191,
+      "reference": null,
+      "monte_carlo_se": 0.007176791297880504,
+      "parameters": {
+        "baseline": 0.1,
+        "control_n": 3835,
+        "treated_n": 3835,
+        "alpha": 0.05,
+        "null_treatment_rate": 0.1,
+        "control_inspections": [
+          383,
+          767,
+          1150,
+          1534,
+          1917,
+          2301,
+          2684,
+          3068,
+          3451,
+          3835
+        ],
+        "treated_inspections": [
+          383,
+          767,
+          1150,
+          1534,
+          1917,
+          2301,
+          2684,
+          3068,
+          3451,
+          3835
+        ]
+      },
+      "seed": 2684470948,
+      "repetitions": 3000
+    },
+    {
+      "check": "planned_alternative",
+      "metric": "power",
+      "estimate": 0.8023333333333333,
+      "reference": 0.8000413398624785,
+      "monte_carlo_se": 0.00727082195159886,
+      "parameters": {
+        "baseline": 0.1,
+        "control_n": 3835,
+        "treated_n": 3835,
+        "alpha": 0.05,
+        "alternative": 0.12,
+        "target_power": 0.8
+      },
+      "seed": 2684470948,
+      "repetitions": 3000
+    },
+    {
+      "check": "newcombe_interval",
+      "metric": "coverage",
+      "estimate": 0.9446666666666667,
+      "reference": 0.95,
+      "monte_carlo_se": 0.004174188765718658,
+      "parameters": {
+        "baseline": 0.1,
+        "control_n": 3835,
+        "treated_n": 3835,
+        "alpha": 0.05,
+        "alternative": 0.12,
+        "target_power": 0.8,
+        "true_difference": 0.01999999999999999
+      },
+      "seed": 2684470948,
+      "repetitions": 3000
+    },
+    {
+      "check": "uncorrected",
+      "metric": "FWER",
+      "estimate": 0.6256666666666667,
+      "reference": 0.6415140775914581,
+      "monte_carlo_se": 0.008835683125616054,
+      "parameters": {
+        "family_size": 20,
+        "alpha": 0.05,
+        "true_nulls": 20
+      },
+      "seed": 2684470948,
+      "repetitions": 3000
+    },
+    {
+      "check": "bonferroni",
+      "metric": "FWER",
+      "estimate": 0.04566666666666667,
+      "reference": 0.04883012474683324,
+      "monte_carlo_se": 0.003811439895114978,
+      "parameters": {
+        "family_size": 20,
+        "alpha": 0.05,
+        "true_nulls": 20
+      },
+      "seed": 2684470948,
+      "repetitions": 3000
+    },
+    {
+      "check": "holm",
+      "metric": "FWER",
+      "estimate": 0.04566666666666667,
+      "reference": 0.04883012474683324,
+      "monte_carlo_se": 0.003811439895114978,
+      "parameters": {
+        "family_size": 20,
+        "alpha": 0.05,
+        "true_nulls": 20
+      },
+      "seed": 2684470948,
+      "repetitions": 3000
+    },
+    {
+      "check": "benjamini_hochberg",
+      "metric": "FDR",
+      "estimate": 0.04633333333333333,
+      "reference": 0.05,
+      "monte_carlo_se": 0.0038378186319642377,
+      "parameters": {
+        "family_size": 20,
+        "alpha": 0.05,
+        "true_nulls": 20
+      },
+      "seed": 2684470948,
+      "repetitions": 3000
+    },
+    {
+      "check": "cuped_strong",
+      "metric": "variance_reduction",
+      "estimate": 0.803643386744725,
+      "monte_carlo_se": 0.006327275217836781,
+      "reference": 0.7999878609615305,
+      "parameters": {
+        "arm_n": 500,
+        "pilot_n": 2000,
+        "pilot_theta": 2.00779071192813,
+        "true_effect": 0.4,
+        "true_slope": 2.0,
+        "noise_sd": 1.0,
+        "unadjusted_effect_variance": 0.020672932041715112,
+        "adjusted_effect_variance": 0.004059266921767635
+      },
+      "seed": 4091952314,
+      "repetitions": 3000
+    },
+    {
+      "check": "cuped_weak",
+      "metric": "variance_reduction",
+      "estimate": 0.019257104430221772,
+      "monte_carlo_se": 0.0036389199462712666,
+      "reference": 0.020010397941669922,
+      "parameters": {
+        "arm_n": 500,
+        "pilot_n": 2000,
+        "pilot_theta": 0.10484063657841938,
+        "true_effect": 0.4,
+        "true_slope": 0.15,
+        "noise_sd": 1.0,
+        "unadjusted_effect_variance": 0.004020443280871171,
+        "adjusted_effect_variance": 0.003943021184755651
+      },
+      "seed": 4091952314,
+      "repetitions": 3000
+    }
+  ]
+}

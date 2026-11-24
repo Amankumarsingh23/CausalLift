@@ -1,0 +1,190 @@
+{
+  "strong": {
+    "fit": {
+      "theta": 2.00779071192813,
+      "pilot_center": 0.010644103638807127,
+      "pilot_correlation": 0.8959559713673111,
+      "pilot_n": 2000,
+      "warnings": []
+    },
+    "unadjusted": {
+      "treatment": {
+        "n": 500,
+        "mean": 10.447781988657505,
+        "events": null,
+        "variance": 4.652066300369995
+      },
+      "control": {
+        "n": 500,
+        "mean": 9.94721622701174,
+        "events": null,
+        "variance": 4.756103662493718
+      },
+      "absolute_lift": 0.500565761645765,
+      "relative_lift": 0.050322195699986395,
+      "effect_se": 0.13717266464470035,
+      "null_se": 0.13717266464470035,
+      "statistic": 3.6491655457908636,
+      "statistic_name": "t",
+      "p_value": 0.0002767234628393989,
+      "log10_p_value": -3.557954016320982,
+      "confidence_interval": [
+        0.23138578734377918,
+        0.7697457359477509
+      ],
+      "confidence_level": 0.95,
+      "significant": true,
+      "test_method": "welch_t",
+      "interval_method": "welch_t",
+      "dataset_id": null,
+      "experiment_id": null,
+      "degrees_of_freedom": 997.8779758495989,
+      "wald_interval": null,
+      "bootstrap_interval": null,
+      "warnings": [],
+      "assumptions": [
+        "Independent observations and treatment arms.",
+        "Fixed-horizon, two-sided inference without multiplicity adjustment.",
+        "A causal interpretation requires a design that identifies an assignment effect.",
+        "Welch relies on normal populations or an adequate sampling approximation for arm means."
+      ]
+    },
+    "adjusted": {
+      "treatment": {
+        "n": 500,
+        "mean": 10.421573247887984,
+        "events": null,
+        "variance": 0.9933008701574068
+      },
+      "control": {
+        "n": 500,
+        "mean": 10.007129192211531,
+        "events": null,
+        "variance": 1.037585200536111
+      },
+      "absolute_lift": 0.41444405567645326,
+      "relative_lift": 0.04141488010357773,
+      "effect_se": 0.0637320338714138,
+      "null_se": 0.0637320338714138,
+      "statistic": 6.502915888619506,
+      "statistic_name": "t",
+      "p_value": 1.243474645337235e-10,
+      "log10_p_value": -9.905363065643252,
+      "confidence_interval": [
+        0.28937981899881615,
+        0.5395082923540904
+      ],
+      "confidence_level": 0.95,
+      "significant": true,
+      "test_method": "welch_t",
+      "interval_method": "welch_t",
+      "dataset_id": null,
+      "experiment_id": null,
+      "degrees_of_freedom": 997.5256999876132,
+      "wald_interval": null,
+      "bootstrap_interval": null,
+      "warnings": [],
+      "assumptions": [
+        "Independent observations and treatment arms.",
+        "Fixed-horizon, two-sided inference without multiplicity adjustment.",
+        "A causal interpretation requires a design that identifies an assignment effect.",
+        "Welch relies on normal populations or an adequate sampling approximation for arm means."
+      ]
+    },
+    "variance_reduction": 0.7841359075452603
+  },
+  "weak": {
+    "fit": {
+      "theta": 0.10484063657841938,
+      "pilot_center": 0.02175681535806528,
+      "pilot_correlation": 0.09889261829821479,
+      "pilot_n": 2000,
+      "warnings": []
+    },
+    "unadjusted": {
+      "treatment": {
+        "n": 500,
+        "mean": 10.42146948215776,
+        "events": null,
+        "variance": 1.049736957307632
+      },
+      "control": {
+        "n": 500,
+        "mean": 10.022283727832036,
+        "events": null,
+        "variance": 1.0322164209465332
+      },
+      "absolute_lift": 0.3991857543257229,
+      "relative_lift": 0.039829819746289755,
+      "effect_se": 0.06452834072334675,
+      "null_se": 0.06452834072334675,
+      "statistic": 6.186208259052523,
+      "statistic_name": "t",
+      "p_value": 8.979313185558656e-10,
+      "log10_p_value": -9.046756880607658,
+      "confidence_interval": [
+        0.2725589511120933,
+        0.5258125575393525
+      ],
+      "confidence_level": 0.95,
+      "significant": true,
+      "test_method": "welch_t",
+      "interval_method": "welch_t",
+      "dataset_id": null,
+      "experiment_id": null,
+      "degrees_of_freedom": 997.9293271540747,
+      "wald_interval": null,
+      "bootstrap_interval": null,
+      "warnings": [],
+      "assumptions": [
+        "Independent observations and treatment arms.",
+        "Fixed-horizon, two-sided inference without multiplicity adjustment.",
+        "A causal interpretation requires a design that identifies an assignment effect.",
+        "Welch relies on normal populations or an adequate sampling approximation for arm means."
+      ]
+    },
+    "adjusted": {
+      "treatment": {
+        "n": 500,
+        "mean": 10.42716937839991,
+        "events": null,
+        "variance": 1.027431438808651
+      },
+      "control": {
+        "n": 500,
+        "mean": 10.02780300610171,
+        "events": null,
+        "variance": 0.994556896557207
+      },
+      "absolute_lift": 0.39936637229819993,
+      "relative_lift": 0.03982590923008697,
+      "effect_se": 0.06359226895410885,
+      "null_se": 0.06359226895410885,
+      "statistic": 6.2801088696237795,
+      "statistic_name": "t",
+      "p_value": 5.042113632411233e-10,
+      "log10_p_value": -9.297387371001287,
+      "confidence_interval": [
+        0.27457643459607567,
+        0.5241563100003241
+      ],
+      "confidence_level": 0.95,
+      "significant": true,
+      "test_method": "welch_t",
+      "interval_method": "welch_t",
+      "dataset_id": null,
+      "experiment_id": null,
+      "degrees_of_freedom": 997.7362588519704,
+      "wald_interval": null,
+      "bootstrap_interval": null,
+      "warnings": [],
+      "assumptions": [
+        "Independent observations and treatment arms.",
+        "Fixed-horizon, two-sided inference without multiplicity adjustment.",
+        "A causal interpretation requires a design that identifies an assignment effect.",
+        "Welch relies on normal populations or an adequate sampling approximation for arm means."
+      ]
+    },
+    "variance_reduction": 0.028802298607950028
+  }
+}
