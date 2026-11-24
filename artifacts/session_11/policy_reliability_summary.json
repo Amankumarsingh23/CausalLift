@@ -1,0 +1,112 @@
+{
+  "A": {
+    "split": "validation",
+    "units": 4001,
+    "train_fingerprint": "06868702eb5edb6a953421af9fcc4b6810448ebb07905e31c523845f3ff19983",
+    "validation_fingerprint": "c122ec44f281edb7ca61c8033192a850bff236b3aa9459e2c0bec880a6e5bf0d",
+    "feature_allowlist": [
+      "engagement",
+      "loyalty",
+      "spend",
+      "recency",
+      "price_sensitivity",
+      "activity"
+    ],
+    "effect_model": "S-LightGBM",
+    "comparison_model": "X-linear",
+    "predictive_model": "pooled LightGBM",
+    "identification": "supported_under_assumptions",
+    "overlap_status": "no weight flag",
+    "business_interpretation": "simulated_policy_comparison",
+    "deployment_recommended": false,
+    "source": "session_10"
+  },
+  "B": {
+    "split": "validation",
+    "units": 4000,
+    "train_fingerprint": "a9e59cff1bb72f4f0db35799f8e6982417f42d0378b4cd28f05d2737e6677eee",
+    "validation_fingerprint": "b5c2cee5feead8b7b157ba36425db5bf109972b6c8b644cc4812cd04affd0545",
+    "feature_allowlist": [
+      "engagement",
+      "loyalty",
+      "spend",
+      "recency",
+      "price_sensitivity",
+      "activity"
+    ],
+    "effect_model": "S-LightGBM",
+    "comparison_model": "X-linear",
+    "predictive_model": "pooled LightGBM",
+    "identification": "supported_under_assumptions",
+    "overlap_status": "not_assessed",
+    "business_interpretation": "simulated_policy_comparison",
+    "deployment_recommended": false,
+    "source": "synthetic randomized design"
+  },
+  "D": {
+    "split": "validation",
+    "units": 4000,
+    "train_fingerprint": "e13a0d9cab1bac8a2a76a469aef249c33ae07fe6adb699523e3c3a04068d0c01",
+    "validation_fingerprint": "011bd3f714510d446e067117e6d74e880bcbd153366dc5b89160872b671c20cd",
+    "feature_allowlist": [
+      "engagement",
+      "loyalty",
+      "spend",
+      "recency",
+      "price_sensitivity",
+      "activity"
+    ],
+    "effect_model": "S-LightGBM",
+    "comparison_model": "X-linear",
+    "predictive_model": "pooled LightGBM",
+    "identification": "supported_under_assumptions",
+    "overlap_status": "not_assessed",
+    "business_interpretation": "simulated_policy_comparison",
+    "deployment_recommended": false,
+    "source": "synthetic randomized design"
+  },
+  "E": {
+    "split": "validation",
+    "units": 4001,
+    "train_fingerprint": "74efb94d5227a52406e58d4ae3a234be942f47c7760ebc8fdcb5b3733cb9e33e",
+    "validation_fingerprint": "12d819d006c15ebe9bee680767ba9e4833ea3b7904f40e7497e05c6460924fd9",
+    "feature_allowlist": [
+      "engagement",
+      "loyalty",
+      "spend",
+      "recency",
+      "price_sensitivity",
+      "activity"
+    ],
+    "effect_model": "S-LightGBM",
+    "comparison_model": "X-linear",
+    "predictive_model": "pooled LightGBM",
+    "identification": "supported_under_assumptions",
+    "overlap_status": "not_assessed",
+    "business_interpretation": "simulated_policy_comparison",
+    "deployment_recommended": false,
+    "source": "synthetic randomized design"
+  },
+  "F": {
+    "split": "validation",
+    "units": 4001,
+    "train_fingerprint": "d4b38f533853d96a7a00b93d17ce4f3e259bcddd511131bb5a645ad24fcf799a",
+    "validation_fingerprint": "37b15e3dfe54e39337306bb08f1dc05f5a8cb533bdabb3b08416a2949a729916",
+    "feature_allowlist": [
+      "engagement",
+      "loyalty",
+      "spend",
+      "recency",
+      "price_sensitivity",
+      "activity"
+    ],
+    "effect_model": "unsupported Scenario F aggregate AIPW score",
+    "comparison_model": null,
+    "predictive_model": null,
+    "identification": "not_identified",
+    "overlap_status": "weight concentration",
+    "business_interpretation": "research_only",
+    "deployment_recommended": false,
+    "source": "session_10"
+  }
+}

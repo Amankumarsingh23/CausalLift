@@ -1,0 +1,3 @@
+case,mu0,mu1,contribution,discount,delivery,profit_without_discount,profit_with_discount,expected_incentive_cost
+high baseline,0.7,0.8,40,8,1,3.0000000000000036,-3.399999999999997,6.4
+low baseline,0.1,0.2,40,8,1,3.0,1.4,1.6

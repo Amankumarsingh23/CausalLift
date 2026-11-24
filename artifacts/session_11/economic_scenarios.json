@@ -1,0 +1,31 @@
+{
+  "scenarios": {
+    "uniform": {
+      "value": "45",
+      "cost": "2"
+    },
+    "variable_value": {
+      "value": "integer uniform 20\u201370",
+      "cost": "2"
+    },
+    "variable_cost": {
+      "value": "integer uniform 20\u201370",
+      "cost": "integer uniform 1\u20137"
+    },
+    "unfavorable": {
+      "value": "5",
+      "cost": "20"
+    }
+  },
+  "seed": 42,
+  "units": "simulated contribution units",
+  "eligibility": "independent 90% probability",
+  "budget": "floor(2 \u00d7 population \u00d7 fraction)",
+  "budget_fractions": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "capacity": "floor(0.30 \u00d7 population)",
+  "variable_cost_cap": 180
+}

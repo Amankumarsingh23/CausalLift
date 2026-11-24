@@ -90,3 +90,6 @@ Run `python -m causallift.session09` to reuse the Session 01 and 08 artifacts. U
 ## Run Session 10
 
 Run `python -m causallift.session10` or use `--fixture` for an offline run. See the [causal reliability guide](docs/CAUSAL_RELIABILITY.md) and [completion report](docs/session-10-completion.md).
+## Run Session 11
+
+Run `python -m causallift.session11` with the existing model files, or use `--fixture` for an offline run. See the [optimization guide](docs/TREATMENT_OPTIMIZATION.md) and [completion report](docs/session-11-completion.md).
