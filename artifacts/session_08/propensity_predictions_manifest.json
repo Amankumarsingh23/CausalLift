@@ -1,0 +1,1227 @@
+{
+  "models": [
+    {
+      "scenario": "A",
+      "model": "constant",
+      "source": "data/synthetic/synthetic_A.parquet",
+      "model_path": "models/A_constant.joblib",
+      "prediction_path": "models/A_constant.parquet",
+      "row_identity": "unit_id",
+      "train_fingerprint": "06868702eb5edb6a953421af9fcc4b6810448ebb07905e31c523845f3ff19983",
+      "validation_fingerprint": "c122ec44f281edb7ca61c8033192a850bff236b3aa9459e2c0bec880a6e5bf0d",
+      "feature_allowlist": [
+        "engagement",
+        "loyalty",
+        "spend",
+        "recency",
+        "price_sensitivity",
+        "activity"
+      ],
+      "target": "treatment",
+      "configuration": {
+        "model": "training assignment share"
+      },
+      "seed": 42,
+      "fold_strategy": "joint",
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 8000,
+            "treated_n": 3966,
+            "control_n": 4034,
+            "treated_events": 3966,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1984,
+            "control_n": 2016,
+            "treated_events": 1984,
+            "control_events": 0
+          },
+          "constant_fallback": 0.49575,
+          "fit_seconds": 0.0007023000007393421
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 8000,
+            "treated_n": 3967,
+            "control_n": 4033,
+            "treated_events": 3967,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1983,
+            "control_n": 2017,
+            "treated_events": 1983,
+            "control_events": 0
+          },
+          "constant_fallback": 0.495875,
+          "fit_seconds": 0.0003374999996594852
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 8000,
+            "treated_n": 3967,
+            "control_n": 4033,
+            "treated_events": 3967,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1983,
+            "control_n": 2017,
+            "treated_events": 1983,
+            "control_events": 0
+          },
+          "constant_fallback": 0.495875,
+          "fit_seconds": 0.0003286000001025968
+        }
+      ],
+      "warnings": [],
+      "oof_metrics": {
+        "n": 12000,
+        "positives": 5950,
+        "prevalence": 0.49583333333333335,
+        "mean_probability": 0.49583333333333335,
+        "roc_auc": 0.4998888811723036,
+        "average_precision": 0.49577778711484594,
+        "log_loss": 0.693112492660494,
+        "brier_score": 0.24998265624999996,
+        "warning": ""
+      }
+    },
+    {
+      "scenario": "A",
+      "model": "logistic",
+      "source": "data/synthetic/synthetic_A.parquet",
+      "model_path": "models/A_logistic.joblib",
+      "prediction_path": "models/A_logistic.parquet",
+      "row_identity": "unit_id",
+      "train_fingerprint": "06868702eb5edb6a953421af9fcc4b6810448ebb07905e31c523845f3ff19983",
+      "validation_fingerprint": "c122ec44f281edb7ca61c8033192a850bff236b3aa9459e2c0bec880a6e5bf0d",
+      "feature_allowlist": [
+        "engagement",
+        "loyalty",
+        "spend",
+        "recency",
+        "price_sensitivity",
+        "activity"
+      ],
+      "target": "treatment",
+      "configuration": {
+        "C": 1.0,
+        "solver": "lbfgs",
+        "max_iter": 200,
+        "tol": 1e-06,
+        "random_state": 42
+      },
+      "seed": 42,
+      "fold_strategy": "joint",
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 8000,
+            "treated_n": 3966,
+            "control_n": 4034,
+            "treated_events": 3966,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1984,
+            "control_n": 2016,
+            "treated_events": 1984,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.13791119999950752
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 8000,
+            "treated_n": 3967,
+            "control_n": 4033,
+            "treated_events": 3967,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1983,
+            "control_n": 2017,
+            "treated_events": 1983,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.017786700000215205
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 8000,
+            "treated_n": 3967,
+            "control_n": 4033,
+            "treated_events": 3967,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1983,
+            "control_n": 2017,
+            "treated_events": 1983,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.02066519999971206
+        }
+      ],
+      "warnings": [],
+      "oof_metrics": {
+        "n": 12000,
+        "positives": 5950,
+        "prevalence": 0.49583333333333335,
+        "mean_probability": 0.4960151897699294,
+        "roc_auc": 0.5031758594346829,
+        "average_precision": 0.49976320679307706,
+        "log_loss": 0.693467131219032,
+        "brier_score": 0.250159463252305,
+        "warning": ""
+      }
+    },
+    {
+      "scenario": "A",
+      "model": "lightgbm",
+      "source": "data/synthetic/synthetic_A.parquet",
+      "model_path": "models/A_lightgbm.joblib",
+      "prediction_path": "models/A_lightgbm.parquet",
+      "row_identity": "unit_id",
+      "train_fingerprint": "06868702eb5edb6a953421af9fcc4b6810448ebb07905e31c523845f3ff19983",
+      "validation_fingerprint": "c122ec44f281edb7ca61c8033192a850bff236b3aa9459e2c0bec880a6e5bf0d",
+      "feature_allowlist": [
+        "engagement",
+        "loyalty",
+        "spend",
+        "recency",
+        "price_sensitivity",
+        "activity"
+      ],
+      "target": "treatment",
+      "configuration": {
+        "objective": "binary",
+        "n_estimators": 55,
+        "learning_rate": 0.07,
+        "num_leaves": 15,
+        "min_child_samples": 40,
+        "reg_lambda": 1.0,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": 2,
+        "verbosity": -1
+      },
+      "seed": 42,
+      "fold_strategy": "joint",
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 8000,
+            "treated_n": 3966,
+            "control_n": 4034,
+            "treated_events": 3966,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1984,
+            "control_n": 2016,
+            "treated_events": 1984,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.048452500000166765
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 8000,
+            "treated_n": 3967,
+            "control_n": 4033,
+            "treated_events": 3967,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1983,
+            "control_n": 2017,
+            "treated_events": 1983,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.034050399999614456
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 8000,
+            "treated_n": 3967,
+            "control_n": 4033,
+            "treated_events": 3967,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1983,
+            "control_n": 2017,
+            "treated_events": 1983,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.03852290000031644
+        }
+      ],
+      "warnings": [],
+      "oof_metrics": {
+        "n": 12000,
+        "positives": 5950,
+        "prevalence": 0.49583333333333335,
+        "mean_probability": 0.49563553223109746,
+        "roc_auc": 0.5096105146190708,
+        "average_precision": 0.5027232376119042,
+        "log_loss": 0.6959978216970789,
+        "brier_score": 0.25138895021043495,
+        "warning": ""
+      }
+    },
+    {
+      "scenario": "C",
+      "model": "constant",
+      "source": "data/synthetic/synthetic_C.parquet",
+      "model_path": "models/C_constant.joblib",
+      "prediction_path": "models/C_constant.parquet",
+      "row_identity": "unit_id",
+      "train_fingerprint": "c4597d44f76322a286ccb623a84939c4f98a30e865055fe00cf5edcc9bff0177",
+      "validation_fingerprint": "46b76d827840f506b6d14f51020fe55beb0a0848e6890944b9238d77a17409ac",
+      "feature_allowlist": [
+        "engagement",
+        "loyalty",
+        "spend",
+        "recency",
+        "price_sensitivity",
+        "activity"
+      ],
+      "target": "treatment",
+      "configuration": {
+        "model": "training assignment share"
+      },
+      "seed": 42,
+      "fold_strategy": "joint",
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 8000,
+            "treated_n": 3522,
+            "control_n": 4478,
+            "treated_events": 3522,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1761,
+            "control_n": 2239,
+            "treated_events": 1761,
+            "control_events": 0
+          },
+          "constant_fallback": 0.44025,
+          "fit_seconds": 0.00025550000009388896
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 8000,
+            "treated_n": 3522,
+            "control_n": 4478,
+            "treated_events": 3522,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1761,
+            "control_n": 2239,
+            "treated_events": 1761,
+            "control_events": 0
+          },
+          "constant_fallback": 0.44025,
+          "fit_seconds": 0.00018829999953595689
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 8000,
+            "treated_n": 3522,
+            "control_n": 4478,
+            "treated_events": 3522,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1761,
+            "control_n": 2239,
+            "treated_events": 1761,
+            "control_events": 0
+          },
+          "constant_fallback": 0.44025,
+          "fit_seconds": 0.00016330000016751
+        }
+      ],
+      "warnings": [],
+      "oof_metrics": {
+        "n": 12000,
+        "positives": 5283,
+        "prevalence": 0.44025,
+        "mean_probability": 0.44024999999999986,
+        "roc_auc": 0.5,
+        "average_precision": 0.44025,
+        "log_loss": 0.68598996394542,
+        "brier_score": 0.24642993749999997,
+        "warning": ""
+      }
+    },
+    {
+      "scenario": "C",
+      "model": "logistic",
+      "source": "data/synthetic/synthetic_C.parquet",
+      "model_path": "models/C_logistic.joblib",
+      "prediction_path": "models/C_logistic.parquet",
+      "row_identity": "unit_id",
+      "train_fingerprint": "c4597d44f76322a286ccb623a84939c4f98a30e865055fe00cf5edcc9bff0177",
+      "validation_fingerprint": "46b76d827840f506b6d14f51020fe55beb0a0848e6890944b9238d77a17409ac",
+      "feature_allowlist": [
+        "engagement",
+        "loyalty",
+        "spend",
+        "recency",
+        "price_sensitivity",
+        "activity"
+      ],
+      "target": "treatment",
+      "configuration": {
+        "C": 1.0,
+        "solver": "lbfgs",
+        "max_iter": 200,
+        "tol": 1e-06,
+        "random_state": 42
+      },
+      "seed": 42,
+      "fold_strategy": "joint",
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 8000,
+            "treated_n": 3522,
+            "control_n": 4478,
+            "treated_events": 3522,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1761,
+            "control_n": 2239,
+            "treated_events": 1761,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.014182400000208872
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 8000,
+            "treated_n": 3522,
+            "control_n": 4478,
+            "treated_events": 3522,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1761,
+            "control_n": 2239,
+            "treated_events": 1761,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.012469700000110606
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 8000,
+            "treated_n": 3522,
+            "control_n": 4478,
+            "treated_events": 3522,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1761,
+            "control_n": 2239,
+            "treated_events": 1761,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.015858400000070105
+        }
+      ],
+      "warnings": [],
+      "oof_metrics": {
+        "n": 12000,
+        "positives": 5283,
+        "prevalence": 0.44025,
+        "mean_probability": 0.4403674697563794,
+        "roc_auc": 0.8421221030509827,
+        "average_precision": 0.8061394868824625,
+        "log_loss": 0.48599282172788144,
+        "brier_score": 0.16050578624549353,
+        "warning": ""
+      }
+    },
+    {
+      "scenario": "C",
+      "model": "lightgbm",
+      "source": "data/synthetic/synthetic_C.parquet",
+      "model_path": "models/C_lightgbm.joblib",
+      "prediction_path": "models/C_lightgbm.parquet",
+      "row_identity": "unit_id",
+      "train_fingerprint": "c4597d44f76322a286ccb623a84939c4f98a30e865055fe00cf5edcc9bff0177",
+      "validation_fingerprint": "46b76d827840f506b6d14f51020fe55beb0a0848e6890944b9238d77a17409ac",
+      "feature_allowlist": [
+        "engagement",
+        "loyalty",
+        "spend",
+        "recency",
+        "price_sensitivity",
+        "activity"
+      ],
+      "target": "treatment",
+      "configuration": {
+        "objective": "binary",
+        "n_estimators": 55,
+        "learning_rate": 0.07,
+        "num_leaves": 15,
+        "min_child_samples": 40,
+        "reg_lambda": 1.0,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": 2,
+        "verbosity": -1
+      },
+      "seed": 42,
+      "fold_strategy": "joint",
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 8000,
+            "treated_n": 3522,
+            "control_n": 4478,
+            "treated_events": 3522,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1761,
+            "control_n": 2239,
+            "treated_events": 1761,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.0392904999998791
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 8000,
+            "treated_n": 3522,
+            "control_n": 4478,
+            "treated_events": 3522,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1761,
+            "control_n": 2239,
+            "treated_events": 1761,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.04124200000023848
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 8000,
+            "treated_n": 3522,
+            "control_n": 4478,
+            "treated_events": 3522,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1761,
+            "control_n": 2239,
+            "treated_events": 1761,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.045396500000606466
+        }
+      ],
+      "warnings": [],
+      "oof_metrics": {
+        "n": 12000,
+        "positives": 5283,
+        "prevalence": 0.44025,
+        "mean_probability": 0.440458778482686,
+        "roc_auc": 0.8387960788156179,
+        "average_precision": 0.7997385419810137,
+        "log_loss": 0.49139126624785845,
+        "brier_score": 0.16224799146484967,
+        "warning": ""
+      }
+    },
+    {
+      "scenario": "F",
+      "model": "constant",
+      "source": "data/synthetic/synthetic_F.parquet",
+      "model_path": "models/F_constant.joblib",
+      "prediction_path": "models/F_constant.parquet",
+      "row_identity": "unit_id",
+      "train_fingerprint": "d4b38f533853d96a7a00b93d17ce4f3e259bcddd511131bb5a645ad24fcf799a",
+      "validation_fingerprint": "37b15e3dfe54e39337306bb08f1dc05f5a8cb533bdabb3b08416a2949a729916",
+      "feature_allowlist": [
+        "engagement",
+        "loyalty",
+        "spend",
+        "recency",
+        "price_sensitivity",
+        "activity"
+      ],
+      "target": "treatment",
+      "configuration": {
+        "model": "training assignment share"
+      },
+      "seed": 42,
+      "fold_strategy": "joint",
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 8000,
+            "treated_n": 3999,
+            "control_n": 4001,
+            "treated_events": 3999,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1999,
+            "control_n": 2001,
+            "treated_events": 1999,
+            "control_events": 0
+          },
+          "constant_fallback": 0.499875,
+          "fit_seconds": 0.000258100000792183
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 8000,
+            "treated_n": 3999,
+            "control_n": 4001,
+            "treated_events": 3999,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1999,
+            "control_n": 2001,
+            "treated_events": 1999,
+            "control_events": 0
+          },
+          "constant_fallback": 0.499875,
+          "fit_seconds": 0.0001770999997461331
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 8000,
+            "treated_n": 3998,
+            "control_n": 4002,
+            "treated_events": 3998,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 2000,
+            "control_n": 2000,
+            "treated_events": 2000,
+            "control_events": 0
+          },
+          "constant_fallback": 0.49975,
+          "fit_seconds": 0.0002782000001388951
+        }
+      ],
+      "warnings": [],
+      "oof_metrics": {
+        "n": 12000,
+        "positives": 5998,
+        "prevalence": 0.49983333333333335,
+        "mean_probability": 0.49983333333333335,
+        "roc_auc": 0.4998888888765432,
+        "average_precision": 0.4997777870401245,
+        "log_loss": 0.693147159726616,
+        "brier_score": 0.24999998958333336,
+        "warning": ""
+      }
+    },
+    {
+      "scenario": "F",
+      "model": "logistic",
+      "source": "data/synthetic/synthetic_F.parquet",
+      "model_path": "models/F_logistic.joblib",
+      "prediction_path": "models/F_logistic.parquet",
+      "row_identity": "unit_id",
+      "train_fingerprint": "d4b38f533853d96a7a00b93d17ce4f3e259bcddd511131bb5a645ad24fcf799a",
+      "validation_fingerprint": "37b15e3dfe54e39337306bb08f1dc05f5a8cb533bdabb3b08416a2949a729916",
+      "feature_allowlist": [
+        "engagement",
+        "loyalty",
+        "spend",
+        "recency",
+        "price_sensitivity",
+        "activity"
+      ],
+      "target": "treatment",
+      "configuration": {
+        "C": 1.0,
+        "solver": "lbfgs",
+        "max_iter": 200,
+        "tol": 1e-06,
+        "random_state": 42
+      },
+      "seed": 42,
+      "fold_strategy": "joint",
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 8000,
+            "treated_n": 3999,
+            "control_n": 4001,
+            "treated_events": 3999,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1999,
+            "control_n": 2001,
+            "treated_events": 1999,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.015419500000461994
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 8000,
+            "treated_n": 3999,
+            "control_n": 4001,
+            "treated_events": 3999,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1999,
+            "control_n": 2001,
+            "treated_events": 1999,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.013623499999994237
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 8000,
+            "treated_n": 3998,
+            "control_n": 4002,
+            "treated_events": 3998,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 2000,
+            "control_n": 2000,
+            "treated_events": 2000,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.018567699999948672
+        }
+      ],
+      "warnings": [],
+      "oof_metrics": {
+        "n": 12000,
+        "positives": 5998,
+        "prevalence": 0.49983333333333335,
+        "mean_probability": 0.49970239896766877,
+        "roc_auc": 0.8172615630290625,
+        "average_precision": 0.8140474945516845,
+        "log_loss": 0.5207453432293342,
+        "brier_score": 0.17452147839198734,
+        "warning": ""
+      }
+    },
+    {
+      "scenario": "F",
+      "model": "lightgbm",
+      "source": "data/synthetic/synthetic_F.parquet",
+      "model_path": "models/F_lightgbm.joblib",
+      "prediction_path": "models/F_lightgbm.parquet",
+      "row_identity": "unit_id",
+      "train_fingerprint": "d4b38f533853d96a7a00b93d17ce4f3e259bcddd511131bb5a645ad24fcf799a",
+      "validation_fingerprint": "37b15e3dfe54e39337306bb08f1dc05f5a8cb533bdabb3b08416a2949a729916",
+      "feature_allowlist": [
+        "engagement",
+        "loyalty",
+        "spend",
+        "recency",
+        "price_sensitivity",
+        "activity"
+      ],
+      "target": "treatment",
+      "configuration": {
+        "objective": "binary",
+        "n_estimators": 55,
+        "learning_rate": 0.07,
+        "num_leaves": 15,
+        "min_child_samples": 40,
+        "reg_lambda": 1.0,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": 2,
+        "verbosity": -1
+      },
+      "seed": 42,
+      "fold_strategy": "joint",
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 8000,
+            "treated_n": 3999,
+            "control_n": 4001,
+            "treated_events": 3999,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1999,
+            "control_n": 2001,
+            "treated_events": 1999,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.04591609999988577
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 8000,
+            "treated_n": 3999,
+            "control_n": 4001,
+            "treated_events": 3999,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 1999,
+            "control_n": 2001,
+            "treated_events": 1999,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.03562659999988682
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 8000,
+            "treated_n": 3998,
+            "control_n": 4002,
+            "treated_events": 3998,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 4000,
+            "treated_n": 2000,
+            "control_n": 2000,
+            "treated_events": 2000,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.0346890999999232
+        }
+      ],
+      "warnings": [],
+      "oof_metrics": {
+        "n": 12000,
+        "positives": 5998,
+        "prevalence": 0.49983333333333335,
+        "mean_probability": 0.5004588856064643,
+        "roc_auc": 0.814141826571314,
+        "average_precision": 0.8084994894425598,
+        "log_loss": 0.5248583774526294,
+        "brier_score": 0.1758245719105126,
+        "warning": ""
+      }
+    },
+    {
+      "scenario": "Criteo 200k",
+      "model": "constant",
+      "source": "data/processed/criteo_v2_1.parquet",
+      "model_path": "models/Criteo_200k_constant.joblib",
+      "prediction_path": "models/Criteo_200k_constant.parquet",
+      "row_identity": "position within unchanged ordered partition",
+      "train_fingerprint": "78638a1affb314e6fbc631645dc74647c80b1ae934c21486548f177c80dc44ec",
+      "validation_fingerprint": "a1c5ec0ff571415fca4bdc28d7712752899884487a73a6c42153f6b29477fb95",
+      "feature_allowlist": [
+        "f0",
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f6",
+        "f7",
+        "f8",
+        "f9",
+        "f10",
+        "f11"
+      ],
+      "target": "treatment",
+      "configuration": {
+        "model": "training assignment share"
+      },
+      "seed": 42,
+      "fold_strategy": "joint",
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 68000,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 34000,
+            "control_events": 0
+          },
+          "constant_fallback": 0.85,
+          "fit_seconds": 0.006027899999935471
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 68000,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 34000,
+            "control_events": 0
+          },
+          "constant_fallback": 0.85,
+          "fit_seconds": 0.00554180000017368
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 68000,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 34000,
+            "control_events": 0
+          },
+          "constant_fallback": 0.85,
+          "fit_seconds": 0.00542940000013914
+        }
+      ],
+      "warnings": [],
+      "oof_metrics": {
+        "n": 120000,
+        "positives": 102000,
+        "prevalence": 0.85,
+        "mean_probability": 0.8499999999999998,
+        "roc_auc": 0.5,
+        "average_precision": 0.85,
+        "log_loss": 0.4227090878059909,
+        "brier_score": 0.12749999999999997,
+        "warning": ""
+      }
+    },
+    {
+      "scenario": "Criteo 200k",
+      "model": "logistic",
+      "source": "data/processed/criteo_v2_1.parquet",
+      "model_path": "models/Criteo_200k_logistic.joblib",
+      "prediction_path": "models/Criteo_200k_logistic.parquet",
+      "row_identity": "position within unchanged ordered partition",
+      "train_fingerprint": "78638a1affb314e6fbc631645dc74647c80b1ae934c21486548f177c80dc44ec",
+      "validation_fingerprint": "a1c5ec0ff571415fca4bdc28d7712752899884487a73a6c42153f6b29477fb95",
+      "feature_allowlist": [
+        "f0",
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f6",
+        "f7",
+        "f8",
+        "f9",
+        "f10",
+        "f11"
+      ],
+      "target": "treatment",
+      "configuration": {
+        "C": 1.0,
+        "solver": "lbfgs",
+        "max_iter": 200,
+        "tol": 1e-06,
+        "random_state": 42
+      },
+      "seed": 42,
+      "fold_strategy": "joint",
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 68000,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 34000,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.16741259999980684
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 68000,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 34000,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.1361947000004875
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 68000,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 34000,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.1294525999992402
+        }
+      ],
+      "warnings": [],
+      "oof_metrics": {
+        "n": 120000,
+        "positives": 102000,
+        "prevalence": 0.85,
+        "mean_probability": 0.8500059503344093,
+        "roc_auc": 0.5057134133986929,
+        "average_precision": 0.8543388392377966,
+        "log_loss": 0.42264994320079385,
+        "brier_score": 0.1274860011157673,
+        "warning": ""
+      }
+    },
+    {
+      "scenario": "Criteo 200k",
+      "model": "lightgbm",
+      "source": "data/processed/criteo_v2_1.parquet",
+      "model_path": "models/Criteo_200k_lightgbm.joblib",
+      "prediction_path": "models/Criteo_200k_lightgbm.parquet",
+      "row_identity": "position within unchanged ordered partition",
+      "train_fingerprint": "78638a1affb314e6fbc631645dc74647c80b1ae934c21486548f177c80dc44ec",
+      "validation_fingerprint": "a1c5ec0ff571415fca4bdc28d7712752899884487a73a6c42153f6b29477fb95",
+      "feature_allowlist": [
+        "f0",
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f6",
+        "f7",
+        "f8",
+        "f9",
+        "f10",
+        "f11"
+      ],
+      "target": "treatment",
+      "configuration": {
+        "objective": "binary",
+        "n_estimators": 55,
+        "learning_rate": 0.07,
+        "num_leaves": 15,
+        "min_child_samples": 40,
+        "reg_lambda": 1.0,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": 2,
+        "verbosity": -1
+      },
+      "seed": 42,
+      "fold_strategy": "joint",
+      "folds": [
+        {
+          "fold": 0,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 68000,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 34000,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.213568000000123
+        },
+        {
+          "fold": 1,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 68000,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 34000,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.23401499999999942
+        },
+        {
+          "fold": 2,
+          "training": {
+            "n": 80000,
+            "treated_n": 68000,
+            "control_n": 12000,
+            "treated_events": 68000,
+            "control_events": 0
+          },
+          "held_out": {
+            "n": 40000,
+            "treated_n": 34000,
+            "control_n": 6000,
+            "treated_events": 34000,
+            "control_events": 0
+          },
+          "constant_fallback": null,
+          "fit_seconds": 0.2599452000004021
+        }
+      ],
+      "warnings": [],
+      "oof_metrics": {
+        "n": 120000,
+        "positives": 102000,
+        "prevalence": 0.85,
+        "mean_probability": 0.84999125539862,
+        "roc_auc": 0.5092541064814815,
+        "average_precision": 0.8556564655711567,
+        "log_loss": 0.42262505379807275,
+        "brier_score": 0.1274860484065529,
+        "warning": ""
+      }
+    }
+  ],
+  "dependencies": {
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "scikit-learn": "1.9.1",
+    "lightgbm": "4.7.0",
+    "networkx": "3.7",
+    "joblib": "1.6.0",
+    "pyarrow": "26.0.1"
+  }
+}

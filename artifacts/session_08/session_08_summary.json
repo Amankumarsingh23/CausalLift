@@ -1,0 +1,10 @@
+{
+  "seed": 42,
+  "fixture": false,
+  "runtime_seconds": 8.545103700000254,
+  "models": 12,
+  "networkx": "3.7",
+  "evaluation_partition": "validation",
+  "hidden_propensity_note": "F truth conditions on observed features and hidden U; model scores condition on observable features only.",
+  "criteo_note": "Released assignment prediction is diagnostic; original trial assignment probabilities are unavailable."
+}

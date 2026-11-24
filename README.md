@@ -81,3 +81,6 @@ The run reuses Session 04/05 models for the original benchmarks and saves new X/
 ```
 
 Session 07 adds partially linear DML, LinearDML and CausalForestDML. It reuses the fixed splits and saved models from earlier sessions. Use `--fixture` for an offline run or `--development-only` to skip Criteo 1M. See the [DML guide](docs/DOUBLE_MACHINE_LEARNING.md), [Causal Forest guide](docs/CAUSAL_FOREST.md) and [Session 07 results](docs/session-07-completion.md).
+## Run Session 08
+
+Run `python -m causallift.session08` in the project environment after installing the package dependencies. Use `--fixture` to run without the benchmark files. See the [DAG guide](docs/CAUSAL_DAGS.md), [propensity guide](docs/PROPENSITY_SCORES.md), and [completion report](docs/session-08-completion.md).

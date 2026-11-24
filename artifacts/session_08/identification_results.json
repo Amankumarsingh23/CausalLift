@@ -1,0 +1,183 @@
+{
+  "confounder": {
+    "empty": {
+      "estimand": "total average effect of treatment on outcome",
+      "adjustment_set": [],
+      "identified": false,
+      "backdoor_d_separated": false,
+      "invalid": [],
+      "warnings": [
+        "The proposed set leaves a path open in the backdoor graph."
+      ],
+      "assumptions": {
+        "graph_is_correct": true,
+        "consistency": true,
+        "positivity_for_adjustment": true
+      }
+    },
+    "proposed": {
+      "estimand": "total average effect of treatment on outcome",
+      "adjustment_set": [
+        "X"
+      ],
+      "identified": true,
+      "backdoor_d_separated": true,
+      "invalid": [],
+      "warnings": [],
+      "assumptions": {
+        "graph_is_correct": true,
+        "consistency": true,
+        "positivity_for_adjustment": true
+      }
+    }
+  },
+  "mediator": {
+    "empty": {
+      "estimand": "total average effect of treatment on outcome",
+      "adjustment_set": [],
+      "identified": true,
+      "backdoor_d_separated": true,
+      "invalid": [],
+      "warnings": [],
+      "assumptions": {
+        "graph_is_correct": true,
+        "consistency": true,
+        "positivity_for_adjustment": true
+      }
+    },
+    "proposed": {
+      "estimand": "total average effect of treatment on outcome",
+      "adjustment_set": [],
+      "identified": true,
+      "backdoor_d_separated": true,
+      "invalid": [],
+      "warnings": [],
+      "assumptions": {
+        "graph_is_correct": true,
+        "consistency": true,
+        "positivity_for_adjustment": true
+      }
+    },
+    "conditioned": {
+      "estimand": "total average effect of treatment on outcome",
+      "adjustment_set": [
+        "M"
+      ],
+      "identified": false,
+      "backdoor_d_separated": true,
+      "invalid": [
+        "M"
+      ],
+      "warnings": [
+        "Classical backdoor adjustment requires observed non-descendants of treatment."
+      ],
+      "assumptions": {
+        "graph_is_correct": true,
+        "consistency": true,
+        "positivity_for_adjustment": true
+      }
+    }
+  },
+  "collider": {
+    "empty": {
+      "estimand": "total average effect of treatment on outcome",
+      "adjustment_set": [],
+      "identified": true,
+      "backdoor_d_separated": true,
+      "invalid": [],
+      "warnings": [],
+      "assumptions": {
+        "graph_is_correct": true,
+        "consistency": true,
+        "positivity_for_adjustment": true
+      }
+    },
+    "proposed": {
+      "estimand": "total average effect of treatment on outcome",
+      "adjustment_set": [],
+      "identified": true,
+      "backdoor_d_separated": true,
+      "invalid": [],
+      "warnings": [],
+      "assumptions": {
+        "graph_is_correct": true,
+        "consistency": true,
+        "positivity_for_adjustment": true
+      }
+    },
+    "conditioned": {
+      "estimand": "total average effect of treatment on outcome",
+      "adjustment_set": [
+        "C"
+      ],
+      "identified": false,
+      "backdoor_d_separated": true,
+      "invalid": [
+        "C"
+      ],
+      "warnings": [
+        "Classical backdoor adjustment requires observed non-descendants of treatment."
+      ],
+      "assumptions": {
+        "graph_is_correct": true,
+        "consistency": true,
+        "positivity_for_adjustment": true
+      }
+    },
+    "path_demo_without_direct_effect_edge": {
+      "unconditioned_d_separated": true,
+      "conditioned_d_separated": false
+    }
+  },
+  "hidden": {
+    "empty": {
+      "estimand": "total average effect of treatment on outcome",
+      "adjustment_set": [],
+      "identified": false,
+      "backdoor_d_separated": false,
+      "invalid": [],
+      "warnings": [
+        "The proposed set leaves a path open in the backdoor graph."
+      ],
+      "assumptions": {
+        "graph_is_correct": true,
+        "consistency": true,
+        "positivity_for_adjustment": true
+      }
+    },
+    "proposed": {
+      "estimand": "total average effect of treatment on outcome",
+      "adjustment_set": [],
+      "identified": false,
+      "backdoor_d_separated": false,
+      "invalid": [],
+      "warnings": [
+        "The proposed set leaves a path open in the backdoor graph."
+      ],
+      "assumptions": {
+        "graph_is_correct": true,
+        "consistency": true,
+        "positivity_for_adjustment": true
+      }
+    },
+    "conditioned": {
+      "estimand": "total average effect of treatment on outcome",
+      "adjustment_set": [
+        "U"
+      ],
+      "identified": false,
+      "backdoor_d_separated": null,
+      "invalid": [
+        "U"
+      ],
+      "warnings": [
+        "Classical backdoor adjustment requires observed non-descendants of treatment."
+      ],
+      "assumptions": {
+        "graph_is_correct": true,
+        "consistency": true,
+        "positivity_for_adjustment": true
+      }
+    }
+  }
+}

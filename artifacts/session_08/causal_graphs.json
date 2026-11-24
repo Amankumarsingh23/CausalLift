@@ -1,0 +1,127 @@
+{
+  "confounder": {
+    "nodes": [
+      "X",
+      "T",
+      "Y"
+    ],
+    "edges": [
+      [
+        "X",
+        "T"
+      ],
+      [
+        "X",
+        "Y"
+      ],
+      [
+        "T",
+        "Y"
+      ]
+    ],
+    "treatment": "T",
+    "outcome": "Y",
+    "observed": [
+      "X"
+    ],
+    "latent": [],
+    "adjustment": [
+      "X"
+    ],
+    "assumptions": {}
+  },
+  "mediator": {
+    "nodes": [
+      "T",
+      "M",
+      "Y"
+    ],
+    "edges": [
+      [
+        "T",
+        "M"
+      ],
+      [
+        "M",
+        "Y"
+      ],
+      [
+        "T",
+        "Y"
+      ]
+    ],
+    "treatment": "T",
+    "outcome": "Y",
+    "observed": [
+      "M"
+    ],
+    "latent": [],
+    "adjustment": [],
+    "assumptions": {}
+  },
+  "collider": {
+    "nodes": [
+      "T",
+      "C",
+      "U",
+      "Y"
+    ],
+    "edges": [
+      [
+        "T",
+        "C"
+      ],
+      [
+        "U",
+        "C"
+      ],
+      [
+        "U",
+        "Y"
+      ],
+      [
+        "T",
+        "Y"
+      ]
+    ],
+    "treatment": "T",
+    "outcome": "Y",
+    "observed": [
+      "C"
+    ],
+    "latent": [
+      "U"
+    ],
+    "adjustment": [],
+    "assumptions": {}
+  },
+  "hidden": {
+    "nodes": [
+      "U",
+      "T",
+      "Y"
+    ],
+    "edges": [
+      [
+        "U",
+        "T"
+      ],
+      [
+        "U",
+        "Y"
+      ],
+      [
+        "T",
+        "Y"
+      ]
+    ],
+    "treatment": "T",
+    "outcome": "Y",
+    "observed": [],
+    "latent": [
+      "U"
+    ],
+    "adjustment": [],
+    "assumptions": {}
+  }
+}
