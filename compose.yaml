@@ -1,0 +1,29 @@
+services:
+  api:
+    build: .
+    environment:
+      CAUSALLIFT_ROOT: /app
+    command: python -m uvicorn causallift.platform.api:app --host 0.0.0.0 --port 8000
+    ports: ["127.0.0.1:8000:8000"]
+    volumes: ["./artifacts:/app/artifacts:ro"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 4s
+      retries: 5
+  dashboard:
+    build: .
+    environment:
+      CAUSALLIFT_ROOT: /app
+      CAUSALLIFT_API: http://api:8000
+    command: python -m streamlit run dashboard/app.py --server.address=0.0.0.0
+    ports: ["127.0.0.1:8501:8501"]
+    volumes: ["./artifacts:/app/artifacts:ro"]
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8501/_stcore/health')"]
+      interval: 10s
+      timeout: 4s
+      retries: 5

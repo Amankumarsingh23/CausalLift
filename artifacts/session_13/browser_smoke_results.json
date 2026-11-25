@@ -1,0 +1,21 @@
+{
+  "api_ready_seconds": 2.901,
+  "dashboard_ready_seconds": 1.486,
+  "pages": [
+    "Overview",
+    "Experimentation lab",
+    "Uplift comparison",
+    "Observational inference",
+    "Causal reliability",
+    "Business policy lab",
+    "Reports"
+  ],
+  "edge_version": "158.0.4370.33",
+  "browser_mode": "headless Edge, real native API and Streamlit with allowlisted aggregates only",
+  "ab_lift": "2.00 pp",
+  "planning": "rendered achieved power",
+  "changed_budget": 60,
+  "selected_after_change": 30,
+  "markdown_download": "verified content",
+  "csv_download": "verified no synthetic truth column"
+}

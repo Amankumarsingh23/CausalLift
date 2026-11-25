@@ -1,0 +1,125 @@
+{
+  "analysis": {
+    "treatment": {
+      "n": 1000,
+      "mean": 0.12,
+      "events": 120,
+      "variance": null
+    },
+    "control": {
+      "n": 1000,
+      "mean": 0.1,
+      "events": 100,
+      "variance": null
+    },
+    "absolute_lift": 0.01999999999999999,
+    "relative_lift": 0.1999999999999999,
+    "effect_se": 0.013985706989637671,
+    "null_se": 0.013992855319769444,
+    "statistic": 1.4293008498232314,
+    "statistic_name": "z",
+    "p_value": 0.15291778186394625,
+    "log10_p_value": -0.8155420102294868,
+    "confidence_interval": [
+      -0.007492167515211052,
+      0.047550667456339055
+    ],
+    "confidence_level": 0.95,
+    "significant": false,
+    "test_method": "pooled_proportion_z",
+    "interval_method": "newcombe_wilson",
+    "dataset_id": null,
+    "experiment_id": null,
+    "degrees_of_freedom": null,
+    "wald_interval": [
+      -0.0074114819980199455,
+      0.04741148199801992
+    ],
+    "bootstrap_interval": null,
+    "warnings": [],
+    "assumptions": [
+      "Independent observations and treatment arms.",
+      "Fixed-horizon, two-sided inference without multiplicity adjustment.",
+      "A causal interpretation requires a design that identifies an assignment effect.",
+      "Binary outcomes follow the independent binomial sampling model."
+    ],
+    "units": "Rates, lift and confidence bounds are fractions."
+  },
+  "planning": {
+    "control_n": 3835,
+    "treated_n": 3835,
+    "achieved_power": 0.8000413398624785,
+    "warnings": [],
+    "units": "Participants per arm. Ratio is treated/control; power is a probability."
+  },
+  "budget_60": {
+    "dataset": "fixture_E",
+    "model": "frozen deterministic fixture scores v1",
+    "split": "interactive fixture",
+    "identification": "supported_under_assumptions",
+    "warning": "Modeled projections under hypothetical economics.",
+    "economics": {
+      "dataset": "fixture_E",
+      "policy": "profit",
+      "budget": 60.0,
+      "capacity": 90,
+      "contribution": 45.0,
+      "cost": 2.0
+    },
+    "population": 240,
+    "eligible": 215,
+    "selected": 30,
+    "spend": 60.0,
+    "remaining_budget": 0.0,
+    "expected_conversions": 3.871572565341689,
+    "expected_contribution": 174.220765440376,
+    "expected_profit": 114.220765440376,
+    "expected_roi": 1.9036794240062667,
+    "true_expected_synthetic_profit": 128.70743901743924,
+    "feasible": true,
+    "seed": 42,
+    "fixture_fingerprint": "27b333457479c76712f31d514e13441b9ba33ea55f70b4ae089834175542bce6",
+    "allocation_fingerprint": "e5ab94c3024f73704072b7a4ef165b8191e5dee07c43e068e0eb104c86ddff1b",
+    "runtime_seconds": 0.0006177000032039359,
+    "units": {
+      "money": "hypothetical currency units",
+      "roi": "fraction",
+      "capacity": "customers"
+    }
+  },
+  "budget_120": {
+    "dataset": "fixture_E",
+    "model": "frozen deterministic fixture scores v1",
+    "split": "interactive fixture",
+    "identification": "supported_under_assumptions",
+    "warning": "Modeled projections under hypothetical economics.",
+    "economics": {
+      "dataset": "fixture_E",
+      "policy": "profit",
+      "budget": 120.0,
+      "capacity": 90,
+      "contribution": 45.0,
+      "cost": 2.0
+    },
+    "population": 240,
+    "eligible": 215,
+    "selected": 60,
+    "spend": 120.0,
+    "remaining_budget": 0.0,
+    "expected_conversions": 6.801391717887279,
+    "expected_contribution": 306.06262730492756,
+    "expected_profit": 186.06262730492756,
+    "expected_roi": 1.5505218942077297,
+    "true_expected_synthetic_profit": 207.04284877779747,
+    "feasible": true,
+    "seed": 42,
+    "fixture_fingerprint": "27b333457479c76712f31d514e13441b9ba33ea55f70b4ae089834175542bce6",
+    "allocation_fingerprint": "8a2114fe6964e2ce4b21190833781c48ea253661c5856baa232e517063d4b8fa",
+    "runtime_seconds": 0.0004896999889751896,
+    "units": {
+      "money": "hypothetical currency units",
+      "roi": "fraction",
+      "capacity": "customers"
+    }
+  }
+}

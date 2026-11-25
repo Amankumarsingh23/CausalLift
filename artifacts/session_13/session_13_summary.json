@@ -1,0 +1,15 @@
+{
+  "session": 13,
+  "offline_mode": "published aggregates and synthetic fixture",
+  "dashboard_pages_verified": 7,
+  "local_tests": {"passed": 149, "failed": 0, "skipped": 0},
+  "ruff_check": "passed",
+  "pip_check": "passed",
+  "tracking_version": "mlflow-skinny 3.18.0",
+  "browser_driver_version": "playwright 1.65.2",
+  "advanced_version": "econml 0.17.1",
+  "numerical_versions": {"scipy": "1.18.1", "scikit-learn": "1.9.1"},
+  "docker_services_verified": ["api", "dashboard"],
+  "frozen_protocol_unchanged": true,
+  "reserved_test_accessed": false
+}

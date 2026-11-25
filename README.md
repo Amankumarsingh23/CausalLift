@@ -97,3 +97,18 @@ Run `python -m causallift.session11` with the existing model files, or use `--fi
 ## Run Session 12
 
 Run `python -m causallift.session12` with the local Session 01, 04, 05, 08, 10 and 11 artifacts. Use `--fixture --output <directory>` for an offline synthetic run. See the [evaluation guide](docs/OFFLINE_POLICY_EVALUATION.md), [business case study](docs/BUSINESS_CASE_STUDY.md), and [completion report](docs/session-12-completion.md).
+
+## Decision platform
+
+CausalLift connects experimental design, causal analysis and profit-aware allocation. The local dashboard uses published tables and the same analytical services as the FastAPI backend. A fresh checkout can run the offline demo without datasets, model binaries or credentials.
+
+```powershell
+python -m pip install -e ".[dev,platform]"
+python -m uvicorn causallift.platform.api:app --port 8000
+```
+
+In a second terminal, run `python -m streamlit run dashboard/app.py` and open the dashboard on port 8501. Alternatively, run `docker compose up --build` for both services. Run `python -m causallift.session13 --fixture --output artifacts/session_13_demo` to reproduce the offline API verification.
+
+On validation, the synthetic E profit-aware policy returned 4,160 in true expected profit at a 1,600 budget. On released Criteo 1M, its paired DR advantage over predictive targeting was 7,092 in hypothetical currency under different realized spending. The interval against treat-none included zero. Scenario F remains research-only, and the final test partition is locked.
+
+[Demo guide](docs/DEMO_GUIDE.md) · [Architecture](docs/PLATFORM_ARCHITECTURE.md) · [Session 13 results](docs/session-13-completion.md)

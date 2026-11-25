@@ -1,0 +1,12 @@
+operation,count,median,max
+artifact_cold_load,1,25.566,25.566
+benchmark,3,6.671,24.601
+binary,3,5.163,6.218
+catalog,3,138.966,182.715
+executive_export,3,13.537,34.660
+health,3,3.487,7.119
+missing_artifact,3,5.247,5.747
+planning,3,6.696,6.970
+policy_budget_120,3,4.980,5.106
+policy_budget_60,3,5.344,6.118
+reliability,3,5.006,22.590

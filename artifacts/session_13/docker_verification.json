@@ -1,0 +1,19 @@
+{
+    "api_health":  "ok",
+    "dashboard_http":  200,
+    "fixture_selected_at_budget_60":  30,
+    "containers":  [
+                       {
+                           "Service":  "api",
+                           "State":  "running",
+                           "Health":  "healthy"
+                       },
+                       {
+                           "Service":  "dashboard",
+                           "State":  "running",
+                           "Health":  "healthy"
+                       }
+                   ],
+    "python":  "Python 3.13.18",
+    "docker":  "29.9.2"
+}

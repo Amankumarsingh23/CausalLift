@@ -1,0 +1,21 @@
+{
+  "mode": "artifact-only",
+  "asset_count": 57,
+  "protocol_before": "35cf618174130b6c527112aeda1b530fbcb460f0ddbadca0ed56f0b264f1f13e",
+  "protocol_after": "35cf618174130b6c527112aeda1b530fbcb460f0ddbadca0ed56f0b264f1f13e",
+  "reserved_test_accessed": false,
+  "environment": "Windows-11-10.0.26300-SP0",
+  "python": "3.13.15",
+  "packages": {
+    "fastapi": "0.165.0",
+    "uvicorn": "0.54.0",
+    "streamlit": "1.67.0",
+    "plotly": "6.9.0",
+    "pydantic": "2.14.4",
+    "httpx": "0.28.1",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1"
+  },
+  "benchmark_method": "Perf counter, in-process TestClient or cold CSV parse, three calls per route",
+  "mlflow_run_id": "e5eeb6928b3d4cc4b67fde4ec99fea02"
+}

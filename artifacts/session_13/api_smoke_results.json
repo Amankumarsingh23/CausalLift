@@ -1,0 +1,12 @@
+{
+  "health": 200,
+  "catalog": 200,
+  "binary": 200,
+  "planning": 200,
+  "benchmark": 200,
+  "reliability": 200,
+  "policy_budget_60": 200,
+  "policy_budget_120": 200,
+  "executive_export": 200,
+  "missing_artifact": 404
+}

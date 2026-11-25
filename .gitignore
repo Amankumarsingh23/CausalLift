@@ -30,3 +30,5 @@ artifacts/session_05*/models/
 artifacts/session_06*/models/
 artifacts/session_07*/models/
 artifacts/session_08*/models/
+.mlflow/
+artifacts/session_13_demo/
