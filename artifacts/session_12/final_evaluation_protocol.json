@@ -1,0 +1,108 @@
+{
+  "protocol": "CausalLift final evaluation v1",
+  "reserved_split": "test",
+  "test_evaluated": false,
+  "seed": 42,
+  "models": {
+    "policy_effect": "Session 05 S-LightGBM",
+    "outcome_nuisance": "Session 05 T-logistic",
+    "predictive": "Session 04 pooled LightGBM"
+  },
+  "primary_cohorts": [
+    "synthetic_E",
+    "Criteo 1M"
+  ],
+  "secondary_cohorts": [
+    "synthetic_A",
+    "synthetic_B",
+    "synthetic_D",
+    "Criteo 200k"
+  ],
+  "primary_outcome": "conversion or synthetic binary outcome",
+  "policy_reference": "treat none",
+  "primary_comparison": "profit versus predictive at 20% nominal capacity",
+  "primary_metrics": [
+    "paired DR incremental profit",
+    "paired incremental conversions",
+    "ESS",
+    "synthetic true expected incremental profit"
+  ],
+  "secondary_metrics": [
+    "DM",
+    "IPS",
+    "SNIPS outcome only",
+    "DR",
+    "proposed spend",
+    "ROI versus no treatment"
+  ],
+  "synthetic_economics": {
+    "contribution": 45,
+    "cost": 2,
+    "eligible_probability": 0.9,
+    "eligibility_seed_components": [
+      42,
+      "ASCII of scenario",
+      0
+    ],
+    "capacity_fraction": 0.3,
+    "budget_ceiling": "floor(2 \u00d7 full test population \u00d7 fraction)",
+    "fractions": [
+      0.05,
+      0.1,
+      0.2
+    ]
+  },
+  "criteo_economics": {
+    "contribution": "synthetic integer draws 60\u2013140 inclusive",
+    "cost": 0.4,
+    "eligibility": "all",
+    "fractions": [
+      0.1,
+      0.2,
+      0.5
+    ],
+    "budget": "cost \u00d7 floor(fraction \u00d7 test count)"
+  },
+  "design_propensities": {
+    "synthetic": "known assignment probability",
+    "criteo": "released test assignment share, approximation only"
+  },
+  "policy_rules": {
+    "none": "all zero",
+    "random": "seeded rank then scan affordable eligible",
+    "predictive": "descending pooled score then affordable eligible scan",
+    "uplift": "descending S-LightGBM CATE then scan",
+    "profit": "exact positive estimated-profit top-K under uniform cost",
+    "ties": "Session 11 seeded stable ranking"
+  },
+  "test_action_generation": "Load unchanged saved models and verify training provenance. Use only ordered test IDs and allowlisted pre-treatment covariates plus frozen economics and counts for action construction. Freeze vectors before joining test assignment, outcomes or synthetic truth. No fitting or selection after test access.",
+  "uncertainty": "Fixed-action conditional Wald approximation; excludes reoptimization, nuisance-fit and trial clustering uncertainty. Report paired outcome and profit intervals, matched counts and ESS. Suppress intervals when matching support is absent.",
+  "research_only": "F excluded from primary comparisons. Criteo is a hypothetical released-sample diagnostic.",
+  "fixture_only": false,
+  "model_artifact_sha256": {
+    "session_04/models/criteo_200k_conversion_lightgbm.joblib": "c7a76fb522e8be378ecb219780b0ed6fa315008ccc9e37d14b9f154fc32e8012",
+    "session_04/models/criteo_200k_visit_lightgbm.joblib": "b464250d67e48f86d6af5cc3602dc1d79e52297d410e6fbf8f11512d707a7e3e",
+    "session_04/models/criteo_1m_conversion_lightgbm.joblib": "867bd4f5fecb22fea27df0bae8c6b7a885d8ce2afa44f139c9ee2e62a1f83fc9",
+    "session_04/models/criteo_1m_visit_lightgbm.joblib": "b184ca57a9d2de40f24136c3c7da1e5ad183f213dfcfafa95bdd3a93f2513558",
+    "session_04/models/synthetic_a_outcome_lightgbm.joblib": "a832c0add5dc7d0672e9f7d071253798ae088e5fd02bae0f181a4ca61d52569f",
+    "session_04/models/synthetic_b_outcome_lightgbm.joblib": "3e06287b7fe4ee38f96d8b1075b189abfd0a481458cd000b149ba28b08df69aa",
+    "session_04/models/synthetic_d_outcome_lightgbm.joblib": "ebb70104bc786d7681f5621c99f6cc47544529acaad1b841feaa10dbe9a73f16",
+    "session_04/models/synthetic_e_outcome_lightgbm.joblib": "2d278993935b89c667690a53e6a6b66815c80415d6c9ca922cb69a378eb85044",
+    "session_05/models/criteo_200k_conversion_s_lightgbm.joblib": "460e09701be191f42fbb35abc58fa5a0f4a129aabf22ce427f3aa3bc0646992b",
+    "session_05/models/criteo_200k_conversion_t_logistic.joblib": "a97ca0ff68c1372cbd39e2dc175be6d595c3a4bf5e5f9faf5127964a0de2b09f",
+    "session_05/models/criteo_200k_visit_s_lightgbm.joblib": "9631f267d0dd46333f9e45a254b95840fe41080d5cba9dad1dce89f0ac8da4ee",
+    "session_05/models/criteo_200k_visit_t_logistic.joblib": "fcd3ad414abf480e67c7389de4c818c4b64aae0f041e6ed05af02258282952c6",
+    "session_05/models/criteo_1m_conversion_s_lightgbm.joblib": "bc1ada3fc7343edd0706db84823f78863727cf67bcc12d642c65a05c69f5cc4f",
+    "session_05/models/criteo_1m_conversion_t_logistic.joblib": "6b78f6595ce22af66024998ececb7df759d0a903db932f20da51da735a95cca5",
+    "session_05/models/criteo_1m_visit_s_lightgbm.joblib": "3f9fd174298e95304d7263f7ede9efabea14a5438b3a636727242bd213e7c5cd",
+    "session_05/models/criteo_1m_visit_t_logistic.joblib": "8330265adf57526586e36920e0bcca537216a140a253002af2845441f464a646",
+    "session_05/models/synthetic_a_outcome_s_lightgbm.joblib": "3d93f90cf2d51a6c8cd298360b0354a4dc507e2ee30771bfbf40a5a1bd9e5436",
+    "session_05/models/synthetic_a_outcome_t_logistic.joblib": "3e7c1db88f686e2d87035c5f168c2c00c209ca05d53f472997c3d35685027399",
+    "session_05/models/synthetic_b_outcome_s_lightgbm.joblib": "f50a7508dafc009b8bda2e3072ec07487f46c5bbd853bc5b56f14e038e395b70",
+    "session_05/models/synthetic_b_outcome_t_logistic.joblib": "e435a770d8edbeb64597f1b5d92d3c0611ce8bb9c35f92e02f1cfa560168522e",
+    "session_05/models/synthetic_d_outcome_s_lightgbm.joblib": "bc5f5f5766f3df3f1100df3bdf6c8208588c669c0753c6ab10da04bedec76b09",
+    "session_05/models/synthetic_d_outcome_t_logistic.joblib": "8138310492aa18c7bc7a0ed4eb00fc96d820d1ec941e5b7ccdaaab8ae96bcf86",
+    "session_05/models/synthetic_e_outcome_s_lightgbm.joblib": "de73fe92f520033a96481160c7818c6ac617d34c2aa49ee3375904a0aa79a663",
+    "session_05/models/synthetic_e_outcome_t_logistic.joblib": "a9905190e89f52b755d8e5d9df2b0ff888a233d8530119248c49f0840c162768"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "synthetic_E_uniform_high_budget": [
+    {
+      "policy": "none",
+      "true_profit": 0.0,
+      "incremental_profit": 0.0,
+      "spend": 0.0
+    },
+    {
+      "policy": "random",
+      "true_profit": -955.5999999999996,
+      "incremental_profit": 1088.3669370717503,
+      "spend": 1600.0
+    },
+    {
+      "policy": "predictive",
+      "true_profit": 1929.8000000000006,
+      "incremental_profit": 2876.148751871251,
+      "spend": 1600.0
+    },
+    {
+      "policy": "uplift",
+      "true_profit": 4160.000000000002,
+      "incremental_profit": 4446.773192330204,
+      "spend": 1600.0
+    },
+    {
+      "policy": "profit",
+      "true_profit": 4160.000000000002,
+      "incremental_profit": 4446.773192330204,
+      "spend": 1600.0
+    },
+    {
+      "policy": "oracle",
+      "true_profit": 4160.000000000002,
+      "incremental_profit": 4588.9970843392575,
+      "spend": 1600.0
+    }
+  ],
+  "simulation": [
+    {
+      "propensity": 0.15,
+      "method": "dm",
+      "n_reps": 80,
+      "bias": -0.03023918702368933,
+      "rmse": 0.030256235617835737,
+      "sd": 0.00029341416299201337,
+      "coverage": 0.0,
+      "ess": 567.5981432599649,
+      "match_fraction": 0.6395156250000001
+    },
+    {
+      "propensity": 0.15,
+      "method": "dr",
+      "n_reps": 80,
+      "bias": -0.0008438438864344224,
+      "rmse": 0.01881726606928282,
+      "sd": 0.018678972056088185,
+      "coverage": 0.9625,
+      "ess": 567.5981432599649,
+      "match_fraction": 0.6395156250000001
+    },
+    {
+      "propensity": 0.15,
+      "method": "ips",
+      "n_reps": 80,
+      "bias": -0.0007626122687873691,
+      "rmse": 0.02289369015257731,
+      "sd": 0.022898875096213585,
+      "coverage": 0.9625,
+      "ess": 567.5981432599649,
+      "match_fraction": 0.6395156250000001
+    },
+    {
+      "propensity": 0.5,
+      "method": "dm",
+      "n_reps": 80,
+      "bias": -0.030432893576724407,
+      "rmse": 0.030466889597989592,
+      "sd": 0.00040984808156247735,
+      "coverage": 0.0,
+      "ess": 800.6625,
+      "match_fraction": 0.5004140625
+    },
+    {
+      "propensity": 0.5,
+      "method": "dr",
+      "n_reps": 80,
+      "bias": -0.0010277373267244046,
+      "rmse": 0.012719197287458179,
+      "sd": 0.012708975091010448,
+      "coverage": 0.975,
+      "ess": 800.6625,
+      "match_fraction": 0.5004140625
+    },
+    {
+      "propensity": 0.5,
+      "method": "ips",
+      "n_reps": 80,
+      "bias": -0.0002933623267244039,
+      "rmse": 0.014467844007663001,
+      "sd": 0.01448338166800624,
+      "coverage": 0.9625,
+      "ess": 800.6625,
+      "match_fraction": 0.5004140625
+    }
+  ],
+  "limitations": [
+    "Coarse conditional intervals exclude reoptimization and trial clustering.",
+    "Criteo assignment approximation and hypothetical money.",
+    "Scenario F is research-only; no intervals asserted."
+  ]
+}

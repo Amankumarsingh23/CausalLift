@@ -93,3 +93,7 @@ Run `python -m causallift.session10` or use `--fixture` for an offline run. See 
 ## Run Session 11
 
 Run `python -m causallift.session11` with the existing model files, or use `--fixture` for an offline run. See the [optimization guide](docs/TREATMENT_OPTIMIZATION.md) and [completion report](docs/session-11-completion.md).
+
+## Run Session 12
+
+Run `python -m causallift.session12` with the local Session 01, 04, 05, 08, 10 and 11 artifacts. Use `--fixture --output <directory>` for an offline synthetic run. See the [evaluation guide](docs/OFFLINE_POLICY_EVALUATION.md), [business case study](docs/BUSINESS_CASE_STUDY.md), and [completion report](docs/session-12-completion.md).

@@ -1,0 +1,18 @@
+{
+  "runtime_seconds": 34.002038099992205,
+  "fixture": false,
+  "seed": 42,
+  "test_used": false,
+  "synthetic_rows": 1296,
+  "criteo_rows": 120,
+  "input_sha256": {
+    "policy_reliability_summary.json": "9fabbe0a81b5f607c8d846034586737963b6e24011acceaea4b9a4f6f55fe681",
+    "policy_optimization_results.csv": "982f6ed593ff8a62a3513a7ef87e2b0ba61da58c73bfd503ec80e2cf1dcde667",
+    "local_assignments.parquet": "51e4f54d2ee61b808021f763238c38ef91012b32167110e31dfa3b4469a829d5",
+    "economic_scenarios.json": "861f38e8c10ad4181dfb9a833613f3d3175c36e4939e6009792506c44ea6144f"
+  },
+  "model_manifests_sha256": {
+    "04": "397e3cf24ac88f95ada73db8e17af2770254329baaa5820305f2d1d414675f2c",
+    "05": "82a8b138b53c23cf52e748436fc6a524b2076b7949d3f6cb392aedad2783c5a8"
+  }
+}
