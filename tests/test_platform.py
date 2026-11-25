@@ -136,7 +136,8 @@ def test_all_dashboard_pages_and_interactions(aggregates):
         assert not app.exception, page
         assert app.title
     downloads = app.get("download_button")
-    assert len(downloads) == 2
+    assert len(downloads) == 3
+    assert any("Final locked evaluation" in heading.value for heading in app.subheader)
     app.radio[0].set_value("Experimentation lab").run()
     app.button[0].click().run()
     assert not app.exception

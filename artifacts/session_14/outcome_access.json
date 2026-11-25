@@ -1,0 +1,13 @@
+{
+  "started_utc": "2026-11-25T13:50:02.256228+00:00",
+  "split": "reserved_test",
+  "action_freeze_sha256": "66659bc14252c07489a07a0f36eb48d56c635f057395b827b39efac2b3168b20",
+  "cohorts": [
+    "synthetic_E",
+    "Criteo 1M",
+    "synthetic_A",
+    "synthetic_B",
+    "synthetic_D",
+    "Criteo 200k"
+  ]
+}

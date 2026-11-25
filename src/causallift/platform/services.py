@@ -127,7 +127,9 @@ def benchmark(registry, key, *, dataset=None, outcome=None, model=None, limit=10
         frame = frame.loc[frame[column].eq(value)]
     return {
         "artifact": key,
-        "designation": "published development benchmark",
+        "designation": "published reserved-test aggregate"
+        if key.startswith("14/")
+        else "published development benchmark",
         "total": len(frame),
         "rows": json.loads(
             frame.head(limit).to_json(orient="records", double_precision=15)

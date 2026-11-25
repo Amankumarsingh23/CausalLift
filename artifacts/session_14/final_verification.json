@@ -1,0 +1,22 @@
+{
+  "pytest": {
+    "passed": 152,
+    "failed": 0,
+    "skipped": 0,
+    "warnings": 1
+  },
+  "ruff": "passed",
+  "pip_check": "passed",
+  "locked_benchmark": "six cohorts completed in 7.87 seconds",
+  "offline_fixture": "passed in 1.15 seconds; separate generated inputs",
+  "platform_fixture": "passed; 63 approved published assets",
+  "browser": "seven pages, reserved-test aggregate display, interactive forms and actual downloads verified",
+  "docker": {
+    "build": "passed",
+    "api_health": "ok",
+    "dashboard_http": 200,
+    "final_aggregate_rows_for_criteo_1m": 24
+  },
+  "raw_rows_and_model_binaries": "local and ignored",
+  "local_documentation_links": "verified"
+}

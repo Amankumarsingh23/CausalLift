@@ -1,114 +1,67 @@
 # CausalLift
 
-CausalLift builds reproducible datasets for estimating incremental treatment effects and evaluating treatment allocation. Session 01 establishes the data foundation with Criteo v2.1 and six synthetic benchmarks with known conditional effects.
+CausalLift is a local-first research and decision-support platform for measuring whether an intervention changes outcomes, choosing whom to treat under a budget, and evaluating the resulting policy on held-out data.
 
-## Setup
+A predictive score ranks people by how likely they are to convert. A causal score estimates how much treatment changes that probability. The policy lab combines estimated incremental effects with contribution, treatment cost, eligibility and capacity to produce a proposed allocation. The offline evaluator then estimates how that allocation would have performed using logged outcomes.
 
-Use Python 3.11 or newer. The Session 01 run used Python 3.13 on Windows.
+## Analytical flow
 
-```powershell
-py -m venv .venv
-.venv/Scripts/python -m pip install -e ".[dev]"
+```mermaid
+flowchart LR
+    A["Criteo and synthetic data"] --> B["Experimentation and planning"]
+    B --> C["Causal estimation"]
+    C --> D["Identification and reliability"]
+    D --> E["Budget-constrained optimization"]
+    E --> F["Offline policy evaluation"]
+    F --> G["FastAPI, Streamlit and exports"]
 ```
 
-On macOS or Linux, use `python3 -m venv .venv` and replace `.venv/Scripts/python` with `.venv/bin/python`. The recorded Windows dependency versions are in [configs/requirements-session01-py313-win.txt](configs/requirements-session01-py313-win.txt).
+The analytical engine includes A/B inference, power and CUPED, S/T/X/R learners, DML and Causal Forest, DAGs and observational adjustment, and fixed-policy DM, IPS, SNIPS and DR evaluation. The dashboard keeps historical validation, locked test aggregates and interactive fixture results distinct.
 
-## Build and verify Session 01
+## Representative evidence
 
-Run from the repository root. The download command fetches Criteo’s approximately 311 MB archive and checks its SHA-256. The build profiles the full archive, writes a 200,000-row stratified working sample and six 20,000-row synthetic datasets, assigns partitions, and generates the reports.
+| Population | Measured result |
+| --- | --- |
+| Released Criteo archive | 13,979,592 rows verified. Conversion assignment difference **+0.1152 pp** with a 95% interval of **[0.1084, 0.1219] pp**. |
+| Criteo 1M validation | Pooled LightGBM conversion ROC-AUC **0.9571**, AP **0.24608**. |
+| Synthetic E locked test | Profit-aware vs. predictive paired DR profit **286.82**, conditional 95% CI **[−2,883.03, 3,456.67]**. Simulator expected difference **2,179.80**. |
+| Criteo 1M locked test | Profit-aware vs. predictive paired DR profit **11,117.61** hypothetical units, conditional 95% CI **[4,858.33, 17,376.90]**. Proposed spend was **2,567.60** vs. **16,000**. The interval against treat-none included zero. |
 
-```powershell
-.venv/Scripts/python -m causallift.session01 download
-.venv/Scripts/python -m causallift.session01 session01
-.venv/Scripts/python -m ruff check .
-.venv/Scripts/python -m pytest -q
-```
+All six frozen cohorts completed. The locked test covers the representative policy models. Original Criteo trial propensities and clusters are unavailable, its two working benchmarks overlap, and the business inputs are hypothetical. The primary Criteo test cohort has 58 control conversions. Synthetic F remains research-only, and high-dimensional DML interval coverage was 0/30 in the earlier diagnostic. [Consolidated benchmark](docs/FINAL_BENCHMARK_REPORT.md) · [Locked evaluation manifest](artifacts/session_14/final_evaluation_manifest.json)
 
-Use `session01 --dataset PATH --seed 42 --size 200000 --rows 20000` to set the input and defaults explicitly. Use `--synthetic-only` for an offline run. Pass `--root PATH` before the subcommand to keep separate runs in separate directories. `--size 1000000` is a larger optional working benchmark and requires more memory. See [DATASETS.md](docs/DATASETS.md) for manual download instructions. CI uses only generated data and a local fixture for test execution.
+## Dashboard
 
-The commands write Criteo Parquet under `data/processed/`, synthetic observed and ground-truth Parquet under `data/synthetic/` and metrics under `artifacts/session_01/`. See the [data contract](docs/DATA_CONTRACT.md), [simulator](docs/CAUSAL_SIMULATOR.md) and [Session 01 completion report](docs/session-01-completion.md).
+![Artifact-only overview captured in Edge](artifacts/session_13/dashboard-overview.png)
 
-## Run Session 02
+![Business policy lab with a budget of 60 and 30 customers selected](artifacts/session_13/dashboard-business-policy.png)
 
-Run the experiment analysis against the existing Session 01 data.
+These screenshots show the Session 13 interface. The current Overview and Reports views also show the locked test aggregates.
 
-```powershell
-.venv/Scripts/python -m causallift.session02
-```
+## Quick start
 
-Reports are written to `artifacts/session_02/`. Use `--mode synthetic` for just the synthetic benchmarks or `--mode fixture` for a small offline example that needs no Session 01 data. See the [methods and reproduction commands](docs/EXPERIMENTATION.md) and [Session 02 completion report](docs/session-02-completion.md).
+Use Python 3.11 or 3.13. Run from the repository root.
 
-## Run Session 03
-
-Generate power and MDE plans, experiment-health diagnostics, guardrail decisions, and statistical simulations from the existing datasets and reports.
-
-```powershell
-.venv/Scripts/python -m causallift.session03
-```
-
-Reports are written to `artifacts/session_03/`. See the [methods and reproduction commands](docs/EXPERIMENT_DESIGN.md) and [Session 03 completion report](docs/session-03-completion.md).
-
-## Run Session 04
-
-```powershell
-.venv/Scripts/python -m pip install -e ".[dev]"
-.venv/Scripts/python -m causallift.session04
-```
-
-Reports and local model files are written to `artifacts/session_04/`. Use `--development-only` to skip the optional Criteo 1M benchmark or `--fixture` for the small offline run. See the [predictive baselines guide](docs/PREDICTIVE_BASELINES.md) and [Session 04 completion report](docs/session-04-completion.md).
-
-## Run Session 05
-
-```powershell
-.venv/Scripts/python -m causallift.session05
-```
-
-The benchmark reuses existing splits and saved predictive models. Use `--development-only` to skip Criteo 1M or `--fixture` for an offline smoke run. See the [learner guide](docs/META_LEARNERS.md), [evaluation conventions](docs/UPLIFT_EVALUATION.md) and [Session 05 results](docs/session-05-completion.md).
-
-## Run Session 06
-
-```powershell
-.venv/Scripts/python -m causallift.session06
-```
-
-The run reuses Session 04/05 models for the original benchmarks and saves new X/R models and diagnostics under `artifacts/session_06/`. Use `--development-only` to skip Criteo 1M or `--fixture` for the standalone offline fixture. See the [cross-fitting guide](docs/CROSS_FITTING.md) and [Session 06 results](docs/session-06-completion.md).
-
-## Run Session 07
-
-```powershell
-.venv/Scripts/python -m pip install -e ".[dev,advanced]"
-.venv/Scripts/python -m causallift.session07
-```
-
-Session 07 adds partially linear DML, LinearDML and CausalForestDML. It reuses the fixed splits and saved models from earlier sessions. Use `--fixture` for an offline run or `--development-only` to skip Criteo 1M. See the [DML guide](docs/DOUBLE_MACHINE_LEARNING.md), [Causal Forest guide](docs/CAUSAL_FOREST.md) and [Session 07 results](docs/session-07-completion.md).
-## Run Session 08
-
-Run `python -m causallift.session08` in the project environment after installing the package dependencies. Use `--fixture` to run without the benchmark files. See the [DAG guide](docs/CAUSAL_DAGS.md), [propensity guide](docs/PROPENSITY_SCORES.md), and [completion report](docs/session-08-completion.md).
-## Run Session 09
-
-Run `python -m causallift.session09` to reuse the Session 01 and 08 artifacts. Use `--download` to acquire the optional NSW/CPS files or `--fixture` for an offline smoke run. See the [methods](docs/OBSERVATIONAL_ESTIMATORS.md) and [completion report](docs/session-09-completion.md).
-## Run Session 10
-
-Run `python -m causallift.session10` or use `--fixture` for an offline run. See the [causal reliability guide](docs/CAUSAL_RELIABILITY.md) and [completion report](docs/session-10-completion.md).
-## Run Session 11
-
-Run `python -m causallift.session11` with the existing model files, or use `--fixture` for an offline run. See the [optimization guide](docs/TREATMENT_OPTIMIZATION.md) and [completion report](docs/session-11-completion.md).
-
-## Run Session 12
-
-Run `python -m causallift.session12` with the local Session 01, 04, 05, 08, 10 and 11 artifacts. Use `--fixture --output <directory>` for an offline synthetic run. See the [evaluation guide](docs/OFFLINE_POLICY_EVALUATION.md), [business case study](docs/BUSINESS_CASE_STUDY.md), and [completion report](docs/session-12-completion.md).
-
-## Decision platform
-
-CausalLift connects experimental design, causal analysis and profit-aware allocation. The local dashboard uses published tables and the same analytical services as the FastAPI backend. A fresh checkout can run the offline demo without datasets, model binaries or credentials.
-
-```powershell
+```sh
 python -m pip install -e ".[dev,platform]"
 python -m uvicorn causallift.platform.api:app --port 8000
 ```
 
-In a second terminal, run `python -m streamlit run dashboard/app.py` and open the dashboard on port 8501. Alternatively, run `docker compose up --build` for both services. Run `python -m causallift.session13 --fixture --output artifacts/session_13_demo` to reproduce the offline API verification.
+In a second terminal, run `python -m streamlit run dashboard/app.py`. Open the dashboard at `http://127.0.0.1:8501` and the API explorer at `http://127.0.0.1:8000/docs`. Run `docker compose up --build` to start both services together. The public checkout supports the full artifact-only demo using published aggregates and deterministic fixture scores.
 
-On validation, the synthetic E profit-aware policy returned 4,160 in true expected profit at a 1,600 budget. On released Criteo 1M, its paired DR advantage over predictive targeting was 7,092 in hypothetical currency under different realized spending. The interval against treat-none included zero. Scenario F remains research-only, and the final test partition is locked.
+```sh
+python -m causallift.session14 --fixture
+```
 
-[Demo guide](docs/DEMO_GUIDE.md) · [Architecture](docs/PLATFORM_ARCHITECTURE.md) · [Session 13 results](docs/session-13-completion.md)
+Replay of the original locked benchmark requires the exact local datasets and frozen model binaries. See the [reproduction guide](docs/REPRODUCTION.md) for acquisition, previous workflows, exact replay and verification commands.
+
+## Repository map
+
+| Path | Contents |
+| --- | --- |
+| [src/causallift](src/causallift) | Analytical modules, session runners and API services |
+| [dashboard](dashboard) | Seven Streamlit views and exports |
+| [artifacts](artifacts) | Published compact results and provenance by session |
+| [tests](tests) | Statistical, pipeline and platform checks |
+| [docs](docs) | Methods, evidence and all 14 completion reports |
+
+[Architecture](docs/PLATFORM_ARCHITECTURE.md) · [Interview demo](docs/DEMO_GUIDE.md) · [Resume evidence](docs/RESUME_EVIDENCE.md) · [Release verification](docs/session-14-completion.md)

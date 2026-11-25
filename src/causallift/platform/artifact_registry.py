@@ -47,6 +47,9 @@ GROUPS = {
         6: "causal_model_manifest.json",
         7: "causal_model_manifest.json",
     },
+    "final": {
+        14: "session_14_summary.json final_business_summary.json validation_vs_test.csv final_paired_policy_comparisons.csv final_policy_evaluation.csv final_policy_support.csv"
+    },
 }
 METRICS = {
     "absolute_lift": "Treatment minus control outcome rate",
@@ -155,7 +158,9 @@ class ArtifactRegistry:
                     "session": session,
                     "group": group,
                     "type": Path(key).suffix[1:],
-                    "split": "historical development",
+                    "split": "reserved_test aggregate"
+                    if session == 14
+                    else "historical development",
                     "status": status,
                 }
             )

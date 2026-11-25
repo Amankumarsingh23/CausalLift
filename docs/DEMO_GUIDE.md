@@ -43,3 +43,13 @@ python -m causallift.session13 --fixture --output artifacts/session_13 --trackin
 ```
 
 The MLflow filesystem store is local and ignored by Git. Recent MLflow versions require the explicit filesystem-store opt-in shown above. Bash users can use `export` for the environment variables. Use a separate `--output` directory to preserve the checked-in evidence.
+
+## Four-minute interview walkthrough
+
+1. Open **Overview** and identify the published validation, reserved-test and fixture designations.
+2. In **Experimentation lab**, analyze the default A/B counts and explain the outcome-rate difference and its interval.
+3. Compare predictive conversion rank with incremental-effect rank in **Uplift comparison**. Select a cohort and show the published ranking metrics.
+4. Open Scenario F in **Causal reliability** and explain why stable estimates can remain biased when a confounder is hidden.
+5. In **Business policy lab**, lower the budget to 60 and show the change in selected customers and planned spending.
+6. In **Reports**, show the paired DR comparisons and spend differences. Synthetic E versus predictive is inconclusive. Criteo 1M versus predictive is positive under hypothetical economics, and its interval against treat-none crosses zero.
+7. Download the executive brief with both validation and test results. [Final browser evidence](../artifacts/session_14/browser_smoke_results.json)

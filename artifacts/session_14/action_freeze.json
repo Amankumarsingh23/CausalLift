@@ -1,0 +1,1359 @@
+{
+  "locked_utc": "2026-11-25T13:50:02.236884+00:00",
+  "split": "reserved_test",
+  "protocol_sha256": "35cf618174130b6c527112aeda1b530fbcb460f0ddbadca0ed56f0b264f1f13e",
+  "cohorts": {
+    "synthetic_E": {
+      "split_counts": {
+        "test": 3999,
+        "train": 12000,
+        "validation": 4001
+      },
+      "split_identity_sha256": {
+        "train": "9302a8abc98eeb6012f616f660dda19875309b771023ca663c3cff3d4a65bbdb",
+        "validation": "032ff780dafff519c3ea3bada3770d970a357fabc3978df656913930d0a8d46b",
+        "test": "c10d93dead8ef89604945b30a0f5b71460e2659404b24c1b552773956e6c66db"
+      },
+      "safe_dataset_projection_sha256": "f51c7acce0786eaf6cc94d5bd23ddeb3408e737845a6af1d4b201d208db89e34",
+      "verified_models": {
+        "session_04/models/synthetic_e_outcome_lightgbm.joblib": {
+          "sha256": "2d278993935b89c667690a53e6a6b66815c80415d6c9ca922cb69a378eb85044",
+          "training_fingerprint": "f9e7c4c5ace28ee488ee8d06bc19c4fb9199f86f987eb1cab1913858d65e6e6e",
+          "features": [
+            "engagement",
+            "loyalty",
+            "spend",
+            "recency",
+            "price_sensitivity",
+            "activity"
+          ]
+        },
+        "session_05/models/synthetic_e_outcome_s_lightgbm.joblib": {
+          "sha256": "de73fe92f520033a96481160c7818c6ac617d34c2aa49ee3375904a0aa79a663",
+          "training_fingerprint": "15224086559d87a220d533113002035b67dc76ed1423c62d62acb96d58a2966b",
+          "features": [
+            "engagement",
+            "loyalty",
+            "spend",
+            "recency",
+            "price_sensitivity",
+            "activity"
+          ]
+        },
+        "session_05/models/synthetic_e_outcome_t_logistic.joblib": {
+          "sha256": "a9905190e89f52b755d8e5d9df2b0ff888a233d8530119248c49f0840c162768",
+          "training_fingerprint": "15224086559d87a220d533113002035b67dc76ed1423c62d62acb96d58a2966b",
+          "features": [
+            "engagement",
+            "loyalty",
+            "spend",
+            "recency",
+            "price_sensitivity",
+            "activity"
+          ]
+        }
+      },
+      "action_vectors": [
+        {
+          "key": "0.05_none",
+          "fraction": 0.05,
+          "budget": 399,
+          "capacity": 1199,
+          "policy": "none",
+          "selected": 0,
+          "spend": 0.0,
+          "sha256": "66b0796fd3c7023bd802ae1d83a0c4ea88398ce4acaf4ed071d76e976ed560e6"
+        },
+        {
+          "key": "0.05_random",
+          "fraction": 0.05,
+          "budget": 399,
+          "capacity": 1199,
+          "policy": "random",
+          "selected": 199,
+          "spend": 398.0,
+          "sha256": "18c0a1558d17acfe27f97745fca69be80ca443c132dc6226b29dff5229aa24da"
+        },
+        {
+          "key": "0.05_predictive",
+          "fraction": 0.05,
+          "budget": 399,
+          "capacity": 1199,
+          "policy": "predictive",
+          "selected": 199,
+          "spend": 398.0,
+          "sha256": "164b4704a4523688dbad95b8fa463d12dea3a574ed5a689161b6e76582bf13bb"
+        },
+        {
+          "key": "0.05_uplift",
+          "fraction": 0.05,
+          "budget": 399,
+          "capacity": 1199,
+          "policy": "uplift",
+          "selected": 199,
+          "spend": 398.0,
+          "sha256": "28dea220a7461ba226a3c4402e0d66ff5e8b6763048db3f21cc2016e43648edd"
+        },
+        {
+          "key": "0.05_profit",
+          "fraction": 0.05,
+          "budget": 399,
+          "capacity": 1199,
+          "policy": "profit",
+          "selected": 199,
+          "spend": 398.0,
+          "sha256": "28dea220a7461ba226a3c4402e0d66ff5e8b6763048db3f21cc2016e43648edd"
+        },
+        {
+          "key": "0.10_none",
+          "fraction": 0.1,
+          "budget": 799,
+          "capacity": 1199,
+          "policy": "none",
+          "selected": 0,
+          "spend": 0.0,
+          "sha256": "66b0796fd3c7023bd802ae1d83a0c4ea88398ce4acaf4ed071d76e976ed560e6"
+        },
+        {
+          "key": "0.10_random",
+          "fraction": 0.1,
+          "budget": 799,
+          "capacity": 1199,
+          "policy": "random",
+          "selected": 399,
+          "spend": 798.0,
+          "sha256": "04e2b64a08128651ee8b5547324d360b1f8ffa33ee9a882ad7ac7e9a52df301d"
+        },
+        {
+          "key": "0.10_predictive",
+          "fraction": 0.1,
+          "budget": 799,
+          "capacity": 1199,
+          "policy": "predictive",
+          "selected": 399,
+          "spend": 798.0,
+          "sha256": "c97fb13124278a8f50a0caf66464c055923b8b7189e92a537d3151352635e82d"
+        },
+        {
+          "key": "0.10_uplift",
+          "fraction": 0.1,
+          "budget": 799,
+          "capacity": 1199,
+          "policy": "uplift",
+          "selected": 399,
+          "spend": 798.0,
+          "sha256": "750765f289e27f6aa2d90b2edde26432bec754750a1abac443b2eab060ea0daf"
+        },
+        {
+          "key": "0.10_profit",
+          "fraction": 0.1,
+          "budget": 799,
+          "capacity": 1199,
+          "policy": "profit",
+          "selected": 399,
+          "spend": 798.0,
+          "sha256": "750765f289e27f6aa2d90b2edde26432bec754750a1abac443b2eab060ea0daf"
+        },
+        {
+          "key": "0.20_none",
+          "fraction": 0.2,
+          "budget": 1599,
+          "capacity": 1199,
+          "policy": "none",
+          "selected": 0,
+          "spend": 0.0,
+          "sha256": "66b0796fd3c7023bd802ae1d83a0c4ea88398ce4acaf4ed071d76e976ed560e6"
+        },
+        {
+          "key": "0.20_random",
+          "fraction": 0.2,
+          "budget": 1599,
+          "capacity": 1199,
+          "policy": "random",
+          "selected": 799,
+          "spend": 1598.0,
+          "sha256": "751e13b14f85419573b8e89b6616d70de5f2d714d499226e5141573e9acc9f49"
+        },
+        {
+          "key": "0.20_predictive",
+          "fraction": 0.2,
+          "budget": 1599,
+          "capacity": 1199,
+          "policy": "predictive",
+          "selected": 799,
+          "spend": 1598.0,
+          "sha256": "df6b2c4f27eab6714b811081fd6bad27e0e45526c03c86accc7d9a1131bffe07"
+        },
+        {
+          "key": "0.20_uplift",
+          "fraction": 0.2,
+          "budget": 1599,
+          "capacity": 1199,
+          "policy": "uplift",
+          "selected": 799,
+          "spend": 1598.0,
+          "sha256": "8de975d18a0ec6117a0b98a7b42a61b833f9ef4c84aa89eb0a8a4c33d7f4df4b"
+        },
+        {
+          "key": "0.20_profit",
+          "fraction": 0.2,
+          "budget": 1599,
+          "capacity": 1199,
+          "policy": "profit",
+          "selected": 799,
+          "spend": 1598.0,
+          "sha256": "8de975d18a0ec6117a0b98a7b42a61b833f9ef4c84aa89eb0a8a4c33d7f4df4b"
+        }
+      ],
+      "action_archive_sha256": "7570b0835f8fc7176708b56fc56f6a283e30a49b70685e1f9b78f8a241f98abe",
+      "file_signature_at_lock": [
+        1319540,
+        1795496157233995200
+      ],
+      "test_rows": 3999,
+      "test_feature_columns": [
+        "engagement",
+        "loyalty",
+        "spend",
+        "recency",
+        "price_sensitivity",
+        "activity"
+      ]
+    },
+    "Criteo 1M": {
+      "split_counts": {
+        "test": 200000,
+        "train": 600000,
+        "validation": 200000
+      },
+      "split_identity_sha256": {
+        "train": "b58cfa78980f55140cf6100c2ca662efbbf7e6802474575e38ee91444e222f2d",
+        "validation": "fdaaa5291e0908f63beedb1b8256f062b7635becf4891fc528e6e645088a0c27",
+        "test": "014672b0138ca2e50d77c303d7280b3b469b2c59320840097c758c9abca66c85"
+      },
+      "safe_dataset_projection_sha256": "6d14a4c85c0dbe81d7eaac4571d96723dd3178a5a0c68a580a3ff1a4a8895c38",
+      "verified_models": {
+        "session_04/models/criteo_1m_conversion_lightgbm.joblib": {
+          "sha256": "867bd4f5fecb22fea27df0bae8c6b7a885d8ce2afa44f139c9ee2e62a1f83fc9",
+          "training_fingerprint": "c8ca30ab3d3bb6cb58ed5a3f37b9876836df86d6a7a368faf56f7a49d185fd84",
+          "features": [
+            "f0",
+            "f1",
+            "f2",
+            "f3",
+            "f4",
+            "f5",
+            "f6",
+            "f7",
+            "f8",
+            "f9",
+            "f10",
+            "f11"
+          ]
+        },
+        "session_05/models/criteo_1m_conversion_s_lightgbm.joblib": {
+          "sha256": "bc1ada3fc7343edd0706db84823f78863727cf67bcc12d642c65a05c69f5cc4f",
+          "training_fingerprint": "f50c3a76c60dc6cab34e0b1bc189c53d1376b2a791a41e8e5b6fd3d2177f95bb",
+          "features": [
+            "f0",
+            "f1",
+            "f2",
+            "f3",
+            "f4",
+            "f5",
+            "f6",
+            "f7",
+            "f8",
+            "f9",
+            "f10",
+            "f11"
+          ]
+        },
+        "session_05/models/criteo_1m_conversion_t_logistic.joblib": {
+          "sha256": "6b78f6595ce22af66024998ececb7df759d0a903db932f20da51da735a95cca5",
+          "training_fingerprint": "f50c3a76c60dc6cab34e0b1bc189c53d1376b2a791a41e8e5b6fd3d2177f95bb",
+          "features": [
+            "f0",
+            "f1",
+            "f2",
+            "f3",
+            "f4",
+            "f5",
+            "f6",
+            "f7",
+            "f8",
+            "f9",
+            "f10",
+            "f11"
+          ]
+        }
+      },
+      "action_vectors": [
+        {
+          "key": "0.10_none",
+          "fraction": 0.1,
+          "budget": 8000.0,
+          "capacity": 20000,
+          "policy": "none",
+          "selected": 0,
+          "spend": 0.0,
+          "sha256": "acc4fb3297b9ba8d2978ea194f504eec208d237875677fc6396caf24065f0f7b"
+        },
+        {
+          "key": "0.10_random",
+          "fraction": 0.1,
+          "budget": 8000.0,
+          "capacity": 20000,
+          "policy": "random",
+          "selected": 20000,
+          "spend": 8000.0,
+          "sha256": "3bcb3775035d088d24bde70ea71f55b434c5c84190192ea8ca58747678ab5596"
+        },
+        {
+          "key": "0.10_predictive",
+          "fraction": 0.1,
+          "budget": 8000.0,
+          "capacity": 20000,
+          "policy": "predictive",
+          "selected": 20000,
+          "spend": 8000.0,
+          "sha256": "5b292babd2c78f26d9f404cff019e926c881c174edfa84426ce2d73b0755c6cc"
+        },
+        {
+          "key": "0.10_uplift",
+          "fraction": 0.1,
+          "budget": 8000.0,
+          "capacity": 20000,
+          "policy": "uplift",
+          "selected": 20000,
+          "spend": 8000.0,
+          "sha256": "493ee7b6caea78975b16d90fddff6f12712e63ed3d19bf1da6ad996b3f3a0c38"
+        },
+        {
+          "key": "0.10_profit",
+          "fraction": 0.1,
+          "budget": 8000.0,
+          "capacity": 20000,
+          "policy": "profit",
+          "selected": 6419,
+          "spend": 2567.6,
+          "sha256": "9f388ab2bca4bf80226c81f8afdcf1bca8ae47153aa7b7164127aa9dbcfa26e4"
+        },
+        {
+          "key": "0.20_none",
+          "fraction": 0.2,
+          "budget": 16000.0,
+          "capacity": 40000,
+          "policy": "none",
+          "selected": 0,
+          "spend": 0.0,
+          "sha256": "acc4fb3297b9ba8d2978ea194f504eec208d237875677fc6396caf24065f0f7b"
+        },
+        {
+          "key": "0.20_random",
+          "fraction": 0.2,
+          "budget": 16000.0,
+          "capacity": 40000,
+          "policy": "random",
+          "selected": 40000,
+          "spend": 16000.0,
+          "sha256": "95c321a6d018a2082c673804c76a6efba6813d3cdf2d681871de882fb3a674f8"
+        },
+        {
+          "key": "0.20_predictive",
+          "fraction": 0.2,
+          "budget": 16000.0,
+          "capacity": 40000,
+          "policy": "predictive",
+          "selected": 40000,
+          "spend": 16000.0,
+          "sha256": "4bba9e2856154d62d32c3e318cfad8dda4ac5f83d1737cc7b2466321ecc9f3fd"
+        },
+        {
+          "key": "0.20_uplift",
+          "fraction": 0.2,
+          "budget": 16000.0,
+          "capacity": 40000,
+          "policy": "uplift",
+          "selected": 40000,
+          "spend": 16000.0,
+          "sha256": "f998d99e7ce031755a08f5288c191dcb064251cf2dac12a1dbfc8e8a5cbfd35f"
+        },
+        {
+          "key": "0.20_profit",
+          "fraction": 0.2,
+          "budget": 16000.0,
+          "capacity": 40000,
+          "policy": "profit",
+          "selected": 6419,
+          "spend": 2567.6,
+          "sha256": "9f388ab2bca4bf80226c81f8afdcf1bca8ae47153aa7b7164127aa9dbcfa26e4"
+        },
+        {
+          "key": "0.50_none",
+          "fraction": 0.5,
+          "budget": 40000.0,
+          "capacity": 100000,
+          "policy": "none",
+          "selected": 0,
+          "spend": 0.0,
+          "sha256": "acc4fb3297b9ba8d2978ea194f504eec208d237875677fc6396caf24065f0f7b"
+        },
+        {
+          "key": "0.50_random",
+          "fraction": 0.5,
+          "budget": 40000.0,
+          "capacity": 100000,
+          "policy": "random",
+          "selected": 100000,
+          "spend": 40000.0,
+          "sha256": "690a77c341f66229df2210764d5b2896ab0289ceef900d98866fc5cf7b8d40e5"
+        },
+        {
+          "key": "0.50_predictive",
+          "fraction": 0.5,
+          "budget": 40000.0,
+          "capacity": 100000,
+          "policy": "predictive",
+          "selected": 100000,
+          "spend": 40000.0,
+          "sha256": "66743966c8dcf8d9d7878495618f97d016fed4c7251ea9deafc287caf93ea8e7"
+        },
+        {
+          "key": "0.50_uplift",
+          "fraction": 0.5,
+          "budget": 40000.0,
+          "capacity": 100000,
+          "policy": "uplift",
+          "selected": 100000,
+          "spend": 40000.0,
+          "sha256": "c36c7e9140408a12c48affe3023299208148640896fb40b9fd49f9dff47de70a"
+        },
+        {
+          "key": "0.50_profit",
+          "fraction": 0.5,
+          "budget": 40000.0,
+          "capacity": 100000,
+          "policy": "profit",
+          "selected": 6419,
+          "spend": 2567.6,
+          "sha256": "9f388ab2bca4bf80226c81f8afdcf1bca8ae47153aa7b7164127aa9dbcfa26e4"
+        }
+      ],
+      "action_archive_sha256": "4dc29efb87f43aaa302efcb59b4c133b86551c5021398ab18caef28b657fc50e",
+      "file_signature_at_lock": [
+        16958629,
+        1795496144243540400
+      ],
+      "test_rows": 200000,
+      "test_feature_columns": [
+        "f0",
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f6",
+        "f7",
+        "f8",
+        "f9",
+        "f10",
+        "f11"
+      ]
+    },
+    "synthetic_A": {
+      "split_counts": {
+        "test": 3999,
+        "train": 12000,
+        "validation": 4001
+      },
+      "split_identity_sha256": {
+        "train": "5da9ee623370dcd003c84f2414e5370302050a87357f63aa53e294cf9fe060d9",
+        "validation": "d217685c72ee1eea8170a2f6a40445c8305e6a8c50e9832eead801e7f171a228",
+        "test": "97a7995bad7a4281e368f9f631cddb74b3ca49fca2310d5f6448a99285eeeb8c"
+      },
+      "safe_dataset_projection_sha256": "c1d56a60ba9ef0848f2da8a22c980879d524e01c8f1368b07dff7309b8a36cf4",
+      "verified_models": {
+        "session_04/models/synthetic_a_outcome_lightgbm.joblib": {
+          "sha256": "a832c0add5dc7d0672e9f7d071253798ae088e5fd02bae0f181a4ca61d52569f",
+          "training_fingerprint": "47110bace11167a3a3f006d87f9d985cb3f12367210de68b68d3498e7b9f2748",
+          "features": [
+            "engagement",
+            "loyalty",
+            "spend",
+            "recency",
+            "price_sensitivity",
+            "activity"
+          ]
+        },
+        "session_05/models/synthetic_a_outcome_s_lightgbm.joblib": {
+          "sha256": "3d93f90cf2d51a6c8cd298360b0354a4dc507e2ee30771bfbf40a5a1bd9e5436",
+          "training_fingerprint": "6b24d8843a56768aca806ccfb2d85b95a172e134e5dfe1036e1659ca7257b881",
+          "features": [
+            "engagement",
+            "loyalty",
+            "spend",
+            "recency",
+            "price_sensitivity",
+            "activity"
+          ]
+        },
+        "session_05/models/synthetic_a_outcome_t_logistic.joblib": {
+          "sha256": "3e7c1db88f686e2d87035c5f168c2c00c209ca05d53f472997c3d35685027399",
+          "training_fingerprint": "6b24d8843a56768aca806ccfb2d85b95a172e134e5dfe1036e1659ca7257b881",
+          "features": [
+            "engagement",
+            "loyalty",
+            "spend",
+            "recency",
+            "price_sensitivity",
+            "activity"
+          ]
+        }
+      },
+      "action_vectors": [
+        {
+          "key": "0.05_none",
+          "fraction": 0.05,
+          "budget": 399,
+          "capacity": 1199,
+          "policy": "none",
+          "selected": 0,
+          "spend": 0.0,
+          "sha256": "c9f8f58b27d57ddb8cc859328d2de1173942dae88d0d3d1ba3f200253a393894"
+        },
+        {
+          "key": "0.05_random",
+          "fraction": 0.05,
+          "budget": 399,
+          "capacity": 1199,
+          "policy": "random",
+          "selected": 199,
+          "spend": 398.0,
+          "sha256": "c4b525e2b43d64020bbd2547eb874fdb8984d9e8923611fb49e95662fba1dfc3"
+        },
+        {
+          "key": "0.05_predictive",
+          "fraction": 0.05,
+          "budget": 399,
+          "capacity": 1199,
+          "policy": "predictive",
+          "selected": 199,
+          "spend": 398.0,
+          "sha256": "a8e09507ffd55c768675e58e1b107282de60b3db42f79cc5230494a7630dd03d"
+        },
+        {
+          "key": "0.05_uplift",
+          "fraction": 0.05,
+          "budget": 399,
+          "capacity": 1199,
+          "policy": "uplift",
+          "selected": 199,
+          "spend": 398.0,
+          "sha256": "d6003ac22cff3ca3f7d32bca2cdcfc0a9edd0eee9788297b5c55c37464dd981e"
+        },
+        {
+          "key": "0.05_profit",
+          "fraction": 0.05,
+          "budget": 399,
+          "capacity": 1199,
+          "policy": "profit",
+          "selected": 199,
+          "spend": 398.0,
+          "sha256": "d6003ac22cff3ca3f7d32bca2cdcfc0a9edd0eee9788297b5c55c37464dd981e"
+        },
+        {
+          "key": "0.10_none",
+          "fraction": 0.1,
+          "budget": 799,
+          "capacity": 1199,
+          "policy": "none",
+          "selected": 0,
+          "spend": 0.0,
+          "sha256": "c9f8f58b27d57ddb8cc859328d2de1173942dae88d0d3d1ba3f200253a393894"
+        },
+        {
+          "key": "0.10_random",
+          "fraction": 0.1,
+          "budget": 799,
+          "capacity": 1199,
+          "policy": "random",
+          "selected": 399,
+          "spend": 798.0,
+          "sha256": "9085ce461c73b25f3826b6e31bf94d5268ffb88761aaafa2c09117ab375d9eab"
+        },
+        {
+          "key": "0.10_predictive",
+          "fraction": 0.1,
+          "budget": 799,
+          "capacity": 1199,
+          "policy": "predictive",
+          "selected": 399,
+          "spend": 798.0,
+          "sha256": "1eb3bf364c82cbaf49021fc70d74e341f0306551346439e5222f797936c3547c"
+        },
+        {
+          "key": "0.10_uplift",
+          "fraction": 0.1,
+          "budget": 799,
+          "capacity": 1199,
+          "policy": "uplift",
+          "selected": 399,
+          "spend": 798.0,
+          "sha256": "4408d40076933451f2658b76c3fc682fac0f9b303d6427098c834a49ea7d6df5"
+        },
+        {
+          "key": "0.10_profit",
+          "fraction": 0.1,
+          "budget": 799,
+          "capacity": 1199,
+          "policy": "profit",
+          "selected": 399,
+          "spend": 798.0,
+          "sha256": "4408d40076933451f2658b76c3fc682fac0f9b303d6427098c834a49ea7d6df5"
+        },
+        {
+          "key": "0.20_none",
+          "fraction": 0.2,
+          "budget": 1599,
+          "capacity": 1199,
+          "policy": "none",
+          "selected": 0,
+          "spend": 0.0,
+          "sha256": "c9f8f58b27d57ddb8cc859328d2de1173942dae88d0d3d1ba3f200253a393894"
+        },
+        {
+          "key": "0.20_random",
+          "fraction": 0.2,
+          "budget": 1599,
+          "capacity": 1199,
+          "policy": "random",
+          "selected": 799,
+          "spend": 1598.0,
+          "sha256": "846d8c083ac4b7fd0fc8f04a07238cd5ecb350147625bcb1de523a8749b6f94e"
+        },
+        {
+          "key": "0.20_predictive",
+          "fraction": 0.2,
+          "budget": 1599,
+          "capacity": 1199,
+          "policy": "predictive",
+          "selected": 799,
+          "spend": 1598.0,
+          "sha256": "a3af351bbcbc4ff658a41e4adddd40e04702fe3e33e619fb9ec39bcaa1b34a84"
+        },
+        {
+          "key": "0.20_uplift",
+          "fraction": 0.2,
+          "budget": 1599,
+          "capacity": 1199,
+          "policy": "uplift",
+          "selected": 799,
+          "spend": 1598.0,
+          "sha256": "0ecf04f31ee2411b59c59c3647aa8ec275f770f8955714e38d1e037bee1ff1d7"
+        },
+        {
+          "key": "0.20_profit",
+          "fraction": 0.2,
+          "budget": 1599,
+          "capacity": 1199,
+          "policy": "profit",
+          "selected": 799,
+          "spend": 1598.0,
+          "sha256": "0ecf04f31ee2411b59c59c3647aa8ec275f770f8955714e38d1e037bee1ff1d7"
+        }
+      ],
+      "action_archive_sha256": "0af5bf8a97f47bd8f3623d20f109445fc239aebc9db82017306ffe02877b83fe",
+      "file_signature_at_lock": [
+        1319502,
+        1795496155991680100
+      ],
+      "test_rows": 3999,
+      "test_feature_columns": [
+        "engagement",
+        "loyalty",
+        "spend",
+        "recency",
+        "price_sensitivity",
+        "activity"
+      ]
+    },
+    "synthetic_B": {
+      "split_counts": {
+        "test": 3999,
+        "train": 12001,
+        "validation": 4000
+      },
+      "split_identity_sha256": {
+        "train": "12afdf9e9f7d696f57f83625d1dd3ec1c58238bf86a17f6cbc75ae7e34359b13",
+        "validation": "46b5f90920cdd7a4522613bcac55adf462ddd4c1ce664992998af0402a14bb69",
+        "test": "b0f71c2df80a82845252bb10b9e61219237eecc8fb21bd16cd3ed3fe79e4868e"
+      },
+      "safe_dataset_projection_sha256": "b6ac570835a4ec7086a5b743601b9ff62c709989ba6d398cfa6e5919a4b6f41c",
+      "verified_models": {
+        "session_04/models/synthetic_b_outcome_lightgbm.joblib": {
+          "sha256": "3e06287b7fe4ee38f96d8b1075b189abfd0a481458cd000b149ba28b08df69aa",
+          "training_fingerprint": "6a2eeffce504419d805b9f4ab1943a249465b87439d2285ca816ed0733579324",
+          "features": [
+            "engagement",
+            "loyalty",
+            "spend",
+            "recency",
+            "price_sensitivity",
+            "activity"
+          ]
+        },
+        "session_05/models/synthetic_b_outcome_s_lightgbm.joblib": {
+          "sha256": "f50a7508dafc009b8bda2e3072ec07487f46c5bbd853bc5b56f14e038e395b70",
+          "training_fingerprint": "2b8acf931c54c12b4de782325324751d023dd601323254019f5df1892abbde0f",
+          "features": [
+            "engagement",
+            "loyalty",
+            "spend",
+            "recency",
+            "price_sensitivity",
+            "activity"
+          ]
+        },
+        "session_05/models/synthetic_b_outcome_t_logistic.joblib": {
+          "sha256": "e435a770d8edbeb64597f1b5d92d3c0611ce8bb9c35f92e02f1cfa560168522e",
+          "training_fingerprint": "2b8acf931c54c12b4de782325324751d023dd601323254019f5df1892abbde0f",
+          "features": [
+            "engagement",
+            "loyalty",
+            "spend",
+            "recency",
+            "price_sensitivity",
+            "activity"
+          ]
+        }
+      },
+      "action_vectors": [
+        {
+          "key": "0.05_none",
+          "fraction": 0.05,
+          "budget": 399,
+          "capacity": 1199,
+          "policy": "none",
+          "selected": 0,
+          "spend": 0.0,
+          "sha256": "106576f94882454f7b27cdc19a45016d4bad38a33e3bc6d046cb318b3cf2d224"
+        },
+        {
+          "key": "0.05_random",
+          "fraction": 0.05,
+          "budget": 399,
+          "capacity": 1199,
+          "policy": "random",
+          "selected": 199,
+          "spend": 398.0,
+          "sha256": "c1d41eb2bdc2d8f30e43ad1ef954b9aaee2463504fd9d9a5abe21d67c3d46327"
+        },
+        {
+          "key": "0.05_predictive",
+          "fraction": 0.05,
+          "budget": 399,
+          "capacity": 1199,
+          "policy": "predictive",
+          "selected": 199,
+          "spend": 398.0,
+          "sha256": "320f6c566d08e089dae515f5d677a055eb239a8ae1f7ac22bd5ea88e104ce547"
+        },
+        {
+          "key": "0.05_uplift",
+          "fraction": 0.05,
+          "budget": 399,
+          "capacity": 1199,
+          "policy": "uplift",
+          "selected": 199,
+          "spend": 398.0,
+          "sha256": "6bd39920659e7539c898531517c93a1c03d5104aeeba89f364b5f142a9eae727"
+        },
+        {
+          "key": "0.05_profit",
+          "fraction": 0.05,
+          "budget": 399,
+          "capacity": 1199,
+          "policy": "profit",
+          "selected": 199,
+          "spend": 398.0,
+          "sha256": "6bd39920659e7539c898531517c93a1c03d5104aeeba89f364b5f142a9eae727"
+        },
+        {
+          "key": "0.10_none",
+          "fraction": 0.1,
+          "budget": 799,
+          "capacity": 1199,
+          "policy": "none",
+          "selected": 0,
+          "spend": 0.0,
+          "sha256": "106576f94882454f7b27cdc19a45016d4bad38a33e3bc6d046cb318b3cf2d224"
+        },
+        {
+          "key": "0.10_random",
+          "fraction": 0.1,
+          "budget": 799,
+          "capacity": 1199,
+          "policy": "random",
+          "selected": 399,
+          "spend": 798.0,
+          "sha256": "38aa28fa753afc25c83deefa14b78d5ff0211846920911dc1d4fcbe569ba312a"
+        },
+        {
+          "key": "0.10_predictive",
+          "fraction": 0.1,
+          "budget": 799,
+          "capacity": 1199,
+          "policy": "predictive",
+          "selected": 399,
+          "spend": 798.0,
+          "sha256": "7c262c65bfb78685b8e601561064c0c18d87fb9c23f9d681fdb14294403c9515"
+        },
+        {
+          "key": "0.10_uplift",
+          "fraction": 0.1,
+          "budget": 799,
+          "capacity": 1199,
+          "policy": "uplift",
+          "selected": 399,
+          "spend": 798.0,
+          "sha256": "21a39ef1d7ebf839335012f7e92d9e2542b0676c837b8a0394e080dbb3abb45e"
+        },
+        {
+          "key": "0.10_profit",
+          "fraction": 0.1,
+          "budget": 799,
+          "capacity": 1199,
+          "policy": "profit",
+          "selected": 399,
+          "spend": 798.0,
+          "sha256": "21a39ef1d7ebf839335012f7e92d9e2542b0676c837b8a0394e080dbb3abb45e"
+        },
+        {
+          "key": "0.20_none",
+          "fraction": 0.2,
+          "budget": 1599,
+          "capacity": 1199,
+          "policy": "none",
+          "selected": 0,
+          "spend": 0.0,
+          "sha256": "106576f94882454f7b27cdc19a45016d4bad38a33e3bc6d046cb318b3cf2d224"
+        },
+        {
+          "key": "0.20_random",
+          "fraction": 0.2,
+          "budget": 1599,
+          "capacity": 1199,
+          "policy": "random",
+          "selected": 799,
+          "spend": 1598.0,
+          "sha256": "88ae6aeb4d01ab57a2bfe06822800d976f2dbdd4ae50f9e2e6535e57cbdfbbce"
+        },
+        {
+          "key": "0.20_predictive",
+          "fraction": 0.2,
+          "budget": 1599,
+          "capacity": 1199,
+          "policy": "predictive",
+          "selected": 799,
+          "spend": 1598.0,
+          "sha256": "88bed7ac93c0fd4e684c07758ad8cacefeb4ddf5a0fbef121e1caf205b46ac76"
+        },
+        {
+          "key": "0.20_uplift",
+          "fraction": 0.2,
+          "budget": 1599,
+          "capacity": 1199,
+          "policy": "uplift",
+          "selected": 799,
+          "spend": 1598.0,
+          "sha256": "8f4b2f613446d69d9be13b0e0f4ca650f90411cb7edd5e7b094eb3711db87a23"
+        },
+        {
+          "key": "0.20_profit",
+          "fraction": 0.2,
+          "budget": 1599,
+          "capacity": 1199,
+          "policy": "profit",
+          "selected": 799,
+          "spend": 1598.0,
+          "sha256": "8f4b2f613446d69d9be13b0e0f4ca650f90411cb7edd5e7b094eb3711db87a23"
+        }
+      ],
+      "action_archive_sha256": "181bc06263753a99db3ee4d7f4c8f6b767b80926ce5ac1d77e84937c6baf3795",
+      "file_signature_at_lock": [
+        1319566,
+        1795496156291375200
+      ],
+      "test_rows": 3999,
+      "test_feature_columns": [
+        "engagement",
+        "loyalty",
+        "spend",
+        "recency",
+        "price_sensitivity",
+        "activity"
+      ]
+    },
+    "synthetic_D": {
+      "split_counts": {
+        "test": 4000,
+        "train": 12000,
+        "validation": 4000
+      },
+      "split_identity_sha256": {
+        "train": "86f88d2e616c2fd7033ef9ea0b980a84270cc55cd8e45afbe8d377f8667413c0",
+        "validation": "0b80913f144448a916f137b7fcc62c6fdff3d3768bf0b4c524f66a8f98cc492a",
+        "test": "145ad10a42cc5269e0ff362e1204ca70241f73bb6dd0b00f6f08ae2bd74244eb"
+      },
+      "safe_dataset_projection_sha256": "665d6ce82f8e3c2e32ce2c3a3e61e353653ce33770bce7e510fe0e6cba47e98c",
+      "verified_models": {
+        "session_04/models/synthetic_d_outcome_lightgbm.joblib": {
+          "sha256": "ebb70104bc786d7681f5621c99f6cc47544529acaad1b841feaa10dbe9a73f16",
+          "training_fingerprint": "d568b07fd089e29d94c777987c9ffb7ed43ba97c2f5214975f418f071dabd4f4",
+          "features": [
+            "engagement",
+            "loyalty",
+            "spend",
+            "recency",
+            "price_sensitivity",
+            "activity"
+          ]
+        },
+        "session_05/models/synthetic_d_outcome_s_lightgbm.joblib": {
+          "sha256": "bc5f5f5766f3df3f1100df3bdf6c8208588c669c0753c6ab10da04bedec76b09",
+          "training_fingerprint": "11b47f6f4b7423ed5e61aa9cce1b685dcb43b4190877e69c2d91f0905da8fc54",
+          "features": [
+            "engagement",
+            "loyalty",
+            "spend",
+            "recency",
+            "price_sensitivity",
+            "activity"
+          ]
+        },
+        "session_05/models/synthetic_d_outcome_t_logistic.joblib": {
+          "sha256": "8138310492aa18c7bc7a0ed4eb00fc96d820d1ec941e5b7ccdaaab8ae96bcf86",
+          "training_fingerprint": "11b47f6f4b7423ed5e61aa9cce1b685dcb43b4190877e69c2d91f0905da8fc54",
+          "features": [
+            "engagement",
+            "loyalty",
+            "spend",
+            "recency",
+            "price_sensitivity",
+            "activity"
+          ]
+        }
+      },
+      "action_vectors": [
+        {
+          "key": "0.05_none",
+          "fraction": 0.05,
+          "budget": 400,
+          "capacity": 1200,
+          "policy": "none",
+          "selected": 0,
+          "spend": 0.0,
+          "sha256": "2be44c630afaaf6c25cdfbdba18909044e3c6fc24acbad0c3b8f8e63cb81c1e4"
+        },
+        {
+          "key": "0.05_random",
+          "fraction": 0.05,
+          "budget": 400,
+          "capacity": 1200,
+          "policy": "random",
+          "selected": 200,
+          "spend": 400.0,
+          "sha256": "dd3af0d0ebe3a7240ff6ad7e44eaa1ca4b3946839309823aa1d3b095b4463075"
+        },
+        {
+          "key": "0.05_predictive",
+          "fraction": 0.05,
+          "budget": 400,
+          "capacity": 1200,
+          "policy": "predictive",
+          "selected": 200,
+          "spend": 400.0,
+          "sha256": "7673b64c8e592787bda2c40ea627ada97131e98b9cf0d366e35728b429820be0"
+        },
+        {
+          "key": "0.05_uplift",
+          "fraction": 0.05,
+          "budget": 400,
+          "capacity": 1200,
+          "policy": "uplift",
+          "selected": 200,
+          "spend": 400.0,
+          "sha256": "1c3f56296b9579bed5c411215079c9ed6f276c975595677ca0c34c4a87f217af"
+        },
+        {
+          "key": "0.05_profit",
+          "fraction": 0.05,
+          "budget": 400,
+          "capacity": 1200,
+          "policy": "profit",
+          "selected": 200,
+          "spend": 400.0,
+          "sha256": "1c3f56296b9579bed5c411215079c9ed6f276c975595677ca0c34c4a87f217af"
+        },
+        {
+          "key": "0.10_none",
+          "fraction": 0.1,
+          "budget": 800,
+          "capacity": 1200,
+          "policy": "none",
+          "selected": 0,
+          "spend": 0.0,
+          "sha256": "2be44c630afaaf6c25cdfbdba18909044e3c6fc24acbad0c3b8f8e63cb81c1e4"
+        },
+        {
+          "key": "0.10_random",
+          "fraction": 0.1,
+          "budget": 800,
+          "capacity": 1200,
+          "policy": "random",
+          "selected": 400,
+          "spend": 800.0,
+          "sha256": "f92a35c4ede3eac5e77da219d792c8ad9c21c51ad584853dae7c0f9b072730f5"
+        },
+        {
+          "key": "0.10_predictive",
+          "fraction": 0.1,
+          "budget": 800,
+          "capacity": 1200,
+          "policy": "predictive",
+          "selected": 400,
+          "spend": 800.0,
+          "sha256": "c76a861eba5b1e0f894d4d1621b347a5ea2426e29e39068f98525df310d8d30b"
+        },
+        {
+          "key": "0.10_uplift",
+          "fraction": 0.1,
+          "budget": 800,
+          "capacity": 1200,
+          "policy": "uplift",
+          "selected": 400,
+          "spend": 800.0,
+          "sha256": "3c560e5a3049ce580833a3b54a727cd1929665b19282488ea26d9704c803ba28"
+        },
+        {
+          "key": "0.10_profit",
+          "fraction": 0.1,
+          "budget": 800,
+          "capacity": 1200,
+          "policy": "profit",
+          "selected": 400,
+          "spend": 800.0,
+          "sha256": "3c560e5a3049ce580833a3b54a727cd1929665b19282488ea26d9704c803ba28"
+        },
+        {
+          "key": "0.20_none",
+          "fraction": 0.2,
+          "budget": 1600,
+          "capacity": 1200,
+          "policy": "none",
+          "selected": 0,
+          "spend": 0.0,
+          "sha256": "2be44c630afaaf6c25cdfbdba18909044e3c6fc24acbad0c3b8f8e63cb81c1e4"
+        },
+        {
+          "key": "0.20_random",
+          "fraction": 0.2,
+          "budget": 1600,
+          "capacity": 1200,
+          "policy": "random",
+          "selected": 800,
+          "spend": 1600.0,
+          "sha256": "e7f55c1030389b78aa951a39908c0ca4b5dcc6c69406a074cc00291e1df151fe"
+        },
+        {
+          "key": "0.20_predictive",
+          "fraction": 0.2,
+          "budget": 1600,
+          "capacity": 1200,
+          "policy": "predictive",
+          "selected": 800,
+          "spend": 1600.0,
+          "sha256": "d97fca0ecf34cf12d5e2754efae382220648b9288eafbcacf9f35ca22cf57dba"
+        },
+        {
+          "key": "0.20_uplift",
+          "fraction": 0.2,
+          "budget": 1600,
+          "capacity": 1200,
+          "policy": "uplift",
+          "selected": 800,
+          "spend": 1600.0,
+          "sha256": "d98deed603bbdb3939c77609236931f81881aa9bbd4c6407fd7ca1822f49cc57"
+        },
+        {
+          "key": "0.20_profit",
+          "fraction": 0.2,
+          "budget": 1600,
+          "capacity": 1200,
+          "policy": "profit",
+          "selected": 630,
+          "spend": 1260.0,
+          "sha256": "4c0fb31b5d9aa815ab9263799a92227664d6425fe2bce95e6f5eb23eb5816a9f"
+        }
+      ],
+      "action_archive_sha256": "234f8a31b38592a87219e70def32e7e67907f0a73bc5c70433a347107a1ecdbb",
+      "file_signature_at_lock": [
+        1320093,
+        1795496156935990700
+      ],
+      "test_rows": 4000,
+      "test_feature_columns": [
+        "engagement",
+        "loyalty",
+        "spend",
+        "recency",
+        "price_sensitivity",
+        "activity"
+      ]
+    },
+    "Criteo 200k": {
+      "split_counts": {
+        "test": 39999,
+        "train": 120000,
+        "validation": 40001
+      },
+      "split_identity_sha256": {
+        "train": "6c8c8e371f895ccf9084f17e33777ef46381e2fbd5bc46df5fa9fb7b76490354",
+        "validation": "ad6e19c014f96fec60404f10cf0b961520e2ba211aea9b08caaed262ac44ad79",
+        "test": "e3af0d9a27669651b554767a703b11f1700e2284f5151976faee81e28b47bb3f"
+      },
+      "safe_dataset_projection_sha256": "d0af17f181347afb8f959c5e99d7d9e516dd708c9e97159f3a275dd682f8074c",
+      "verified_models": {
+        "session_04/models/criteo_200k_conversion_lightgbm.joblib": {
+          "sha256": "c7a76fb522e8be378ecb219780b0ed6fa315008ccc9e37d14b9f154fc32e8012",
+          "training_fingerprint": "04dedbf76f47899fe6eb73ce91a5aa7324a25fa0fff6eb3fe86d2a3ff21bb388",
+          "features": [
+            "f0",
+            "f1",
+            "f2",
+            "f3",
+            "f4",
+            "f5",
+            "f6",
+            "f7",
+            "f8",
+            "f9",
+            "f10",
+            "f11"
+          ]
+        },
+        "session_05/models/criteo_200k_conversion_s_lightgbm.joblib": {
+          "sha256": "460e09701be191f42fbb35abc58fa5a0f4a129aabf22ce427f3aa3bc0646992b",
+          "training_fingerprint": "d131ecbff20b3a021b2f9fda235f9c7d865898b03cbbbd9a242a24abfaef3a8b",
+          "features": [
+            "f0",
+            "f1",
+            "f2",
+            "f3",
+            "f4",
+            "f5",
+            "f6",
+            "f7",
+            "f8",
+            "f9",
+            "f10",
+            "f11"
+          ]
+        },
+        "session_05/models/criteo_200k_conversion_t_logistic.joblib": {
+          "sha256": "a97ca0ff68c1372cbd39e2dc175be6d595c3a4bf5e5f9faf5127964a0de2b09f",
+          "training_fingerprint": "d131ecbff20b3a021b2f9fda235f9c7d865898b03cbbbd9a242a24abfaef3a8b",
+          "features": [
+            "f0",
+            "f1",
+            "f2",
+            "f3",
+            "f4",
+            "f5",
+            "f6",
+            "f7",
+            "f8",
+            "f9",
+            "f10",
+            "f11"
+          ]
+        }
+      },
+      "action_vectors": [
+        {
+          "key": "0.10_none",
+          "fraction": 0.1,
+          "budget": 1599.6,
+          "capacity": 3999,
+          "policy": "none",
+          "selected": 0,
+          "spend": 0.0,
+          "sha256": "fb1803e9ce3e194a708da6dd100b0d1f9d25dbdd630f50acbc5d53f35097e32c"
+        },
+        {
+          "key": "0.10_random",
+          "fraction": 0.1,
+          "budget": 1599.6,
+          "capacity": 3999,
+          "policy": "random",
+          "selected": 3999,
+          "spend": 1599.6,
+          "sha256": "a4348d6ef71ae367e70412c7f3fa141c5d8b17efb19761b53abf09b2c842a457"
+        },
+        {
+          "key": "0.10_predictive",
+          "fraction": 0.1,
+          "budget": 1599.6,
+          "capacity": 3999,
+          "policy": "predictive",
+          "selected": 3999,
+          "spend": 1599.6,
+          "sha256": "6c744289465956aae2512a691f0bf4ecd77d73b7236d9e8f727cea2d1deb0b9a"
+        },
+        {
+          "key": "0.10_uplift",
+          "fraction": 0.1,
+          "budget": 1599.6,
+          "capacity": 3999,
+          "policy": "uplift",
+          "selected": 3999,
+          "spend": 1599.6,
+          "sha256": "b4c822710005fa0fed618e6f343b86fe936432c4651f6e4ee1aaa4833f780bbc"
+        },
+        {
+          "key": "0.10_profit",
+          "fraction": 0.1,
+          "budget": 1599.6,
+          "capacity": 3999,
+          "policy": "profit",
+          "selected": 775,
+          "spend": 310.0,
+          "sha256": "df609aaa5e58fc2bae180fa39a187281e7f0badecc230f981df91f3f96df169c"
+        },
+        {
+          "key": "0.20_none",
+          "fraction": 0.2,
+          "budget": 3199.6,
+          "capacity": 7999,
+          "policy": "none",
+          "selected": 0,
+          "spend": 0.0,
+          "sha256": "fb1803e9ce3e194a708da6dd100b0d1f9d25dbdd630f50acbc5d53f35097e32c"
+        },
+        {
+          "key": "0.20_random",
+          "fraction": 0.2,
+          "budget": 3199.6,
+          "capacity": 7999,
+          "policy": "random",
+          "selected": 7999,
+          "spend": 3199.6,
+          "sha256": "bc867b59bdc39039aae07426d6fa12a9434b127d0e003e3473a64450705c4cfb"
+        },
+        {
+          "key": "0.20_predictive",
+          "fraction": 0.2,
+          "budget": 3199.6,
+          "capacity": 7999,
+          "policy": "predictive",
+          "selected": 7999,
+          "spend": 3199.6,
+          "sha256": "8610b6fe9b04a678d91cdac09e96a3166b810bf54ce8798510fc55cd78cbb89e"
+        },
+        {
+          "key": "0.20_uplift",
+          "fraction": 0.2,
+          "budget": 3199.6,
+          "capacity": 7999,
+          "policy": "uplift",
+          "selected": 7999,
+          "spend": 3199.6,
+          "sha256": "718b8536a9b2d72f44519df077ae5ab930d432feba02af16fd1fd0fd587ccbc8"
+        },
+        {
+          "key": "0.20_profit",
+          "fraction": 0.2,
+          "budget": 3199.6,
+          "capacity": 7999,
+          "policy": "profit",
+          "selected": 775,
+          "spend": 310.0,
+          "sha256": "df609aaa5e58fc2bae180fa39a187281e7f0badecc230f981df91f3f96df169c"
+        },
+        {
+          "key": "0.50_none",
+          "fraction": 0.5,
+          "budget": 7999.6,
+          "capacity": 19999,
+          "policy": "none",
+          "selected": 0,
+          "spend": 0.0,
+          "sha256": "fb1803e9ce3e194a708da6dd100b0d1f9d25dbdd630f50acbc5d53f35097e32c"
+        },
+        {
+          "key": "0.50_random",
+          "fraction": 0.5,
+          "budget": 7999.6,
+          "capacity": 19999,
+          "policy": "random",
+          "selected": 19999,
+          "spend": 7999.6,
+          "sha256": "05630cdd8fbb2ce7e022560670b59d55b0b3cb8997f9e2d67ee19ad292cb5559"
+        },
+        {
+          "key": "0.50_predictive",
+          "fraction": 0.5,
+          "budget": 7999.6,
+          "capacity": 19999,
+          "policy": "predictive",
+          "selected": 19999,
+          "spend": 7999.6,
+          "sha256": "7773994b05418ecc2e90050bab84d5675db689edc93b2e82f372c9f6ef5b9055"
+        },
+        {
+          "key": "0.50_uplift",
+          "fraction": 0.5,
+          "budget": 7999.6,
+          "capacity": 19999,
+          "policy": "uplift",
+          "selected": 19999,
+          "spend": 7999.6,
+          "sha256": "469b6646f47be703ba5fd6cab17317c59c367b93d2ae00f27f3ebe25b96a045a"
+        },
+        {
+          "key": "0.50_profit",
+          "fraction": 0.5,
+          "budget": 7999.6,
+          "capacity": 19999,
+          "policy": "profit",
+          "selected": 775,
+          "spend": 310.0,
+          "sha256": "df609aaa5e58fc2bae180fa39a187281e7f0badecc230f981df91f3f96df169c"
+        }
+      ],
+      "action_archive_sha256": "183c029b57bbc603d5d100a7f30e05abbb28b6530b3a138b737791b87ed10237",
+      "file_signature_at_lock": [
+        3722793,
+        1795496155699110900
+      ],
+      "test_rows": 39999,
+      "test_feature_columns": [
+        "f0",
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f6",
+        "f7",
+        "f8",
+        "f9",
+        "f10",
+        "f11"
+      ]
+    }
+  },
+  "blocked": {},
+  "projected_columns": "Partition membership, pre-treatment features and identity only; training labels only for provenance"
+}

@@ -34,7 +34,7 @@ with st.sidebar:
     st.caption("Decision studio")
     page = st.radio("Workspace", PAGES)
     st.divider()
-    st.caption("Development validation · Final test locked")
+    st.caption("Development validation · Published test aggregates")
 
 
 def load(key):
@@ -94,6 +94,41 @@ def metrics(values):
         column.metric(name, value)
 
 
+def final_summary():
+    st.subheader("Final locked evaluation · Reserved test")
+    final = load("14/session_14_summary.json")
+    if final and final["test_evaluated"]:
+        st.caption(
+            "Frozen models · Session 04 pooled LightGBM · Session 05 S-LightGBM and T-logistic"
+        )
+        st.write(
+            f"{len(final['cohorts_completed'])} completed cohorts. At the 20% setting, the primary comparison is profit-aware versus predictive targeting."
+        )
+        report = load("14/final_business_summary.json")
+        if report:
+            table = pd.DataFrame(report["primary"])
+            columns = [
+                "dataset",
+                "reference",
+                "incremental_profit",
+                "ci_profit_low",
+                "ci_profit_high",
+                "spend",
+                "reference_spend",
+                "ess",
+                "identification",
+            ]
+            st.dataframe(
+                table.reindex(columns=columns), hide_index=True, width="stretch"
+            )
+        st.warning(
+            "Criteo amounts use hypothetical economics. Conditional intervals exclude allocation reoptimization, nuisance fitting and unknown trial clustering. Scenario F remains research-only."
+        )
+        st.markdown(
+            "[Final benchmark report](https://github.com/Amankumarsingh23/CausalLift/blob/main/docs/FINAL_BENCHMARK_REPORT.md)"
+        )
+
+
 def overview():
     st.caption("DEVELOPMENT VALIDATION")
     st.title("Evidence for treatment decisions")
@@ -116,6 +151,7 @@ def overview():
     st.info(
         "Published development results, synthetic expected truth, Criteo released-sample estimates, and interactive fixtures have different interpretations. Criteo economics are hypothetical."
     )
+    final_summary()
     show("02/synthetic_experiment_results.csv", title="Experiment evidence")
     ranking = load("05/uplift_ranking_metrics.csv")
     if ranking is not None:
@@ -454,6 +490,16 @@ def policy_lab():
 
 def reports():
     st.title("Policy evaluation and reports")
+    final_summary()
+    with st.expander("Validation versus reserved test"):
+        table = show("14/validation_vs_test.csv", title="Matched 20% DR comparisons")
+        if isinstance(table, pd.DataFrame):
+            st.download_button(
+                "Download validation versus test CSV",
+                table.to_csv(index=False),
+                file_name="causallift-validation-vs-test.csv",
+                mime="text/csv",
+            )
     st.warning(LIMITATIONS)
     st.write(
         "Criteo profit-aware versus treat-none includes zero in its interval. The paired comparison to predictive targeting uses different proposed spending."

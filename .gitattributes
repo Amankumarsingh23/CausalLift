@@ -1,0 +1,2 @@
+# The published action lock is hashed byte-for-byte at execution.
+artifacts/session_14/action_freeze.json -text whitespace=cr-at-eol

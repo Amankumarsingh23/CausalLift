@@ -10,8 +10,9 @@ LIMITATIONS = (
 
 def business_report(registry):
     lines = [
-        "# CausalLift validation decision brief",
+        "# CausalLift decision brief",
         "",
+        "## Development validation",
         "Population: fixed development validation cohorts, including ineligible units where applicable.",
         "Estimand: paired DR expected incremental profit relative to predictive targeting.",
         "Units: simulated or hypothetical currency. Intervals are conditional 95% Wald intervals.",
@@ -49,12 +50,37 @@ def business_report(registry):
                 "",
             ]
         )
+    try:
+        final = registry.load("14/final_business_summary.json")
+    except FileNotFoundError:
+        final = None
+    if final:
+        lines.extend(
+            [
+                "## Locked reserved-test aggregates",
+                "",
+                "Frozen models: Session 04 pooled LightGBM, Session 05 S-LightGBM and T-logistic.",
+            ]
+        )
+        for row in final["primary"]:
+            interval = (
+                f"{row['ci_profit_low']:,.2f} to {row['ci_profit_high']:,.2f}"
+                if "ci_profit_low" in row
+                else "unavailable"
+            )
+            lines.append(
+                f"- {row['dataset']}, profit-aware versus {row['reference']}: "
+                f"paired DR profit {row['incremental_profit']:,.2f} (conditional 95% CI {interval}); "
+                f"proposed spend {row['spend']:,.2f} versus {row['reference_spend']:,.2f}; "
+                f"cohort {row['n']:,}; identification {row['identification']}."
+            )
+        lines.append("")
     lines.extend(
         [
             "## Limitations",
             LIMITATIONS,
             "The Criteo profit-aware interval against treat-none includes zero.",
-            "The final evaluation partition remains locked.",
+            "The reserved row-level data remain private.",
             "",
         ]
     )
